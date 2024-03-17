@@ -60,9 +60,6 @@ class _MyHomePageState extends State<MyHomePage>
     return Provider<Appearance>(
       create: (context) => Appearance(),
       child: Scaffold(
-        appBar: AppBar(
-          title: Text("aaaa---"),
-        ),
         body: TabBarView(
           controller: _tabController,
           children: pages.map((e) => e.$3).toList(),
