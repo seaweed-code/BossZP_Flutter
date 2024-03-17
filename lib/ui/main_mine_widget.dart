@@ -1,6 +1,8 @@
 import 'package:bosszp/gen/assets.gen.dart';
+import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 
 class MainMineWidget extends StatelessWidget {
   const MainMineWidget({super.key});
@@ -8,6 +10,7 @@ class MainMineWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final avatarWidth = 58.0;
+    // final appear = context.read<Appearance>();
     return Stack(
       alignment: Alignment.topCenter,
       children: [

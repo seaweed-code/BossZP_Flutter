@@ -1,11 +1,15 @@
+import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:provider/provider.dart';
 
 class MessageItemWidget extends StatelessWidget {
   const MessageItemWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // final appear = context.read<Appearance>();
+    // print(appear);
     final avatarWidth = 44.0;
     return Padding(
       padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),

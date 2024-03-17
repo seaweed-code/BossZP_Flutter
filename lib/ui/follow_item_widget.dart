@@ -86,17 +86,17 @@ class _IconTextWIdget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = Provider.of<Appearance>(context, listen: false).subTitleColor;
+    final appear = context.read<Appearance>();
     return TextButton.icon(
         onPressed: () {},
         icon: Icon(
           Icons.access_alarm_outlined,
-          color: color,
+          color: appear.subTitleColor,
           size: 22,
         ),
         label: Text(
           "426",
-          style: TextStyle(fontSize: 12, color: color),
+          style: TextStyle(fontSize: 12, color: appear.subTitleColor),
         ));
   }
 }
