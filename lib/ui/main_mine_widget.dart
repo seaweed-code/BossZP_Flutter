@@ -16,11 +16,8 @@ class MainMineWidget extends StatelessWidget {
         CustomScrollView(
           slivers: [
             SliverAppBar(
-              // title: Text("---"),
               pinned: true,
               backgroundColor: Colors.transparent,
-              // foregroundColor: Colors.amber,
-              // shadowColor: Colors.white,
               surfaceTintColor: Colors.transparent,
             ),
             SliverToBoxAdapter(
