@@ -3,8 +3,8 @@ import 'package:bosszp/model/Appearance.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class Follow_Item_Widget extends StatelessWidget {
-  const Follow_Item_Widget({super.key, this.answeredQuestion});
+class FollowItemWidget extends StatelessWidget {
+  const FollowItemWidget({super.key, this.answeredQuestion});
 
   final String? answeredQuestion;
 

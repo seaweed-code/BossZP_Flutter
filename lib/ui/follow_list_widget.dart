@@ -10,7 +10,7 @@ class Follow_List_Widget extends StatelessWidget {
       // prototypeItem: Follow_Item_Widget(),
       itemCount: 20,
       itemBuilder: (context, index) {
-        return Follow_Item_Widget();
+        return FollowItemWidget();
       },
     );
   }
