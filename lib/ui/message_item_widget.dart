@@ -15,17 +15,17 @@ class MessageItemWidget extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
       child: Row(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(avatarWidth / 2),
-            child: CachedNetworkImage(
-              width: avatarWidth,
-              height: avatarWidth,
-              fit: BoxFit.cover,
-              placeholder: (context, url) => const CircularProgressIndicator(),
-              imageUrl:
-                  'https://k.sinaimg.cn/n/sinakd20117/192/w1696h1696/20240131/3dd7-94af50d27027ceae9ccc3d13760a2f7c.jpg/w700d1q75cms.jpg',
-            ),
-          ),
+          // ClipRRect(
+          //   borderRadius: BorderRadius.circular(avatarWidth / 2),
+          //   child: CachedNetworkImage(
+          //     width: avatarWidth,
+          //     height: avatarWidth,
+          //     fit: BoxFit.cover,
+          //     placeholder: (context, url) => const CircularProgressIndicator(),
+          //     imageUrl:
+          //         'https://k.sinaimg.cn/n/sinakd20117/192/w1696h1696/20240131/3dd7-94af50d27027ceae9ccc3d13760a2f7c.jpg/w700d1q75cms.jpg',
+          //   ),
+          // ),
           SizedBox(width: 12),
           Expanded(
             child: Container(
