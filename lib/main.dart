@@ -1,5 +1,6 @@
 import 'package:bosszp/model/Appearance.dart';
 import 'package:bosszp/ui/follow_list_widget.dart';
+import 'package:bosszp/ui/main_mine_widget.dart';
 import 'package:bosszp/ui/message_list_widget.dart';
 import 'package:bosszp/ui/posotion_list_widget.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage>
     ("zhiwei", "职位", PositionListWidget()),
     ("youle", "有了", Follow_List_Widget()),
     ("xiaoxi-b", "消息", MessageListWidget()),
-    ("wode-b", "我的", Text("44"))
+    ("wode-b", "我的", MainMineWidget())
   ];
 
   @override
