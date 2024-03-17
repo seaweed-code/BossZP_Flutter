@@ -7,7 +7,7 @@ class MainMineWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final avatarWidth = 50.0;
+    final avatarWidth = 58.0;
     return Stack(
       alignment: Alignment.topCenter,
       children: [
@@ -30,7 +30,25 @@ class MainMineWidget extends StatelessWidget {
                     ClipRRect(
                         borderRadius: BorderRadius.circular(avatarWidth / 2),
                         child: Assets.images.avatar1Iphone
-                            .image(width: avatarWidth, height: avatarWidth))
+                            .image(width: avatarWidth, height: avatarWidth)),
+                    SizedBox(width: 10),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "李孝利",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        // SizedBox(height: 3),
+                        Text(
+                          "简历评分80分，建议优化",
+                          style: TextStyle(color: Colors.black12, fontSize: 13),
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
