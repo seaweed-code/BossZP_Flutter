@@ -32,7 +32,7 @@ class PostionItemWidget extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black87),
+                          color: appear.titleColor),
                     ),
                   ),
                   SizedBox(width: 10),
@@ -49,7 +49,7 @@ class PostionItemWidget extends StatelessWidget {
               SizedBox(height: 6),
               Text(
                 "腾讯 不需要融资 1000人以上",
-                style: TextStyle(fontSize: 12, color: appear.darkColor),
+                style: TextStyle(fontSize: 12, color: appear.subTitleColor),
               ),
               SizedBox(height: 6),
               Wrap(
@@ -65,7 +65,8 @@ class PostionItemWidget extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(6, 3, 6, 3),
                       child: Text(
                         "经验不限$i",
-                        style: TextStyle(color: appear.darkColor, fontSize: 10),
+                        style: TextStyle(
+                            color: appear.subTitleColor, fontSize: 10),
                       ),
                     )
                 ],
@@ -74,18 +75,18 @@ class PostionItemWidget extends StatelessWidget {
                 children: [
                   Icon(Icons.ac_unit_rounded),
                   SizedBox(width: 6),
-                  _PersonInfoWidget(colorDark: appear.darkColor),
+                  _PersonInfoWidget(colorDark: appear.subTitleColor),
                   Spacer(),
                   Text(
                     "东城区 - 建国门",
-                    style: TextStyle(fontSize: 10, color: appear.darkColor),
+                    style: TextStyle(fontSize: 10, color: appear.subTitleColor),
                   ),
                   IconButton(
                     splashColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     padding: EdgeInsets.zero,
                     iconSize: 16,
-                    color: appear.darkColor,
+                    color: appear.subTitleColor,
                     onPressed: () {},
                     icon: Icon(Icons.close),
                   )

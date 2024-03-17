@@ -27,7 +27,7 @@ class FollowItemWidget extends StatelessWidget {
                 children: [
                   Icon(Icons.ac_unit_sharp),
                   SizedBox(width: 6),
-                  _PersonInfoWidget(colorDark: appearance.darkColor),
+                  _PersonInfoWidget(colorDark: appearance.subTitleColor),
                   Spacer(),
                   SizedBox(width: 8),
                   ElevatedButton(
@@ -51,7 +51,7 @@ class FollowItemWidget extends StatelessWidget {
                   answeredQuestion!,
                   style: TextStyle(
                       fontSize: 12,
-                      color: context.read<Appearance>().darkColor),
+                      color: context.read<Appearance>().subTitleColor),
                 ),
               SizedBox(height: 8),
               Text.rich(
@@ -86,7 +86,7 @@ class _IconTextWIdget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = Provider.of<Appearance>(context, listen: false).darkColor;
+    final color = Provider.of<Appearance>(context, listen: false).subTitleColor;
     return TextButton.icon(
         onPressed: () {},
         icon: Icon(
