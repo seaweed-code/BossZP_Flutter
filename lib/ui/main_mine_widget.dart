@@ -1,7 +1,5 @@
 import 'package:bosszp/gen/assets.gen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MainMineWidget extends StatelessWidget {
   const MainMineWidget({super.key});
@@ -16,12 +14,6 @@ class MainMineWidget extends StatelessWidget {
             SliverAppBar(
               // title: Text("---"),
               pinned: true,
-              // flexibleSpace: FlexibleSpaceBar(
-              // collapseMode: CollapseMode.pin,
-              // background: DecoratedBox(
-              //   decoration: BoxDecoration(color: Colors.transparent),
-              // ),
-              // ),
               backgroundColor: Colors.transparent,
               // foregroundColor: Colors.amber,
               // shadowColor: Colors.white,
