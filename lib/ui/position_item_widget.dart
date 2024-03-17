@@ -13,7 +13,7 @@ class PostionItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
     return Container(
-      color: Color(0xFFF2F2F4),
+      color: appear.backgroundColor,
       child: Card(
         margin: EdgeInsets.only(left: 10, right: 10, top: 12, bottom: 0),
         elevation: 0.2,

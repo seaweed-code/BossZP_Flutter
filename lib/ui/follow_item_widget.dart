@@ -12,7 +12,7 @@ class FollowItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final appearance = context.read<Appearance>();
     return Container(
-      color: Color(0xFFF2F2F2),
+      color: appearance.backgroundColor,
       child: Card(
         color: Colors.white,
         margin: EdgeInsets.fromLTRB(15, 5, 15, 5),
