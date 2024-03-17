@@ -7,8 +7,12 @@ class MainMineWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.topCenter,
       children: [
-        Assets.images.basicBbNavMineBacIphone.image(fit: BoxFit.fitWidth),
+        SizedBox(
+            width: double.infinity,
+            child: Assets.images.basicBbNavMineBacIphone
+                .image(fit: BoxFit.fitWidth)),
         CustomScrollView(
           slivers: [
             SliverAppBar(
