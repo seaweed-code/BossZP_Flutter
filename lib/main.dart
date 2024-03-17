@@ -1,4 +1,4 @@
-import 'package:bosszp/model/Appearance.dart';
+import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/follow_list_widget.dart';
 import 'package:bosszp/ui/main_mine_widget.dart';
 import 'package:bosszp/ui/message_list_widget.dart';

@@ -8,8 +8,7 @@ class MessageItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final appear = context.read<Appearance>();
-    // print(appear);
+    final appear = context.read<Appearance>();
     final avatarWidth = 44.0;
     return Padding(
       padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
@@ -41,7 +40,7 @@ class MessageItemWidget extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.normal,
-                            color: Color(0XFF2B2B2B)),
+                            color: appear.titleColor),
                       ),
                       SizedBox(width: 8),
                       Text(

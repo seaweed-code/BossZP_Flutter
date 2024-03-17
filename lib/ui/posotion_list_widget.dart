@@ -1,4 +1,4 @@
-import 'package:bosszp/model/Appearance.dart';
+import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'position_item_widget.dart';
