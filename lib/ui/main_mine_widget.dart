@@ -10,7 +10,7 @@ class MainMineWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final avatarWidth = 58.0;
-    // final appear = context.read<Appearance>();
+    final appear = context.read<Appearance>();
     return Stack(
       alignment: Alignment.topCenter,
       children: [
@@ -41,14 +41,15 @@ class MainMineWidget extends StatelessWidget {
                         Text(
                           "李孝利",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: appear.titleColor,
                               fontSize: 18,
-                              fontWeight: FontWeight.w600),
+                              fontWeight: FontWeight.w900),
                         ),
                         // SizedBox(height: 3),
                         Text(
                           "简历评分80分，建议优化",
-                          style: TextStyle(color: Colors.black12, fontSize: 13),
+                          style: TextStyle(
+                              color: appear.subTitleColor, fontSize: 13),
                         )
                       ],
                     )
