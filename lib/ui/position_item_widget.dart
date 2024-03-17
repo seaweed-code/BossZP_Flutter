@@ -11,7 +11,7 @@ class PostionItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorDark = context.read<Appearance>().darkColor;
+    final appear = context.read<Appearance>();
     return Container(
       color: Color(0xFFF2F2F4),
       child: Card(
@@ -49,7 +49,7 @@ class PostionItemWidget extends StatelessWidget {
               SizedBox(height: 6),
               Text(
                 "腾讯 不需要融资 1000人以上",
-                style: TextStyle(fontSize: 12, color: colorDark),
+                style: TextStyle(fontSize: 12, color: appear.darkColor),
               ),
               SizedBox(height: 6),
               Wrap(
@@ -65,7 +65,7 @@ class PostionItemWidget extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(6, 3, 6, 3),
                       child: Text(
                         "经验不限$i",
-                        style: TextStyle(color: colorDark, fontSize: 10),
+                        style: TextStyle(color: appear.darkColor, fontSize: 10),
                       ),
                     )
                 ],
@@ -74,18 +74,18 @@ class PostionItemWidget extends StatelessWidget {
                 children: [
                   Icon(Icons.ac_unit_rounded),
                   SizedBox(width: 6),
-                  _PersonInfoWidget(colorDark: colorDark),
+                  _PersonInfoWidget(colorDark: appear.darkColor),
                   Spacer(),
                   Text(
                     "东城区 - 建国门",
-                    style: TextStyle(fontSize: 10, color: colorDark),
+                    style: TextStyle(fontSize: 10, color: appear.darkColor),
                   ),
                   IconButton(
                     splashColor: Colors.transparent,
                     highlightColor: Colors.transparent,
                     padding: EdgeInsets.zero,
                     iconSize: 16,
-                    color: colorDark,
+                    color: appear.darkColor,
                     onPressed: () {},
                     icon: Icon(Icons.close),
                   )
