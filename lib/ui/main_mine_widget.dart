@@ -16,11 +16,16 @@ class MainMineWidget extends StatelessWidget {
             SliverAppBar(
               // title: Text("---"),
               pinned: true,
-              // flexibleSpace: FlexibleSpaceBar(
-              //     background: Colors.transparent,
-              //     ),
+              flexibleSpace: FlexibleSpaceBar(
+                collapseMode: CollapseMode.pin,
+                // background: DecoratedBox(
+                //   decoration: BoxDecoration(color: Colors.transparent),
+                // ),
+              ),
               backgroundColor: Colors.transparent,
-              foregroundColor: Colors.amber,
+              // foregroundColor: Colors.amber,
+              // shadowColor: Colors.white,
+              surfaceTintColor: Colors.transparent,
             ),
             SliverToBoxAdapter(
               child: Placeholder(),
