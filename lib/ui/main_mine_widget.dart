@@ -31,33 +31,34 @@ class MainMineWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     _AvatarWidget(avatarWidth: avatarWidth, appear: appear),
-                    SizedBox(height: 10),
-                    Row(
-                      children: [
-                        for (int i = 0; i < 4; i++)
-                          Flexible(
-                              fit: FlexFit.tight,
-                              flex: 1,
-                              child: Text.rich(
-                                maxLines: 2,
-                                style: TextStyle(
-                                    color: appear.titleColor,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500),
-                                TextSpan(
-                                  text: "740",
-                                  children: [
-                                    TextSpan(
-                                        text: "\n沟通过",
-                                        style: TextStyle(
-                                            color: appear.subTitleColor,
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.normal))
-                                  ],
-                                ),
-                                textAlign: TextAlign.center,
-                              ))
-                      ],
+                    SizedBox(height: 16),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0, right: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          for (int i = 0; i < 4; i++)
+                            Text.rich(
+                              maxLines: 2,
+                              style: TextStyle(
+                                  color: appear.titleColor,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500),
+                              TextSpan(
+                                text: "740",
+                                children: [
+                                  TextSpan(
+                                      text: "\n沟通过",
+                                      style: TextStyle(
+                                          color: appear.subTitleColor,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.normal))
+                                ],
+                              ),
+                              textAlign: TextAlign.center,
+                            )
+                        ],
+                      ),
                     )
                   ],
                 ),
