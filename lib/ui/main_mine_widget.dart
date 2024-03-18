@@ -33,34 +33,7 @@ class MainMineWidget extends StatelessWidget {
                   children: [
                     _AvatarWidget(avatarWidth: avatarWidth, appear: appear),
                     SizedBox(height: 16),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0, right: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          for (int i = 0; i < 4; i++)
-                            Text.rich(
-                              maxLines: 2,
-                              style: TextStyle(
-                                  color: appear.titleColor,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500),
-                              TextSpan(
-                                text: "740",
-                                children: [
-                                  TextSpan(
-                                      text: "\n沟通过",
-                                      style: TextStyle(
-                                          color: appear.subTitleColor,
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.normal))
-                                ],
-                              ),
-                              textAlign: TextAlign.center,
-                            )
-                        ],
-                      ),
-                    ),
+                    _NumberRowWidget(appear: appear),
                     SizedBox(height: 10),
                     Card(
                       color: Colors.white,
@@ -76,6 +49,47 @@ class MainMineWidget extends StatelessWidget {
           ],
         ),
       ],
+    );
+  }
+}
+
+class _NumberRowWidget extends StatelessWidget {
+  const _NumberRowWidget({
+    super.key,
+    required this.appear,
+  });
+
+  final Appearance appear;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 10.0, right: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          for (int i = 0; i < 4; i++)
+            Text.rich(
+              maxLines: 2,
+              style: TextStyle(
+                  color: appear.titleColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500),
+              TextSpan(
+                text: "740",
+                children: [
+                  TextSpan(
+                      text: "\n沟通过",
+                      style: TextStyle(
+                          color: appear.subTitleColor,
+                          fontSize: 12,
+                          fontWeight: FontWeight.normal))
+                ],
+              ),
+              textAlign: TextAlign.center,
+            )
+        ],
+      ),
     );
   }
 }
