@@ -1,5 +1,6 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
@@ -37,17 +38,23 @@ class MainMineWidget extends StatelessWidget {
                     SizedBox(height: 10),
                     Card(
                       color: Colors.white,
+                      // margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
                       elevation: 0,
-                      child: Row(
-                        children: [
-                          _SubRowWidget(),
-                          Spacer(),
-                          Text(
-                            "|",
-                          ),
-                          Spacer(),
-                          _SubRowWidget(),
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Row(
+                          children: [
+                            Expanded(child: _SubRowWidget()),
+                            SizedBox(width: 15),
+                            Text(
+                              "|",
+                              style: TextStyle(
+                                  color: appear.subTitleColor, fontSize: 12),
+                            ),
+                            SizedBox(width: 15),
+                            Expanded(child: _SubRowWidget()),
+                          ],
+                        ),
                       ),
                     )
                   ],
@@ -83,6 +90,7 @@ class _SubRowWidget extends StatelessWidget {
               fontSize: 15,
               fontWeight: FontWeight.w600),
         ),
+        Spacer(),
         Text(
           "提升曝光",
           style: TextStyle(
