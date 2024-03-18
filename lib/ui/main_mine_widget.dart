@@ -16,6 +16,7 @@ class MainMineWidget extends StatelessWidget {
       children: [
         SizedBox(
             width: double.infinity,
+            // height: 200,
             child: Assets.images.basicBbNavMineBacIphone
                 .image(fit: BoxFit.fitWidth)),
         CustomScrollView(
@@ -58,6 +59,14 @@ class MainMineWidget extends StatelessWidget {
                               textAlign: TextAlign.center,
                             )
                         ],
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Card(
+                      color: Colors.white,
+                      elevation: 0,
+                      child: Row(
+                        children: [Text("|")],
                       ),
                     )
                   ],
