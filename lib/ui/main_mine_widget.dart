@@ -58,18 +58,27 @@ class MainMineWidget extends StatelessWidget {
                     ),
                     Card(
                         color: Colors.white,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("常用功能"),
-                            SizedBox(height: 10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                for (int i = 0; i < 4; i++) _FrequentFunWidget()
-                              ],
-                            )
-                          ],
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "常用功能",
+                                style: TextStyle(
+                                    fontSize: 14, fontWeight: FontWeight.w800),
+                              ),
+                              SizedBox(height: 10),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  for (int i = 0; i < 4; i++)
+                                    _FrequentFunWidget()
+                                ],
+                              )
+                            ],
+                          ),
                         ))
                   ],
                 ),
@@ -93,7 +102,10 @@ class _FrequentFunWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Icon(Icons.g_translate_outlined),
+        Icon(
+          Icons.g_translate_outlined,
+          size: 40,
+        ),
         Text(
           "在线简历",
           style: TextStyle(color: appear.titleColor, fontSize: 12),
