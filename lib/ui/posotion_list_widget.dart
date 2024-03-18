@@ -16,18 +16,19 @@ class PositionListWidget extends StatelessWidget {
       slivers: [
         SliverAppBar(
           leadingWidth: double.infinity,
-          // title: Text("aaa"),
-          // centerTitle: true,
           leading: Align(
             alignment: Alignment.centerLeft,
-            child: Text(
-              "Flutter",
-              style: TextStyle(
-                  color: appear.titleColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Text(
+                "Flutter",
+                style: TextStyle(
+                    color: appear.titleColor,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ),
           pinned: true,
