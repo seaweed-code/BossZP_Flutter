@@ -92,37 +92,7 @@ class MainMineWidget extends StatelessWidget {
                               ],
                             ),
                           )),
-                      Card(
-                          color: Colors.white,
-                          elevation: 0.0,
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "常用功能",
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w800),
-                                ),
-                                SizedBox(height: 10),
-                                for (int idx = 0; idx < 3; idx++)
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        bottom: (idx == 3 - 1) ? 0 : 20),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: [
-                                        for (int i = 0; i < 4; i++)
-                                          _FrequentFunWidget()
-                                      ],
-                                    ),
-                                  )
-                              ],
-                            ),
-                          ))
+                      _OtherFunsWidget()
                     ],
                   ),
                 ),
@@ -132,6 +102,42 @@ class MainMineWidget extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class _OtherFunsWidget extends StatelessWidget {
+  const _OtherFunsWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+        color: Colors.white,
+        elevation: 0.0,
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "其他功能",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+              ),
+              SizedBox(height: 10),
+              for (int idx = 0; idx < 3; idx++)
+                Padding(
+                  padding: EdgeInsets.only(bottom: (idx == 3 - 1) ? 0 : 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      for (int i = 0; i < 4; i++) _FrequentFunWidget()
+                    ],
+                  ),
+                )
+            ],
+          ),
+        ));
   }
 }
 
