@@ -178,7 +178,8 @@ class _OtherFunsWidget extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Assets.images.settingDetailIconIphone.image(),
+                            Assets.images.settingDetailIconIphone.image(
+                                width: 25, height: 25, fit: BoxFit.cover),
                             SizedBox(height: 5),
                             Text(
                               "企业洞察",
