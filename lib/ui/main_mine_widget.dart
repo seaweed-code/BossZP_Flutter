@@ -120,9 +120,23 @@ class _OtherFunsWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "其他功能",
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+              Row(
+                children: [
+                  Text(
+                    "其他功能",
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                  ),
+                  Spacer(),
+                  Text(
+                    "查看全部",
+                    style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black45),
+                  ),
+                  SizedBox(width: 12),
+                  Assets.images.basicMoreArrowiphone.image()
+                ],
               ),
               SizedBox(height: 10),
               for (int idx = 0; idx < 3; idx++)
