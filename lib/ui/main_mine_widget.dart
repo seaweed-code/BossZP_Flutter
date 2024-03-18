@@ -49,7 +49,7 @@ class MainMineWidget extends StatelessWidget {
                             Text(
                               "|",
                               style: TextStyle(
-                                  color: appear.subTitleColor, fontSize: 14),
+                                  color: Colors.black12, fontSize: 14),
                             ),
                             SizedBox(width: 12),
                             Expanded(child: _SubRowWidget()),
