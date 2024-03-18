@@ -1,3 +1,4 @@
+import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/follow_list_widget.dart';
 import 'package:bosszp/ui/main_mine_widget.dart';
