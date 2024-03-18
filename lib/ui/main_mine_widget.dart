@@ -45,13 +45,13 @@ class MainMineWidget extends StatelessWidget {
                         child: Row(
                           children: [
                             Expanded(child: _SubRowWidget()),
-                            SizedBox(width: 15),
+                            SizedBox(width: 12),
                             Text(
                               "|",
                               style: TextStyle(
-                                  color: appear.subTitleColor, fontSize: 12),
+                                  color: appear.subTitleColor, fontSize: 14),
                             ),
-                            SizedBox(width: 15),
+                            SizedBox(width: 12),
                             Expanded(child: _SubRowWidget()),
                           ],
                         ),
@@ -79,7 +79,7 @@ class _SubRowWidget extends StatelessWidget {
     return Row(
       children: [
         Icon(
-          Icons.voice_over_off,
+          Icons.bar_chart,
           size: 20,
         ),
         SizedBox(width: 4), // height)
@@ -87,7 +87,7 @@ class _SubRowWidget extends StatelessWidget {
           "简历刷新",
           style: TextStyle(
               color: appear.titleColor,
-              fontSize: 15,
+              fontSize: 14,
               fontWeight: FontWeight.w600),
         ),
         Spacer(),
