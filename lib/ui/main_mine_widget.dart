@@ -28,7 +28,38 @@ class MainMineWidget extends StatelessWidget {
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15),
-                child: _AvatarWidget(avatarWidth: avatarWidth, appear: appear),
+                child: Column(
+                  children: [
+                    _AvatarWidget(avatarWidth: avatarWidth, appear: appear),
+                    Row(
+                      children: [
+                        for (int i = 0; i < 4; i++)
+                          Flexible(
+                              fit: FlexFit.tight,
+                              flex: 1,
+                              child: Text.rich(
+                                maxLines: 2,
+                                style: TextStyle(
+                                    color: appear.titleColor,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500),
+                                TextSpan(
+                                  text: "740",
+                                  children: [
+                                    TextSpan(
+                                        text: "\n沟通过",
+                                        style: TextStyle(
+                                            color: appear.subTitleColor,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.normal))
+                                  ],
+                                ),
+                                textAlign: TextAlign.center,
+                              ))
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ],
