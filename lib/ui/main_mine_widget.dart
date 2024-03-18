@@ -43,17 +43,25 @@ class MainMineWidget extends StatelessWidget {
                         elevation: 0.0,
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
-                          child: Row(
+                          child: Column(
                             children: [
-                              Expanded(child: _SubRowWidget()),
-                              SizedBox(width: 12),
-                              Text(
-                                "|",
-                                style: TextStyle(
-                                    color: Colors.black12, fontSize: 14),
+                              Placeholder(
+                                fallbackHeight: 60,
                               ),
-                              SizedBox(width: 12),
-                              Expanded(child: _SubRowWidget()),
+                              SizedBox(height: 15),
+                              Row(
+                                children: [
+                                  Expanded(child: _SubRowWidget()),
+                                  SizedBox(width: 12),
+                                  Text(
+                                    "|",
+                                    style: TextStyle(
+                                        color: Colors.black12, fontSize: 14),
+                                  ),
+                                  SizedBox(width: 12),
+                                  Expanded(child: _SubRowWidget()),
+                                ],
+                              ),
                             ],
                           ),
                         ),
