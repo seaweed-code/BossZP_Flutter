@@ -31,6 +31,7 @@ class MainMineWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     _AvatarWidget(avatarWidth: avatarWidth, appear: appear),
+                    SizedBox(height: 10),
                     Row(
                       children: [
                         for (int i = 0; i < 4; i++)
