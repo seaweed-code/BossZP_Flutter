@@ -11,13 +11,23 @@ class PositionListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.read<Appearance>();
+    final appear = context.read<Appearance>();
     return CustomScrollView(
       slivers: [
         SliverAppBar(
-          title: Text("aaa"),
+          // title: Text("aaa"),
+          leading: Text(
+            "iOS",
+            style: TextStyle(
+                color: appear.titleColor,
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
+          ),
           pinned: true,
-          // backgroundColor: Colors.amber,
+          actions: [
+            IconButton(onPressed: null, icon: Icon(Icons.add)),
+            IconButton(onPressed: null, icon: Icon(Icons.search)),
+          ],
           flexibleSpace: FlexibleSpaceBar(
               background:
                   Assets.images.basicBbNavBacIphone.image(fit: BoxFit.cover)),
@@ -28,13 +38,6 @@ class PositionListWidget extends StatelessWidget {
           },
           itemCount: 20,
         )
-
-        //   child: ListView.builder(
-        //       itemCount: 20,
-        //       itemBuilder: (context, index) {
-        //         return PostionItemWidget();
-        //       }),
-        // ),
       ],
     );
   }
