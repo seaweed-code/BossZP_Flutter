@@ -12,82 +12,89 @@ class MainMineWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final avatarWidth = 58.0;
     final appear = context.read<Appearance>();
-    return Stack(
-      alignment: Alignment.topCenter,
-      children: [
-        SizedBox(
-            width: double.infinity,
-            // height: 200,
-            child: Assets.images.basicBbNavMineBacIphone
-                .image(fit: BoxFit.fitWidth)),
-        CustomScrollView(
-          slivers: [
-            SliverAppBar(
-              pinned: true,
-              backgroundColor: Colors.transparent,
-              surfaceTintColor: Colors.transparent,
-            ),
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15),
-                child: Column(
-                  children: [
-                    _AvatarWidget(avatarWidth: avatarWidth, appear: appear),
-                    SizedBox(height: 16),
-                    _NumberRowWidget(appear: appear),
-                    SizedBox(height: 10),
-                    Card(
-                      color: Colors.white,
-                      elevation: 0.4,
-                      child: Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Row(
-                          children: [
-                            Expanded(child: _SubRowWidget()),
-                            SizedBox(width: 12),
-                            Text(
-                              "|",
-                              style: TextStyle(
-                                  color: Colors.black12, fontSize: 14),
-                            ),
-                            SizedBox(width: 12),
-                            Expanded(child: _SubRowWidget()),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Card(
+    return Container(
+      color: appear.backgroundColor,
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          SizedBox(
+              width: double.infinity,
+              // height: 200,
+              child: Assets.images.basicBbNavMineBacIphone
+                  .image(fit: BoxFit.fitWidth)),
+          CustomScrollView(
+            slivers: [
+              SliverAppBar(
+                pinned: true,
+                backgroundColor: Colors.transparent,
+                surfaceTintColor: Colors.transparent,
+              ),
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15, right: 15),
+                  child: Column(
+                    children: [
+                      _AvatarWidget(avatarWidth: avatarWidth, appear: appear),
+                      SizedBox(height: 16),
+                      _NumberRowWidget(appear: appear),
+                      SizedBox(height: 10),
+                      Card(
                         color: Colors.white,
-                        elevation: 0.6,
+                        elevation: 0.4,
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                          child: Row(
                             children: [
+                              Expanded(child: _SubRowWidget()),
+                              SizedBox(width: 12),
                               Text(
-                                "常用功能",
+                                "|",
                                 style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.w800),
+                                    color: Colors.black12, fontSize: 14),
                               ),
-                              SizedBox(height: 10),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  for (int i = 0; i < 4; i++)
-                                    _FrequentFunWidget()
-                                ],
-                              )
+                              SizedBox(width: 12),
+                              Expanded(child: _SubRowWidget()),
                             ],
                           ),
-                        ))
-                  ],
+                        ),
+                      ),
+                      Container(
+                        // color: Colors.green,
+                        child: Card(
+                            color: Colors.white,
+                            elevation: 0.6,
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "常用功能",
+                                    style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w800),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      for (int i = 0; i < 4; i++)
+                                        _FrequentFunWidget()
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )),
+                      )
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
-        ),
-      ],
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
