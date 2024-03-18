@@ -1,3 +1,4 @@
+import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -12,10 +13,16 @@ class PositionListWidget extends StatelessWidget {
     context.read<Appearance>();
     return Column(
       children: [
-        AppBar(title: Text("aaa")),
+        AppBar(
+          title: Text("aaa"),
+
+          // flexibleSpace: FlexibleSpaceBar(
+          //     // background: Assets.images.basicBbNavBacIphone.image(),
+          //     ),
+        ),
         Expanded(
           child: ListView.builder(
-              itemCount: 100,
+              itemCount: 20,
               itemBuilder: (context, index) {
                 return PostionItemWidget();
               }),
