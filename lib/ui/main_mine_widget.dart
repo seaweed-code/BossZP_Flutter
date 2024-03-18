@@ -55,13 +55,54 @@ class MainMineWidget extends StatelessWidget {
                           ],
                         ),
                       ),
-                    )
+                    ),
+                    Card(
+                        color: Colors.white,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("常用功能"),
+                            SizedBox(height: 10),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                for (int i = 0; i < 4; i++) _FrequentFunWidget()
+                              ],
+                            )
+                          ],
+                        ))
                   ],
                 ),
               ),
             ),
           ],
         ),
+      ],
+    );
+  }
+}
+
+class _FrequentFunWidget extends StatelessWidget {
+  const _FrequentFunWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Icon(Icons.g_translate_outlined),
+        Text(
+          "在线简历",
+          style: TextStyle(color: appear.titleColor, fontSize: 12),
+        ),
+        SizedBox(height: 3),
+        Text(
+          "待优化5项",
+          style: TextStyle(color: appear.subTitleColor, fontSize: 10),
+        )
       ],
     );
   }
