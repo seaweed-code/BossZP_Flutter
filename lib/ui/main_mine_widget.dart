@@ -183,16 +183,10 @@ class _OtherFunsWidget extends StatelessWidget {
                               size: 35,
                             ),
                             Text(
-                              "在线简历",
+                              "企业洞察",
                               style: TextStyle(
                                   color: appear.titleColor, fontSize: 12),
                             ),
-                            SizedBox(height: 3),
-                            Text(
-                              "待优化5项",
-                              style: TextStyle(
-                                  color: appear.subTitleColor, fontSize: 10),
-                            )
                           ],
                         )
                     ],
