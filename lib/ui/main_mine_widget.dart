@@ -1,6 +1,7 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
@@ -10,7 +11,8 @@ class MainMineWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final avatarWidth = 58.0;
+    const avatarWidth = 58.0;
+    final scrollControlller = ScrollController();
     final appear = context.read<Appearance>();
     return Container(
       color: appear.backgroundColor,
@@ -23,12 +25,9 @@ class MainMineWidget extends StatelessWidget {
               child: Assets.images.basicBbNavMineBacIphone
                   .image(fit: BoxFit.fitWidth)),
           CustomScrollView(
+            controller: scrollControlller,
             slivers: [
-              SliverAppBar(
-                pinned: true,
-                backgroundColor: Colors.transparent,
-                surfaceTintColor: Colors.transparent,
-              ),
+              _AnimatedAppBar(controller: scrollControlller),
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15, right: 15),
@@ -76,6 +75,57 @@ class MainMineWidget extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _AnimatedAppBar extends StatefulWidget {
+  _AnimatedAppBar({super.key, required this.controller, this.maxOffset = 58.0});
+  final ScrollController controller;
+
+  final maxOffset;
+  @override
+  State<_AnimatedAppBar> createState() => _AnimatedAppBarState();
+}
+
+class _AnimatedAppBarState extends State<_AnimatedAppBar> {
+  double offset = 0;
+
+  @override
+  void initState() {
+    widget.controller.addListener(_onscroll);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    widget.controller.removeListener(_onscroll);
+    super.dispose();
+  }
+
+  void _onscroll() {
+    final position = widget.controller.position;
+    final dx = clampDouble(position.pixels, 0, widget.maxOffset);
+
+    if (offset != dx) {
+      setState(() {
+        offset = dx;
+      });
+    }
+    print(dx);
+    print(widget.controller.position);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverAppBar(
+      pinned: true,
+      // flexibleSpace: FlexibleSpaceBar(
+      //     background:
+      //         Assets.images.basicBbNavBacIphone.image(fit: BoxFit.cover)),
+      backgroundColor:
+          Colors.white.withAlpha((offset * (255 / widget.maxOffset)).toInt()),
+      surfaceTintColor: Colors.transparent,
     );
   }
 }
