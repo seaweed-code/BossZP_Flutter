@@ -40,7 +40,7 @@ class MainMineWidget extends StatelessWidget {
                       SizedBox(height: 10),
                       Card(
                         color: Colors.white,
-                        elevation: 0.4,
+                        elevation: 0.0,
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: Row(
@@ -58,35 +58,32 @@ class MainMineWidget extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        // color: Colors.green,
-                        child: Card(
-                            color: Colors.white,
-                            elevation: 0.6,
-                            child: Padding(
-                              padding: const EdgeInsets.all(12.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "常用功能",
-                                    style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w800),
-                                  ),
-                                  SizedBox(height: 10),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      for (int i = 0; i < 4; i++)
-                                        _FrequentFunWidget()
-                                    ],
-                                  )
-                                ],
-                              ),
-                            )),
-                      )
+                      Card(
+                          color: Colors.white,
+                          elevation: 0.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "常用功能",
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                                SizedBox(height: 10),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    for (int i = 0; i < 4; i++)
+                                      _FrequentFunWidget()
+                                  ],
+                                )
+                              ],
+                            ),
+                          ))
                     ],
                   ),
                 ),
