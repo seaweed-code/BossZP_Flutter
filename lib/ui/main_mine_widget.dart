@@ -66,32 +66,7 @@ class MainMineWidget extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Card(
-                          color: Colors.white,
-                          elevation: 0.0,
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "常用功能",
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w800),
-                                ),
-                                SizedBox(height: 10),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    for (int i = 0; i < 4; i++)
-                                      _FrequentFunWidget()
-                                  ],
-                                )
-                              ],
-                            ),
-                          )),
+                      _FrequentFunWidget(),
                       _OtherFunsWidget()
                     ],
                   ),
@@ -105,6 +80,59 @@ class MainMineWidget extends StatelessWidget {
   }
 }
 
+class _FrequentFunWidget extends StatelessWidget {
+  const _FrequentFunWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    return Card(
+        color: Colors.white,
+        elevation: 0.0,
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "常用功能",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  for (int i = 0; i < 4; i++)
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.g_translate_outlined,
+                          size: 35,
+                        ),
+                        Text(
+                          "在线简历",
+                          style:
+                              TextStyle(color: appear.titleColor, fontSize: 12),
+                        ),
+                        SizedBox(height: 3),
+                        Text(
+                          "待优化5项",
+                          style: TextStyle(
+                              color: appear.subTitleColor, fontSize: 10),
+                        )
+                      ],
+                    )
+                ],
+              )
+            ],
+          ),
+        ));
+  }
+}
+
 class _OtherFunsWidget extends StatelessWidget {
   const _OtherFunsWidget({
     super.key,
@@ -112,6 +140,7 @@ class _OtherFunsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Appearance appear = context.read();
     return Card(
         color: Colors.white,
         elevation: 0.0,
@@ -145,42 +174,33 @@ class _OtherFunsWidget extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      for (int i = 0; i < 4; i++) _FrequentFunWidget()
+                      for (int i = 0; i < 4; i++)
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.g_translate_outlined,
+                              size: 35,
+                            ),
+                            Text(
+                              "在线简历",
+                              style: TextStyle(
+                                  color: appear.titleColor, fontSize: 12),
+                            ),
+                            SizedBox(height: 3),
+                            Text(
+                              "待优化5项",
+                              style: TextStyle(
+                                  color: appear.subTitleColor, fontSize: 10),
+                            )
+                          ],
+                        )
                     ],
                   ),
                 )
             ],
           ),
         ));
-  }
-}
-
-class _FrequentFunWidget extends StatelessWidget {
-  const _FrequentFunWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final Appearance appear = context.read();
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Icon(
-          Icons.g_translate_outlined,
-          size: 35,
-        ),
-        Text(
-          "在线简历",
-          style: TextStyle(color: appear.titleColor, fontSize: 12),
-        ),
-        SizedBox(height: 3),
-        Text(
-          "待优化5项",
-          style: TextStyle(color: appear.subTitleColor, fontSize: 10),
-        )
-      ],
-    );
   }
 }
 
