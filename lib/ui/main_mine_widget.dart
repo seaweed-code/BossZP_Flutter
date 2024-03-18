@@ -38,8 +38,7 @@ class MainMineWidget extends StatelessWidget {
                     SizedBox(height: 10),
                     Card(
                       color: Colors.white,
-                      // margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                      elevation: 0,
+                      elevation: 0.4,
                       child: Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: Row(
