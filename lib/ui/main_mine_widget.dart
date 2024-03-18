@@ -58,6 +58,7 @@ class MainMineWidget extends StatelessWidget {
                     ),
                     Card(
                         color: Colors.white,
+                        elevation: 0.6,
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: Column(
@@ -104,7 +105,7 @@ class _FrequentFunWidget extends StatelessWidget {
       children: [
         Icon(
           Icons.g_translate_outlined,
-          size: 40,
+          size: 35,
         ),
         Text(
           "在线简历",
