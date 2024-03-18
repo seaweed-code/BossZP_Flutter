@@ -28,37 +28,54 @@ class MainMineWidget extends StatelessWidget {
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15),
-                child: Row(
-                  children: [
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(avatarWidth / 2),
-                        child: Assets.images.avatar1Iphone
-                            .image(width: avatarWidth, height: avatarWidth)),
-                    SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "李孝利",
-                          style: TextStyle(
-                              color: appear.titleColor,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w900),
-                        ),
-                        // SizedBox(height: 3),
-                        Text(
-                          "简历评分80分，建议优化",
-                          style: TextStyle(
-                              color: appear.subTitleColor, fontSize: 13),
-                        )
-                      ],
-                    )
-                  ],
-                ),
+                child: _AvatarWidget(avatarWidth: avatarWidth, appear: appear),
               ),
             ),
           ],
         ),
+      ],
+    );
+  }
+}
+
+class _AvatarWidget extends StatelessWidget {
+  const _AvatarWidget({
+    super.key,
+    required this.avatarWidth,
+    required this.appear,
+  });
+
+  final double avatarWidth;
+  final Appearance appear;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        ClipRRect(
+            borderRadius: BorderRadius.circular(avatarWidth / 2),
+            child: Assets.images.avatar1Iphone
+                .image(width: avatarWidth, height: avatarWidth)),
+        SizedBox(width: 10),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "李孝利",
+              style: TextStyle(
+                  color: appear.titleColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w900),
+            ),
+            // SizedBox(height: 3),
+            Text(
+              "简历评分80分，建议优化",
+              style: TextStyle(color: appear.subTitleColor, fontSize: 13),
+            )
+          ],
+        ),
+        Spacer(),
+        Assets.images.basicMoreArrowiphone.image(width: 45, height: 45)
       ],
     );
   }
