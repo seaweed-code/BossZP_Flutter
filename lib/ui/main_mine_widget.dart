@@ -57,9 +57,6 @@ class MainMineWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SliverToBoxAdapter(
-              child: Placeholder(),
-            )
           ],
         ),
       ],

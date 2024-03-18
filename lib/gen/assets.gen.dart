@@ -48,6 +48,16 @@ class $AssetsImagesGen {
   AssetGenImage get basicCommonAlertAdCloseIphone => const AssetGenImage(
       'assets/images/basic_common_alert_ad_close_iphone.png');
 
+  /// File path: assets/images/basic_more_arrowiphone.png
+  AssetGenImage get basicMoreArrowiphone =>
+      const AssetGenImage('assets/images/basic_more_arrowiphone.png');
+
+  /// File path: assets/images/nav_theme_bgiphone.png
+  AssetGenImage get navThemeBgiphone =>
+      const AssetGenImage('assets/images/nav_theme_bgiphone.png');
+
+  $AssetsImagesWebpGen get webp => const $AssetsImagesWebpGen();
+
   /// List of all assets
   List<AssetGenImage> get values => [
         avatar0Iphone,
@@ -58,7 +68,107 @@ class $AssetsImagesGen {
         basicBackCycleIphone,
         basicBbNavBacIphone,
         basicBbNavMineBacIphone,
-        basicCommonAlertAdCloseIphone
+        basicCommonAlertAdCloseIphone,
+        basicMoreArrowiphone,
+        navThemeBgiphone
+      ];
+}
+
+class $AssetsImagesWebpGen {
+  const $AssetsImagesWebpGen();
+
+  /// File path: assets/images/webp/niuren-dark.webp
+  AssetGenImage get niurenDark =>
+      const AssetGenImage('assets/images/webp/niuren-dark.webp');
+
+  /// File path: assets/images/webp/niuren.webp
+  AssetGenImage get niuren =>
+      const AssetGenImage('assets/images/webp/niuren.webp');
+
+  /// File path: assets/images/webp/sousuo-dark.webp
+  AssetGenImage get sousuoDark =>
+      const AssetGenImage('assets/images/webp/sousuo-dark.webp');
+
+  /// File path: assets/images/webp/sousuo.webp
+  AssetGenImage get sousuo =>
+      const AssetGenImage('assets/images/webp/sousuo.webp');
+
+  /// File path: assets/images/webp/wode-b-dark.webp
+  AssetGenImage get wodeBDark =>
+      const AssetGenImage('assets/images/webp/wode-b-dark.webp');
+
+  /// File path: assets/images/webp/wode-b.webp
+  AssetGenImage get wodeB =>
+      const AssetGenImage('assets/images/webp/wode-b.webp');
+
+  /// File path: assets/images/webp/wode-c-dark.webp
+  AssetGenImage get wodeCDark =>
+      const AssetGenImage('assets/images/webp/wode-c-dark.webp');
+
+  /// File path: assets/images/webp/wode-c.webp
+  AssetGenImage get wodeC =>
+      const AssetGenImage('assets/images/webp/wode-c.webp');
+
+  /// File path: assets/images/webp/xiaoxi-b-dark.webp
+  AssetGenImage get xiaoxiBDark =>
+      const AssetGenImage('assets/images/webp/xiaoxi-b-dark.webp');
+
+  /// File path: assets/images/webp/xiaoxi-b.webp
+  AssetGenImage get xiaoxiB =>
+      const AssetGenImage('assets/images/webp/xiaoxi-b.webp');
+
+  /// File path: assets/images/webp/xiaoxi-c-dark.webp
+  AssetGenImage get xiaoxiCDark =>
+      const AssetGenImage('assets/images/webp/xiaoxi-c-dark.webp');
+
+  /// File path: assets/images/webp/xiaoxi-c.webp
+  AssetGenImage get xiaoxiC =>
+      const AssetGenImage('assets/images/webp/xiaoxi-c.webp');
+
+  /// File path: assets/images/webp/youle-dark.webp
+  AssetGenImage get youleDark =>
+      const AssetGenImage('assets/images/webp/youle-dark.webp');
+
+  /// File path: assets/images/webp/youle.webp
+  AssetGenImage get youle =>
+      const AssetGenImage('assets/images/webp/youle.webp');
+
+  /// File path: assets/images/webp/zhibo-dark.webp
+  AssetGenImage get zhiboDark =>
+      const AssetGenImage('assets/images/webp/zhibo-dark.webp');
+
+  /// File path: assets/images/webp/zhibo.webp
+  AssetGenImage get zhibo =>
+      const AssetGenImage('assets/images/webp/zhibo.webp');
+
+  /// File path: assets/images/webp/zhiwei-dark.webp
+  AssetGenImage get zhiweiDark =>
+      const AssetGenImage('assets/images/webp/zhiwei-dark.webp');
+
+  /// File path: assets/images/webp/zhiwei.webp
+  AssetGenImage get zhiwei =>
+      const AssetGenImage('assets/images/webp/zhiwei.webp');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        niurenDark,
+        niuren,
+        sousuoDark,
+        sousuo,
+        wodeBDark,
+        wodeB,
+        wodeCDark,
+        wodeC,
+        xiaoxiBDark,
+        xiaoxiB,
+        xiaoxiCDark,
+        xiaoxiC,
+        youleDark,
+        youle,
+        zhiboDark,
+        zhibo,
+        zhiweiDark,
+        zhiwei
       ];
 }
 
