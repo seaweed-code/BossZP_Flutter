@@ -39,7 +39,15 @@ class MainMineWidget extends StatelessWidget {
                       color: Colors.white,
                       elevation: 0,
                       child: Row(
-                        children: [Text("|")],
+                        children: [
+                          _SubRowWidget(),
+                          Spacer(),
+                          Text(
+                            "|",
+                          ),
+                          Spacer(),
+                          _SubRowWidget(),
+                        ],
                       ),
                     )
                   ],
@@ -48,6 +56,42 @@ class MainMineWidget extends StatelessWidget {
             ),
           ],
         ),
+      ],
+    );
+  }
+}
+
+class _SubRowWidget extends StatelessWidget {
+  const _SubRowWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    return Row(
+      children: [
+        Icon(
+          Icons.voice_over_off,
+          size: 20,
+        ),
+        SizedBox(width: 4), // height)
+        Text(
+          "简历刷新",
+          style: TextStyle(
+              color: appear.titleColor,
+              fontSize: 15,
+              fontWeight: FontWeight.w600),
+        ),
+        Text(
+          "提升曝光",
+          style: TextStyle(
+              color: Colors.black45,
+              fontSize: 12,
+              fontWeight: FontWeight.normal),
+        ),
+        SizedBox(width: 5),
+        Assets.images.basicMoreArrowiphone.image(),
       ],
     );
   }
