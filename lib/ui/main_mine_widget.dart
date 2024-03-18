@@ -109,7 +109,8 @@ class MainMineWidget extends StatelessWidget {
                                 SizedBox(height: 10),
                                 for (int idx = 0; idx < 3; idx++)
                                   Padding(
-                                    padding: const EdgeInsets.only(bottom: 10),
+                                    padding: EdgeInsets.only(
+                                        bottom: (idx == 3 - 1) ? 0 : 20),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
