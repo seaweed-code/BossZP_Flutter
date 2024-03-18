@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -42,7 +43,9 @@ class FollowItemWidget extends StatelessWidget {
                         style: TextStyle(
                             color: appearance.blueColor, fontSize: 12),
                       )),
-                  TextButton(onPressed: () {}, child: Text("..."))
+                  IconButton(
+                      onPressed: () {},
+                      icon: Assets.images.bzCompanyBlackIconMoreIphone.image())
                 ],
               ),
               if (answeredQuestion != null) SizedBox(height: 6),
