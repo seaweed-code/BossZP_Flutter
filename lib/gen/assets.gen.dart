@@ -60,6 +60,14 @@ class $AssetsImagesGen {
   AssetGenImage get navThemeBgiphone =>
       const AssetGenImage('assets/images/nav_theme_bgiphone.png');
 
+  /// File path: assets/images/setting_contact_search_icon_iphone.png
+  AssetGenImage get settingContactSearchIconIphone => const AssetGenImage(
+      'assets/images/setting_contact_search_icon_iphone.png');
+
+  /// File path: assets/images/setting_detail_icon_iphone.png
+  AssetGenImage get settingDetailIconIphone =>
+      const AssetGenImage('assets/images/setting_detail_icon_iphone.png');
+
   /// File path: assets/images/setting_more_arrow_iphone.png
   AssetGenImage get settingMoreArrowIphone =>
       const AssetGenImage('assets/images/setting_more_arrow_iphone.png');
@@ -80,6 +88,8 @@ class $AssetsImagesGen {
         basicMoreArrowiphone,
         bzCompanyBlackIconMoreIphone,
         navThemeBgiphone,
+        settingContactSearchIconIphone,
+        settingDetailIconIphone,
         settingMoreArrowIphone
       ];
 }

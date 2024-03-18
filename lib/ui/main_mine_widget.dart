@@ -178,10 +178,8 @@ class _OtherFunsWidget extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Icon(
-                              Icons.g_translate_outlined,
-                              size: 35,
-                            ),
+                            Assets.images.settingDetailIconIphone.image(),
+                            SizedBox(height: 5),
                             Text(
                               "企业洞察",
                               style: TextStyle(
