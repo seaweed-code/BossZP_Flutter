@@ -56,6 +56,10 @@ class $AssetsImagesGen {
   AssetGenImage get navThemeBgiphone =>
       const AssetGenImage('assets/images/nav_theme_bgiphone.png');
 
+  /// File path: assets/images/setting_more_arrow_iphone.png
+  AssetGenImage get settingMoreArrowIphone =>
+      const AssetGenImage('assets/images/setting_more_arrow_iphone.png');
+
   $AssetsImagesWebpGen get webp => const $AssetsImagesWebpGen();
 
   /// List of all assets
@@ -70,7 +74,8 @@ class $AssetsImagesGen {
         basicBbNavMineBacIphone,
         basicCommonAlertAdCloseIphone,
         basicMoreArrowiphone,
-        navThemeBgiphone
+        navThemeBgiphone,
+        settingMoreArrowIphone
       ];
 }
 

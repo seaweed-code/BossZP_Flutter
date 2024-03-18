@@ -117,7 +117,7 @@ class _AvatarWidget extends StatelessWidget {
           ],
         ),
         Spacer(),
-        Assets.images.basicMoreArrowiphone.image(width: 45, height: 45)
+        Assets.images.settingMoreArrowIphone.image()
       ],
     );
   }
