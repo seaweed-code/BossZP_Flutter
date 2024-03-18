@@ -91,6 +91,36 @@ class MainMineWidget extends StatelessWidget {
                                 )
                               ],
                             ),
+                          )),
+                      Card(
+                          color: Colors.white,
+                          elevation: 0.0,
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "常用功能",
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w800),
+                                ),
+                                SizedBox(height: 10),
+                                for (int idx = 0; idx < 3; idx++)
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 10),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceAround,
+                                      children: [
+                                        for (int i = 0; i < 4; i++)
+                                          _FrequentFunWidget()
+                                      ],
+                                    ),
+                                  )
+                              ],
+                            ),
                           ))
                     ],
                   ),
