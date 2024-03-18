@@ -15,17 +15,20 @@ class PositionListWidget extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
-          leadingWidth: 200,
+          leadingWidth: double.infinity,
           // title: Text("aaa"),
           // centerTitle: true,
-          leading: Text(
-            "iOS-----乒乒乓乓",
-            style: TextStyle(
-                color: appear.titleColor,
-                fontSize: 18,
-                fontWeight: FontWeight.bold),
-            maxLines: 1,,
-            overflow: TextOverflow.ellipsis,
+          leading: Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "Flutter",
+              style: TextStyle(
+                  color: appear.titleColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
           pinned: true,
           actions: [
