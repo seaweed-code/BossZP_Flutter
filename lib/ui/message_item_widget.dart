@@ -12,7 +12,7 @@ class MessageItemWidget extends StatelessWidget {
     final appear = context.read<Appearance>();
     final avatarWidth = 48.0;
     return Padding(
-      padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
+      padding: const EdgeInsets.fromLTRB(15, 15, 15, 15),
       child: Row(
         children: [
           ClipRRect(
