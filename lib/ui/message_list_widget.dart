@@ -39,7 +39,8 @@ class _MessageListWidgetState extends State<MessageListWidget> {
           pinned: true,
           // floating: true,
         ),
-        SliverList.builder(
+        SliverPrototypeExtentList.builder(
+          prototypeItem: MessageItemWidget(leading: leading),
           itemCount: 30,
           itemBuilder: (context, index) {
             return MessageItemWidget(
