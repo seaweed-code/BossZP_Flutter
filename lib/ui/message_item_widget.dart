@@ -41,16 +41,16 @@ class MessageItemWidget extends StatelessWidget {
                         "李女士",
                         textAlign: TextAlign.end,
                         style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 18,
                             fontWeight: FontWeight.normal,
-                            color: appear.titleColor),
+                            color: Color(0xFF232323)),
                       ),
                       SizedBox(width: 8),
                       Text(
-                        "bibili-HRM",
+                        "bibili-iOS工程师",
                         textAlign: TextAlign.end,
                         style: TextStyle(
-                            fontSize: 13,
+                            fontSize: 14,
                             fontWeight: FontWeight.normal,
                             color: Color(0xFF969696)),
                       ),
@@ -75,7 +75,7 @@ class MessageItemWidget extends StatelessWidget {
                       ]),
                       style: TextStyle(
                         color: Color(0xFFB8B8B8),
-                        fontSize: 14,
+                        fontSize: 15,
                       ),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1)
