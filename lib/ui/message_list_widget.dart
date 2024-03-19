@@ -57,6 +57,7 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
       padding: EdgeInsets.only(left: leading, right: leading),
       height: maxExtent,
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Text(
             "全部",
