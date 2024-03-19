@@ -43,10 +43,10 @@ class _AppBarWidget extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(left: 15),
           child: Text(
-            "Flutter",
+            "iOS",
             style: TextStyle(
                 color: appear.titleColor,
-                fontSize: 18,
+                fontSize: 26,
                 fontWeight: FontWeight.bold),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
