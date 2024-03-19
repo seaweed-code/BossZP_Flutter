@@ -27,6 +27,11 @@ class MessageListWidget extends StatelessWidget {
                 background: Assets.images.basicBgNaviBackImgIphone
                     .image(fit: BoxFit.cover))),
         _SearchBarWidget(leading: leading, appear: appear),
+        SliverPersistentHeader(
+          delegate: _SliverHeaderDelegate(),
+          pinned: true,
+          // floating: true,
+        ),
         SliverList.builder(
           itemCount: 30,
           itemBuilder: (context, index) {
@@ -37,6 +42,28 @@ class MessageListWidget extends StatelessWidget {
         )
       ],
     );
+  }
+}
+
+class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
+  @override
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
+    final Appearance appearance = context.read();
+    return Container(color: Colors.white);
+  }
+
+  @override
+  // TODO: implement maxExtent
+  double get maxExtent => 50;
+
+  @override
+  // TODO: implement minExtent
+  double get minExtent => 50;
+
+  @override
+  bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) {
+    return true;
   }
 }
 

@@ -11,7 +11,8 @@ class MessageItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
     final avatarWidth = 50.0;
-    return Padding(
+    return Container(
+      color: Colors.white,
       padding: EdgeInsets.fromLTRB(leading, 15, leading, 15),
       child: Row(
         children: [
