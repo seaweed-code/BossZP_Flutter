@@ -41,7 +41,7 @@ class _MessageListWidgetState extends State<MessageListWidget> {
         ),
         SliverPrototypeExtentList.builder(
           prototypeItem: MessageItemWidget(leading: leading),
-          itemCount: 30,
+          itemCount: 300,
           itemBuilder: (context, index) {
             return MessageItemWidget(
               leading: leading,
