@@ -80,7 +80,7 @@ class MainMineWidget extends StatelessWidget {
 }
 
 class _AnimatedAppBar extends StatefulWidget {
-  _AnimatedAppBar({super.key, required this.controller, this.maxOffset = 58.0});
+  _AnimatedAppBar({super.key, required this.controller, this.maxOffset = 28.0});
   final ScrollController controller;
 
   final maxOffset;
@@ -112,20 +112,22 @@ class _AnimatedAppBarState extends State<_AnimatedAppBar> {
         offset = dx;
       });
     }
-    print(dx);
-    print(widget.controller.position);
   }
 
   @override
   Widget build(BuildContext context) {
+    final opacity = offset * (1.0 / widget.maxOffset);
+    print(opacity);
     return SliverAppBar(
       pinned: true,
-      // flexibleSpace: FlexibleSpaceBar(
-      //     background:
-      //         Assets.images.basicBbNavBacIphone.image(fit: BoxFit.cover)),
-      backgroundColor:
-          Colors.white.withAlpha((offset * (255 / widget.maxOffset)).toInt()),
-      surfaceTintColor: Colors.transparent,
+      flexibleSpace: FlexibleSpaceBar(
+          background: Opacity(
+              opacity: opacity,
+              child:
+                  Assets.images.basicBbNavBacIphone.image(fit: BoxFit.cover))),
+      // backgroundColor:
+      //     Colors.white.withAlpha((offset * (255 / widget.maxOffset)).toInt()),
+      // surfaceTintColor: Colors.transparent,
     );
   }
 }
