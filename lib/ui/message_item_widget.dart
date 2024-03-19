@@ -9,22 +9,22 @@ class MessageItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
-    final avatarWidth = 44.0;
+    final avatarWidth = 48.0;
     return Padding(
       padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
       child: Row(
         children: [
-          // ClipRRect(
-          //   borderRadius: BorderRadius.circular(avatarWidth / 2),
-          //   child: CachedNetworkImage(
-          //     width: avatarWidth,
-          //     height: avatarWidth,
-          //     fit: BoxFit.cover,
-          //     placeholder: (context, url) => const CircularProgressIndicator(),
-          //     imageUrl:
-          //         'https://k.sinaimg.cn/n/sinakd20117/192/w1696h1696/20240131/3dd7-94af50d27027ceae9ccc3d13760a2f7c.jpg/w700d1q75cms.jpg',
-          //   ),
-          // ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(avatarWidth / 2),
+            child: CachedNetworkImage(
+              width: avatarWidth,
+              height: avatarWidth,
+              fit: BoxFit.cover,
+              placeholder: (context, url) => const CircularProgressIndicator(),
+              imageUrl:
+                  'https://k.sinaimg.cn/n/sinakd20117/192/w1696h1696/20240131/3dd7-94af50d27027ceae9ccc3d13760a2f7c.jpg/w700d1q75cms.jpg',
+            ),
+          ),
           SizedBox(width: 12),
           Expanded(
             child: Container(
@@ -38,7 +38,7 @@ class MessageItemWidget extends StatelessWidget {
                         "李女士",
                         textAlign: TextAlign.end,
                         style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 16,
                             fontWeight: FontWeight.normal,
                             color: appear.titleColor),
                       ),
@@ -47,7 +47,7 @@ class MessageItemWidget extends StatelessWidget {
                         "bibili-HRM",
                         textAlign: TextAlign.end,
                         style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 13,
                             fontWeight: FontWeight.normal,
                             color: Color(0xFF969696)),
                       ),
@@ -56,7 +56,7 @@ class MessageItemWidget extends StatelessWidget {
                         "15:09",
                         textAlign: TextAlign.end,
                         style: TextStyle(
-                            fontSize: 11,
+                            fontSize: 13,
                             fontWeight: FontWeight.normal,
                             color: Color(0xFFB8B8B8)),
                       ),
@@ -72,7 +72,7 @@ class MessageItemWidget extends StatelessWidget {
                       ]),
                       style: TextStyle(
                         color: Color(0xFFB8B8B8),
-                        fontSize: 13,
+                        fontSize: 14,
                       ),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1)
