@@ -1,16 +1,19 @@
 import 'package:bosszp/gen/assets.gen.dart';
+import 'package:bosszp/model/appearance.dart';
 // import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/message_item_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:provider/provider.dart';
+import 'package:flutter/rendering.dart';
+import 'package:provider/provider.dart';
 
 class MessageListWidget extends StatelessWidget {
   const MessageListWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // context.read<Appearance>();
-
+    final appear = context.read<Appearance>();
+    final leading = 15.0;
     return CustomScrollView(
       slivers: [
         SliverAppBar(
@@ -23,10 +26,29 @@ class MessageListWidget extends StatelessWidget {
             flexibleSpace: FlexibleSpaceBar(
                 background: Assets.images.basicBgNaviBackImgIphone
                     .image(fit: BoxFit.cover))),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.only(left: leading, right: leading),
+            child: SizedBox(
+              height: 36,
+              child: TextField(
+                decoration: InputDecoration(
+                    hintText: '搜索联系人、公司、聊天记录',
+                    hintStyle: TextStyle(color: appear.timeColor),
+                    prefixIcon:
+                        Assets.images.settingContactSearchIconIphone.image(),
+                    border: OutlineInputBorder(),
+                    contentPadding: EdgeInsets.symmetric(vertical: 8.0)),
+              ),
+            ),
+          ),
+        ),
         SliverList.builder(
           itemCount: 30,
           itemBuilder: (context, index) {
-            return MessageItemWidget();
+            return MessageItemWidget(
+              leading: leading,
+            );
           },
         )
       ],

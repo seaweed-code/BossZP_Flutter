@@ -5,14 +5,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:provider/provider.dart';
 
 class MessageItemWidget extends StatelessWidget {
-  const MessageItemWidget({super.key});
-
+  const MessageItemWidget({super.key, this.leading = 15.0});
+  final leading;
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
     final avatarWidth = 50.0;
     return Padding(
-      padding: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+      padding: EdgeInsets.fromLTRB(leading, 15, leading, 15),
       child: Row(
         children: [
           ClipRRect(
