@@ -55,6 +55,21 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
   _SliverHeaderDelegate({required this.leading, required this.selected});
   final double leading;
   final ValueNotifier<int> selected;
+
+  TextStyle _getStyle(BuildContext context, int index) {
+    final Appearance appearance = context.read();
+    if (index == selected.value) {
+      return TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w600,
+          color: appearance.titleColor);
+    }
+    return TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.normal,
+        color: appearance.subTitleColor);
+  }
+
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
@@ -72,18 +87,12 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
             children: [
               Text(
                 "全部",
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.normal,
-                    color: appearance.subTitleColor),
+                style: _getStyle(context, 0),
               ),
               SizedBox(width: 20),
               Text(
                 "我发起",
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: appearance.titleColor),
+                style: _getStyle(context, 1),
               ),
               child!,
             ],
