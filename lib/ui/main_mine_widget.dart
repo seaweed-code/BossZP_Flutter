@@ -103,6 +103,12 @@ class _AnimatedAppBarState extends State<_AnimatedAppBar> {
     super.dispose();
   }
 
+  @override
+  void didUpdateWidget(covariant _AnimatedAppBar oldWidget) {
+    print("didUpdateWidget-----");
+    super.didUpdateWidget(oldWidget);
+  }
+
   void _onscroll() {
     final position = widget.controller.position;
     final dx = clampDouble(position.pixels, 0, widget.maxOffset);
@@ -117,7 +123,7 @@ class _AnimatedAppBarState extends State<_AnimatedAppBar> {
   @override
   Widget build(BuildContext context) {
     final opacity = offset * (1.0 / widget.maxOffset);
-    print(opacity);
+    // print(opacity);
     return SliverAppBar(
       pinned: true,
       flexibleSpace: FlexibleSpaceBar(
