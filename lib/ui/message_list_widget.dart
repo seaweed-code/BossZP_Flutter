@@ -56,6 +56,7 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
       color: Colors.white,
       padding: EdgeInsets.only(left: leading, right: leading),
       height: maxExtent,
+      alignment: Alignment.center,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
