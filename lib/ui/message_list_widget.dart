@@ -14,6 +14,11 @@ class MessageListWidget extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
+            actions: [
+              IconButton(
+                  onPressed: null,
+                  icon: Assets.images.bzGetNaviMsgGrayIconIphone.image())
+            ],
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
                 background: Assets.images.basicBgNaviBackImgIphone
