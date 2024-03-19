@@ -84,14 +84,24 @@ class _NavigationSwitchWidget extends StatelessWidget {
         builder: (context, _) {
           return Row(
             children: [
-              Text(
-                "聊天",
-                style: _getStyle(context, 0),
+              GestureDetector(
+                onTap: () {
+                  selected.value = 0;
+                },
+                child: Text(
+                  "聊天",
+                  style: _getStyle(context, 0),
+                ),
               ),
               SizedBox(width: 20),
-              Text(
-                "互动",
-                style: _getStyle(context, 1),
+              GestureDetector(
+                onTap: () {
+                  selected.value = 1;
+                },
+                child: Text(
+                  "互动",
+                  style: _getStyle(context, 1),
+                ),
               )
             ],
           );
