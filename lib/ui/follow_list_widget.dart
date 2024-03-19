@@ -9,12 +9,13 @@ class FollowListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const avatarWidth = 32.0;
+    const leading = 15.0;
     return Scaffold(
       appBar: AppBar(
           leading: Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: const EdgeInsets.only(left: 15),
+              padding: const EdgeInsets.only(left: leading),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(avatarWidth / 2),
                 child: Assets.images.avatar2Iphone
@@ -36,7 +37,9 @@ class FollowListWidget extends StatelessWidget {
       body: ListView.builder(
         itemCount: 20,
         itemBuilder: (context, index) {
-          return FollowItemWidget();
+          return FollowItemWidget(
+            leading: leading,
+          );
         },
       ),
     );

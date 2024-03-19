@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class FollowItemWidget extends StatelessWidget {
-  const FollowItemWidget({super.key, this.answeredQuestion});
+  const FollowItemWidget(
+      {super.key, this.answeredQuestion, required this.leading});
 
   final String? answeredQuestion;
+  final leading;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class FollowItemWidget extends StatelessWidget {
       color: appearance.backgroundColor,
       child: Card(
         color: Colors.white,
-        margin: EdgeInsets.fromLTRB(15, 5, 15, 5),
+        margin: EdgeInsets.fromLTRB(leading, 5, leading, 5),
         elevation: 0.5,
         child: Padding(
           padding: EdgeInsets.fromLTRB(8, 12, 8, 12),
