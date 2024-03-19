@@ -30,7 +30,7 @@ class PostionItemWidget extends StatelessWidget {
                       "iOS开发工程师",
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: appear.titleColor),
                     ),
@@ -40,8 +40,8 @@ class PostionItemWidget extends StatelessWidget {
                     "20-25K",
                     textAlign: TextAlign.end,
                     style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
                         color: context.read<Appearance>().blueColor),
                   )
                 ],
@@ -49,7 +49,7 @@ class PostionItemWidget extends StatelessWidget {
               SizedBox(height: 6),
               Text(
                 "腾讯 不需要融资 1000人以上",
-                style: TextStyle(fontSize: 12, color: appear.subTitleColor),
+                style: TextStyle(fontSize: 14, color: appear.subTitleColor),
               ),
               SizedBox(height: 6),
               Wrap(
@@ -66,7 +66,7 @@ class PostionItemWidget extends StatelessWidget {
                       child: Text(
                         "经验不限$i",
                         style: TextStyle(
-                            color: appear.subTitleColor, fontSize: 10),
+                            color: appear.subTitleColor, fontSize: 14),
                       ),
                     )
                 ],
@@ -79,7 +79,7 @@ class PostionItemWidget extends StatelessWidget {
                   Spacer(),
                   Text(
                     "东城区 - 建国门",
-                    style: TextStyle(fontSize: 10, color: appear.subTitleColor),
+                    style: TextStyle(fontSize: 14, color: appear.subTitleColor),
                   ),
                   IconButton(
                     splashColor: Colors.transparent,
@@ -115,12 +115,12 @@ class _PersonInfoWidget extends StatelessWidget {
       children: [
         Text(
           "张先生 - 人事总监",
-          style: TextStyle(fontSize: 10, color: Colors.black87),
+          style: TextStyle(fontSize: 14, color: Colors.black87),
         ),
         if (Random().nextBool())
           Text(
             "今日回复4次",
-            style: TextStyle(fontSize: 10, color: colorDark),
+            style: TextStyle(fontSize: 13, color: colorDark),
           )
       ],
     );
