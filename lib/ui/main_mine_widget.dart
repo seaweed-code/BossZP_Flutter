@@ -164,7 +164,7 @@ class _FrequentFunWidget extends StatelessWidget {
             children: [
               Text(
                 "常用功能",
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800),
               ),
               SizedBox(height: 10),
               Row(
@@ -216,13 +216,13 @@ class _OtherFunsWidget extends StatelessWidget {
                 children: [
                   Text(
                     "其他功能",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800),
                   ),
                   Spacer(),
                   Text(
                     "查看全部",
                     style: TextStyle(
-                        fontSize: 11,
+                        fontSize: 13,
                         fontWeight: FontWeight.normal,
                         color: Colors.black45),
                   ),
@@ -242,12 +242,12 @@ class _OtherFunsWidget extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Assets.images.settingDetailIconIphone.image(
-                                width: 25, height: 25, fit: BoxFit.cover),
+                                width: 30, height: 30, fit: BoxFit.cover),
                             SizedBox(height: 5),
                             Text(
                               "企业洞察",
                               style: TextStyle(
-                                  color: appear.titleColor, fontSize: 12),
+                                  color: appear.titleColor, fontSize: 14),
                             ),
                           ],
                         )
@@ -279,7 +279,7 @@ class _SubRowWidget extends StatelessWidget {
           "简历刷新",
           style: TextStyle(
               color: appear.titleColor,
-              fontSize: 14,
+              fontSize: 15,
               fontWeight: FontWeight.w600),
         ),
         Spacer(),
