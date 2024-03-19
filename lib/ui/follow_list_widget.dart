@@ -8,8 +8,20 @@ class FollowListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const avatarWidth = 32.0;
     return Scaffold(
       appBar: AppBar(
+          leading: Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(avatarWidth / 2),
+                child: Assets.images.avatar2Iphone
+                    .image(width: avatarWidth, height: avatarWidth),
+              ),
+            ),
+          ),
           actions: [
             IconButton(
                 onPressed: null,
