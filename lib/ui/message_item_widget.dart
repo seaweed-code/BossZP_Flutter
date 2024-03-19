@@ -1,3 +1,4 @@
+import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -16,14 +17,16 @@ class MessageItemWidget extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(avatarWidth / 2),
-            child: CachedNetworkImage(
-              width: avatarWidth,
-              height: avatarWidth,
-              fit: BoxFit.cover,
-              placeholder: (context, url) => const CircularProgressIndicator(),
-              imageUrl:
-                  'https://k.sinaimg.cn/n/sinakd20117/192/w1696h1696/20240131/3dd7-94af50d27027ceae9ccc3d13760a2f7c.jpg/w700d1q75cms.jpg',
-            ),
+            child: Assets.images.avatar3Iphone
+                .image(width: avatarWidth, height: avatarWidth),
+            // child: CachedNetworkImage(
+            //   width: avatarWidth,
+            //   height: avatarWidth,
+            //   fit: BoxFit.cover,
+            //   placeholder: (context, url) => const CircularProgressIndicator(),
+            //   imageUrl:
+            //       'https://k.sinaimg.cn/n/sinakd20117/192/w1696h1696/20240131/3dd7-94af50d27027ceae9ccc3d13760a2f7c.jpg/w700d1q75cms.jpg',
+            // ),
           ),
           SizedBox(width: 12),
           Expanded(
