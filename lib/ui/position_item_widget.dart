@@ -62,7 +62,7 @@ class PostionItemWidget extends StatelessWidget {
                   for (int i = 0; i < 3; i++)
                     Container(
                       decoration: BoxDecoration(
-                          color: Color(0xFFf5f5f5),
+                          color: appear.backgroundColor,
                           borderRadius: BorderRadius.circular(2)),
                       margin: EdgeInsets.fromLTRB(0, 0, 4, 0),
                       padding: EdgeInsets.fromLTRB(6, 3, 6, 3),
