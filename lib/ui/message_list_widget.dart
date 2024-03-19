@@ -73,6 +73,7 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
                 fontWeight: FontWeight.w700,
                 color: appearance.titleColor),
           ),
+          Assets.images.bzGetInterviewPositionSelectedIphone.image()
         ],
       ),
     );

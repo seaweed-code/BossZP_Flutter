@@ -249,6 +249,10 @@ class $AssetsImagesGen {
   AssetGenImage get bzGetInterviewExpectMenuAddIcon => const AssetGenImage(
       'assets/images/bz_get_interview_expect_menu_add_icon.png');
 
+  /// File path: assets/images/bz_get_interview_position_selected_iphone.png
+  AssetGenImage get bzGetInterviewPositionSelectedIphone => const AssetGenImage(
+      'assets/images/bz_get_interview_position_selected_iphone.png');
+
   /// File path: assets/images/bz_get_msg_navi_set_icon_iphone.png
   AssetGenImage get bzGetMsgNaviSetIconIphone =>
       const AssetGenImage('assets/images/bz_get_msg_navi_set_icon_iphone.png');
@@ -501,6 +505,7 @@ class $AssetsImagesGen {
         bzGetCardDetailInfoIconIphone,
         bzGetCardDetailLikeIconIphone,
         bzGetInterviewExpectMenuAddIcon,
+        bzGetInterviewPositionSelectedIphone,
         bzGetMsgNaviSetIconIphone,
         bzGetNaviMsgGrayIconIphone,
         bzGetNaviSearchIconIphone,
