@@ -73,7 +73,7 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-    final Appearance appearance = context.read();
+    // final Appearance appearance = context.read();
     return Container(
       color: Colors.white,
       padding: EdgeInsets.only(left: leading, right: leading),
