@@ -61,7 +61,7 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
           Text(
             "全部",
             style: TextStyle(
-                fontSize: 14,
+                fontSize: 16,
                 fontWeight: FontWeight.normal,
                 color: appearance.subTitleColor),
           ),
@@ -69,11 +69,12 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
           Text(
             "我发起",
             style: TextStyle(
-                fontSize: 14,
+                fontSize: 16,
                 fontWeight: FontWeight.w700,
                 color: appearance.titleColor),
           ),
-          Assets.images.bzGetInterviewPositionSelectedIphone.image()
+          Assets.images.bzGetInterviewPositionSelectedIphone
+              .image(fit: BoxFit.cover),
         ],
       ),
     );
