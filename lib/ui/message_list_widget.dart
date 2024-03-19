@@ -28,7 +28,7 @@ class MessageListWidget extends StatelessWidget {
                     .image(fit: BoxFit.cover))),
         _SearchBarWidget(leading: leading, appear: appear),
         SliverPersistentHeader(
-          delegate: _SliverHeaderDelegate(),
+          delegate: _SliverHeaderDelegate(leading: leading),
           pinned: true,
           // floating: true,
         ),
@@ -46,11 +46,28 @@ class MessageListWidget extends StatelessWidget {
 }
 
 class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
+  _SliverHeaderDelegate({required this.leading});
+  final double leading;
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     final Appearance appearance = context.read();
-    return Container(color: Colors.white);
+    return Container(
+      color: Colors.white,
+      padding: EdgeInsets.only(left: leading, right: leading),
+      height: maxExtent,
+      child: Row(
+        children: [
+          Text(
+            "全部",
+          ),
+          SizedBox(width: 15),
+          Text(
+            "我发起",
+          ),
+        ],
+      ),
+    );
   }
 
   @override
