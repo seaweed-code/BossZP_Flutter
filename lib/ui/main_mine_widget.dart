@@ -66,7 +66,8 @@ class MainMineWidget extends StatelessWidget {
                         ),
                       ),
                       _FrequentFunWidget(),
-                      _OtherFunsWidget()
+                      _OtherFunsWidget(),
+                      Placeholder()
                     ],
                   ),
                 ),
@@ -125,17 +126,28 @@ class _AnimatedAppBarState extends State<_AnimatedAppBar> {
   @override
   Widget build(BuildContext context) {
     final opacity = offset * (1.0 / widget.maxOffset);
-    // print(opacity);
+    final Appearance appear = context.read();
     return SliverAppBar(
       pinned: true,
+      actions: [
+        IconButton(
+            onPressed: null,
+            icon: Icon(
+              Icons.person,
+              color: appear.titleColor,
+            )),
+        IconButton(
+            onPressed: null,
+            icon: Icon(Icons.document_scanner, color: appear.titleColor)),
+        IconButton(
+            onPressed: null,
+            icon: Icon(Icons.settings, color: appear.titleColor))
+      ],
       flexibleSpace: FlexibleSpaceBar(
           background: Opacity(
               opacity: opacity,
               child:
                   Assets.images.basicBbNavBacIphone.image(fit: BoxFit.cover))),
-      // backgroundColor:
-      //     Colors.white.withAlpha((offset * (255 / widget.maxOffset)).toInt()),
-      // surfaceTintColor: Colors.transparent,
     );
   }
 }
