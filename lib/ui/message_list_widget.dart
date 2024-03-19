@@ -5,6 +5,7 @@ import 'package:bosszp/ui/message_item_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 class MessageListWidget extends StatefulWidget {
@@ -85,14 +86,24 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
           return Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text(
-                "全部",
-                style: _getStyle(context, 0),
+              GestureDetector(
+                onTap: () {
+                  selected.value = 0;
+                },
+                child: Text(
+                  "全部",
+                  style: _getStyle(context, 0),
+                ),
               ),
               SizedBox(width: 20),
-              Text(
-                "我发起",
-                style: _getStyle(context, 1),
+              GestureDetector(
+                onTap: () {
+                  selected.value = 1;
+                },
+                child: Text(
+                  "我发起",
+                  style: _getStyle(context, 1),
+                ),
               ),
               child!,
             ],
