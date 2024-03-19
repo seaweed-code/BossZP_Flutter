@@ -43,7 +43,7 @@ class MessageItemWidget extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.normal,
-                            color: Color(0xFF232323)),
+                            color: appear.titleColor),
                       ),
                       SizedBox(width: 8),
                       Text(
