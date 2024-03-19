@@ -10,7 +10,7 @@ class MessageItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
-    final avatarWidth = 48.0;
+    final avatarWidth = 50.0;
     return Padding(
       padding: const EdgeInsets.fromLTRB(15, 15, 15, 15),
       child: Row(
