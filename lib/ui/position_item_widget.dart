@@ -14,7 +14,7 @@ class PostionItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
-    const avatarWidth = 32.0;
+    const avatarWidth = 26.0;
     return Container(
       color: appear.backgroundColor,
       child: Card(
