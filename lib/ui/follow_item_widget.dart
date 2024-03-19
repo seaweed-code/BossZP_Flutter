@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -12,6 +13,7 @@ class FollowItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appearance = context.read<Appearance>();
+    const avatarWidth = 36.0;
     return Container(
       color: appearance.backgroundColor,
       child: Card(
@@ -26,7 +28,11 @@ class FollowItemWidget extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Icon(Icons.ac_unit_sharp),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(avatarWidth / 2),
+                    child: Assets.images.avatar2Iphone
+                        .image(width: avatarWidth, height: avatarWidth),
+                  ),
                   SizedBox(width: 6),
                   _PersonInfoWidget(colorDark: appearance.subTitleColor),
                   Spacer(),
@@ -120,12 +126,12 @@ class _PersonInfoWidget extends StatelessWidget {
         Text(
           "张先生 - 人事总监",
           style: TextStyle(
-              fontSize: 13, fontWeight: FontWeight.w600, color: Colors.black87),
+              fontSize: 14, fontWeight: FontWeight.w600, color: Colors.black87),
         ),
         if (Random().nextBool())
           Text(
             "今日回复4次",
-            style: TextStyle(fontSize: 10, color: colorDark),
+            style: TextStyle(fontSize: 12, color: colorDark),
           )
       ],
     );
