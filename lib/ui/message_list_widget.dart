@@ -72,7 +72,7 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
             "我发起",
             style: TextStyle(
                 fontSize: 16,
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w600,
                 color: appearance.titleColor),
           ),
           Padding(
