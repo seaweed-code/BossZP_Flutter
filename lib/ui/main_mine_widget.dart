@@ -44,7 +44,7 @@ class MainMineWidget extends StatelessWidget {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(12),
                               child: Assets.images.newBannerIphone
-                                  .image(fit: BoxFit.fitWidth),
+                                  .image(fit: BoxFit.fill, height: 80),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(15.0),
