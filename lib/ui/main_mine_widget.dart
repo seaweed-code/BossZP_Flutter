@@ -70,7 +70,7 @@ class MainMineWidget extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 15, 5, 20),
                         child: Text(
-                          "客服电话 400-065-5799 工作时间：8:00-22:00\n老年人直连热线 400-661-6030 工作时间：8:00-22:00",
+                          "客服电话 400-065-5799 工作时间：8:00-22:00\n老年人直连热线 400-661-6030 工作时间：8:00-22:00\n推荐算法举报与未成年人举报渠道同上\n人力资源服务许可证  营业执照  朝阳区人社局监督电话\n京ICP备案14013441号-23A  京ICP证150923号",
                           style: TextStyle(
                               color: appear.subTitleColor, fontSize: 14),
                           textAlign: TextAlign.center,
