@@ -33,11 +33,17 @@ class _MessageListWidgetState extends State<MessageListWidget> {
                     "聊天",
                     style: TextStyle(
                         color: appear.titleColor,
-                        fontSize: 34,
+                        fontSize: 32,
                         fontWeight: FontWeight.w900),
                   ),
                   SizedBox(width: 20),
-                  Text("互动")
+                  Text(
+                    "互动",
+                    style: TextStyle(
+                        color: appear.subTitleColor,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w900),
+                  )
                 ],
               ),
             ),
