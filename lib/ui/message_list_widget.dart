@@ -17,6 +17,7 @@ class MessageListWidget extends StatefulWidget {
 
 class _MessageListWidgetState extends State<MessageListWidget> {
   ValueNotifier<int> selected = ValueNotifier(0);
+  ValueNotifier<int> selected2 = ValueNotifier(0);
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
@@ -27,25 +28,7 @@ class _MessageListWidgetState extends State<MessageListWidget> {
             leadingWidth: double.infinity,
             leading: Padding(
               padding: const EdgeInsets.only(left: leading),
-              child: Row(
-                children: [
-                  Text(
-                    "聊天",
-                    style: TextStyle(
-                        color: appear.titleColor,
-                        fontSize: 32,
-                        fontWeight: FontWeight.w900),
-                  ),
-                  SizedBox(width: 20),
-                  Text(
-                    "互动",
-                    style: TextStyle(
-                        color: appear.subTitleColor,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w900),
-                  )
-                ],
-              ),
+              child: _NavigationSwitchWidget(selected: selected2),
             ),
             actions: [
               IconButton(
@@ -73,6 +56,46 @@ class _MessageListWidgetState extends State<MessageListWidget> {
         )
       ],
     );
+  }
+}
+
+class _NavigationSwitchWidget extends StatelessWidget {
+  const _NavigationSwitchWidget({
+    super.key,
+    required this.selected,
+  });
+
+  final ValueNotifier<int> selected;
+
+  TextStyle _getStyle(BuildContext context, int index) {
+    final Appearance appear = context.read();
+    if (index == selected.value) {
+      return TextStyle(
+          color: appear.titleColor, fontSize: 32, fontWeight: FontWeight.w900);
+    }
+    return TextStyle(
+        color: appear.subTitleColor, fontSize: 22, fontWeight: FontWeight.w900);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+        listenable: selected,
+        builder: (context, _) {
+          return Row(
+            children: [
+              Text(
+                "聊天",
+                style: _getStyle(context, 0),
+              ),
+              SizedBox(width: 20),
+              Text(
+                "互动",
+                style: _getStyle(context, 1),
+              )
+            ],
+          );
+        });
   }
 }
 
