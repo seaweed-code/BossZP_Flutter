@@ -24,6 +24,23 @@ class _MessageListWidgetState extends State<MessageListWidget> {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
+            leadingWidth: double.infinity,
+            leading: Padding(
+              padding: const EdgeInsets.only(left: leading),
+              child: Row(
+                children: [
+                  Text(
+                    "聊天",
+                    style: TextStyle(
+                        color: appear.titleColor,
+                        fontSize: 34,
+                        fontWeight: FontWeight.w900),
+                  ),
+                  SizedBox(width: 20),
+                  Text("互动")
+                ],
+              ),
+            ),
             actions: [
               IconButton(
                   onPressed: null,
@@ -41,7 +58,7 @@ class _MessageListWidgetState extends State<MessageListWidget> {
         ),
         SliverPrototypeExtentList.builder(
           prototypeItem: MessageItemWidget(leading: leading),
-          itemCount: 300,
+          itemCount: 30,
           itemBuilder: (context, index) {
             return MessageItemWidget(
               leading: leading,
