@@ -116,7 +116,6 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
             ],
           );
         },
-        // child: ,
       ),
     );
   }
