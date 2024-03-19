@@ -60,7 +60,7 @@ class _AppBarWidget extends StatelessWidget {
       ],
       flexibleSpace: FlexibleSpaceBar(
           background:
-              Assets.images.basicBbNavBacIphone.image(fit: BoxFit.cover)),
+              Assets.images.basicBgNaviBackImgIphone.image(fit: BoxFit.cover)),
     );
   }
 }
