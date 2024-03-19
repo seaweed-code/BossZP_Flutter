@@ -6,4 +6,5 @@ class Appearance {
   var subTitleColor = const Color(0xFF5e5e5e);
   var darkColor = const Color(0xFF848484);
   var blueColor = const Color(0xFF00888C);
+  var timeColor = const Color(0xFFB8B8B8);
 }

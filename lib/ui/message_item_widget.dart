@@ -52,7 +52,7 @@ class MessageItemWidget extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.normal,
-                            color: Color(0xFF969696)),
+                            color: appear.darkColor),
                       ),
                       Spacer(),
                       Text(
@@ -61,9 +61,8 @@ class MessageItemWidget extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.normal,
-                            color: Color(0xFFB8B8B8)),
+                            color: appear.timeColor),
                       ),
-                      // SizedBox(width: 8)
                     ],
                   ),
                   SizedBox(height: 3),
@@ -71,10 +70,10 @@ class MessageItemWidget extends StatelessWidget {
                       TextSpan(text: "[已读] ", children: [
                         TextSpan(
                             text: "嗯，好的，收到了，稍后给给您回复消息，耐心等候一下哈",
-                            style: TextStyle(color: Color(0XFF636363)))
+                            style: TextStyle(color: appear.subTitleColor))
                       ]),
                       style: TextStyle(
-                        color: Color(0xFFB8B8B8),
+                        color: appear.timeColor,
                         fontSize: 15,
                       ),
                       overflow: TextOverflow.ellipsis,
