@@ -174,20 +174,17 @@ class _FrequentFunWidget extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(
-                          Icons.g_translate_outlined,
-                          size: 35,
-                        ),
+                        Assets.images.bgResumeMbtiDidTestIconIphone.image(),
                         Text(
                           "在线简历",
                           style:
-                              TextStyle(color: appear.titleColor, fontSize: 12),
+                              TextStyle(color: appear.titleColor, fontSize: 14),
                         ),
                         SizedBox(height: 3),
                         Text(
                           "待优化5项",
                           style: TextStyle(
-                              color: appear.subTitleColor, fontSize: 10),
+                              color: appear.subTitleColor, fontSize: 12),
                         )
                       ],
                     )
