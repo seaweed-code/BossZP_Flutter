@@ -56,6 +56,10 @@ class $AssetsImagesGen {
   AssetGenImage get basicCommonAlertAdCloseIphone => const AssetGenImage(
       'assets/images/basic_common_alert_ad_close_iphone.png');
 
+  /// File path: assets/images/basic_loading_activity_cycle_iphone.png
+  AssetGenImage get basicLoadingActivityCycleIphone => const AssetGenImage(
+      'assets/images/basic_loading_activity_cycle_iphone.png');
+
   /// File path: assets/images/basic_more_arrowiphone.png
   AssetGenImage get basicMoreArrowiphone =>
       const AssetGenImage('assets/images/basic_more_arrowiphone.png');
@@ -64,9 +68,17 @@ class $AssetsImagesGen {
   AssetGenImage get bzCompanyBlackIconMoreIphone => const AssetGenImage(
       'assets/images/bz_company_black_icon_more_iphone.png');
 
+  /// File path: assets/images/bz_refresh_cycle_2_iphone.png
+  AssetGenImage get bzRefreshCycle2Iphone =>
+      const AssetGenImage('assets/images/bz_refresh_cycle_2_iphone.png');
+
   /// File path: assets/images/nav_theme_bgiphone.png
   AssetGenImage get navThemeBgiphone =>
       const AssetGenImage('assets/images/nav_theme_bgiphone.png');
+
+  /// File path: assets/images/new_banner_iphone.png
+  AssetGenImage get newBannerIphone =>
+      const AssetGenImage('assets/images/new_banner_iphone.png');
 
   /// File path: assets/images/setting_contact_search_icon_iphone.png
   AssetGenImage get settingContactSearchIconIphone => const AssetGenImage(
@@ -95,9 +107,12 @@ class $AssetsImagesGen {
         basicBgNavMineBackImgIphone,
         basicBgNaviBackImgIphone,
         basicCommonAlertAdCloseIphone,
+        basicLoadingActivityCycleIphone,
         basicMoreArrowiphone,
         bzCompanyBlackIconMoreIphone,
+        bzRefreshCycle2Iphone,
         navThemeBgiphone,
+        newBannerIphone,
         settingContactSearchIconIphone,
         settingDetailIconIphone,
         settingMoreArrowIphone

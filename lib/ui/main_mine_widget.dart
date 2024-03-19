@@ -1,5 +1,6 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -38,9 +39,12 @@ class MainMineWidget extends StatelessWidget {
                         color: Colors.white,
                         elevation: 0.0,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            Placeholder(
-                              fallbackHeight: 60,
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Assets.images.newBannerIphone
+                                  .image(fit: BoxFit.fitWidth),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(15.0),
