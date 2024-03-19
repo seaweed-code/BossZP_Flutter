@@ -64,11 +64,12 @@ class PostionItemWidget extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: appear.backgroundColor,
                           borderRadius: BorderRadius.circular(2)),
-                      margin: EdgeInsets.fromLTRB(0, 0, 4, 0),
-                      padding: EdgeInsets.fromLTRB(6, 3, 6, 3),
+                      margin: EdgeInsets.fromLTRB(0, 0, 6, 0),
+                      padding: EdgeInsets.fromLTRB(8, 3, 8, 3),
                       child: Text(
                         "经验不限$i",
-                        style: TextStyle(color: appear.darkColor, fontSize: 14),
+                        style: TextStyle(
+                            color: appear.subTitleColor, fontSize: 14),
                       ),
                     )
                 ],
