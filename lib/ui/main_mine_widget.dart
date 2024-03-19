@@ -91,7 +91,8 @@ class _AnimatedAppBar extends StatefulWidget {
 
 class _AnimatedAppBarState extends State<_AnimatedAppBar> {
   double offset = 0;
-
+  final backNavigation =
+      Assets.images.basicBbNavBacIphone.image(fit: BoxFit.cover);
   @override
   void initState() {
     widget.controller.addListener(_onscroll);
@@ -144,10 +145,7 @@ class _AnimatedAppBarState extends State<_AnimatedAppBar> {
             icon: Icon(Icons.settings, color: appear.titleColor))
       ],
       flexibleSpace: FlexibleSpaceBar(
-          background: Opacity(
-              opacity: opacity,
-              child:
-                  Assets.images.basicBbNavBacIphone.image(fit: BoxFit.cover))),
+          background: Opacity(opacity: opacity, child: backNavigation)),
     );
   }
 }
