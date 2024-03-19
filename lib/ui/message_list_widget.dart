@@ -95,7 +95,7 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
                   style: _getStyle(context, 0),
                 ),
               ),
-              SizedBox(width: 20),
+              const SizedBox(width: 20),
               GestureDetector(
                 onTap: () {
                   selected.value = 1;
