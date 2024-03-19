@@ -55,8 +55,12 @@ class _AppBarWidget extends StatelessWidget {
       ),
       pinned: true,
       actions: [
-        IconButton(onPressed: null, icon: Icon(Icons.add)),
-        IconButton(onPressed: null, icon: Icon(Icons.search)),
+        IconButton(
+            onPressed: null,
+            icon: Assets.images.addMoreExpressionIphone.image()),
+        IconButton(
+            onPressed: null,
+            icon: Assets.images.bzGetNaviSearchIconIphone.image()),
       ],
       flexibleSpace: FlexibleSpaceBar(
           background:
