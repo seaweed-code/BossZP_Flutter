@@ -52,7 +52,7 @@ class PostionItemWidget extends StatelessWidget {
               SizedBox(height: 6),
               Text(
                 "腾讯 不需要融资 1000人以上",
-                style: TextStyle(fontSize: 14, color: appear.subTitleColor),
+                style: TextStyle(fontSize: 15, color: appear.subTitleColor),
               ),
               SizedBox(height: 6),
               Wrap(
@@ -62,14 +62,13 @@ class PostionItemWidget extends StatelessWidget {
                   for (int i = 0; i < 3; i++)
                     Container(
                       decoration: BoxDecoration(
-                          color: Color(0xFFF2F2F2),
+                          color: Color(0xFFf5f5f5),
                           borderRadius: BorderRadius.circular(2)),
                       margin: EdgeInsets.fromLTRB(0, 0, 4, 0),
                       padding: EdgeInsets.fromLTRB(6, 3, 6, 3),
                       child: Text(
                         "经验不限$i",
-                        style: TextStyle(
-                            color: appear.subTitleColor, fontSize: 14),
+                        style: TextStyle(color: appear.darkColor, fontSize: 14),
                       ),
                     )
                 ],
@@ -82,11 +81,11 @@ class PostionItemWidget extends StatelessWidget {
                       child: Assets.images.avatar1Iphone
                           .image(width: avatarWidth, height: avatarWidth)),
                   SizedBox(width: 6),
-                  _PersonInfoWidget(colorDark: appear.subTitleColor),
+                  _PersonInfoWidget(),
                   Spacer(),
                   Text(
                     "东城区 - 建国门",
-                    style: TextStyle(fontSize: 14, color: appear.subTitleColor),
+                    style: TextStyle(fontSize: 14, color: appear.darkColor),
                   ),
                   IconButton(
                     onPressed: () {},
@@ -106,24 +105,22 @@ class PostionItemWidget extends StatelessWidget {
 class _PersonInfoWidget extends StatelessWidget {
   const _PersonInfoWidget({
     super.key,
-    required this.colorDark,
   });
-
-  final Color colorDark;
 
   @override
   Widget build(BuildContext context) {
+    final Appearance appear = context.read();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           "张先生 - 人事总监",
-          style: TextStyle(fontSize: 14, color: Colors.black87),
+          style: TextStyle(fontSize: 14, color: appear.subTitleColor),
         ),
         if (Random().nextBool())
           Text(
             "今日回复4次",
-            style: TextStyle(fontSize: 13, color: colorDark),
+            style: TextStyle(fontSize: 13, color: appear.darkColor),
           )
       ],
     );
