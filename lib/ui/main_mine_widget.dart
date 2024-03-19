@@ -21,8 +21,7 @@ class MainMineWidget extends StatelessWidget {
         children: [
           SizedBox(
               width: double.infinity,
-              // height: 200,
-              child: Assets.images.basicBbNavMineBacIphone
+              child: Assets.images.basicBgNavMineBackImgIphone
                   .image(fit: BoxFit.fitWidth)),
           CustomScrollView(
             controller: scrollControlller,
@@ -92,7 +91,7 @@ class _AnimatedAppBar extends StatefulWidget {
 class _AnimatedAppBarState extends State<_AnimatedAppBar> {
   double offset = 0;
   final backNavigation =
-      Assets.images.basicBbNavBacIphone.image(fit: BoxFit.cover);
+      Assets.images.basicBgNaviBackImgIphone.image(fit: BoxFit.cover);
   @override
   void initState() {
     widget.controller.addListener(_onscroll);

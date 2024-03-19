@@ -44,6 +44,14 @@ class $AssetsImagesGen {
   AssetGenImage get basicBbNavMineBacIphone =>
       const AssetGenImage('assets/images/basic_bb_nav_mine_bac_iphone.png');
 
+  /// File path: assets/images/basic_bg_nav_mine_back_img_iphone.png
+  AssetGenImage get basicBgNavMineBackImgIphone => const AssetGenImage(
+      'assets/images/basic_bg_nav_mine_back_img_iphone.png');
+
+  /// File path: assets/images/basic_bg_navi_back_img_iphone.png
+  AssetGenImage get basicBgNaviBackImgIphone =>
+      const AssetGenImage('assets/images/basic_bg_navi_back_img_iphone.png');
+
   /// File path: assets/images/basic_common_alert_ad_close_iphone.png
   AssetGenImage get basicCommonAlertAdCloseIphone => const AssetGenImage(
       'assets/images/basic_common_alert_ad_close_iphone.png');
@@ -84,6 +92,8 @@ class $AssetsImagesGen {
         basicBackCycleIphone,
         basicBbNavBacIphone,
         basicBbNavMineBacIphone,
+        basicBgNavMineBackImgIphone,
+        basicBgNaviBackImgIphone,
         basicCommonAlertAdCloseIphone,
         basicMoreArrowiphone,
         bzCompanyBlackIconMoreIphone,
