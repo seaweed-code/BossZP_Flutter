@@ -89,13 +89,9 @@ class PostionItemWidget extends StatelessWidget {
                     style: TextStyle(fontSize: 14, color: appear.subTitleColor),
                   ),
                   IconButton(
-                    splashColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    padding: EdgeInsets.zero,
-                    iconSize: 16,
-                    color: appear.subTitleColor,
                     onPressed: () {},
-                    icon: Icon(Icons.close),
+                    icon: Assets.images.darkBasicGuideviewCommentCloseIphone
+                        .image(),
                   )
                 ],
               )

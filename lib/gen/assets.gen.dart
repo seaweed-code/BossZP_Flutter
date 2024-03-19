@@ -342,6 +342,14 @@ class $AssetsImagesGen {
   AssetGenImage get contactRightScanNewIphone =>
       const AssetGenImage('assets/images/contact_right_scan_new_iphone.png');
 
+  /// File path: assets/images/dark_basic_geekphone_comment_close_iphone.png
+  AssetGenImage get darkBasicGeekphoneCommentCloseIphone => const AssetGenImage(
+      'assets/images/dark_basic_geekphone_comment_close_iphone.png');
+
+  /// File path: assets/images/dark_basic_guideview_comment_close_iphone.png
+  AssetGenImage get darkBasicGuideviewCommentCloseIphone => const AssetGenImage(
+      'assets/images/dark_basic_guideview_comment_close_iphone.png');
+
   /// File path: assets/images/dark_bb_switch_identity_iphone.png
   AssetGenImage get darkBbSwitchIdentityIphone =>
       const AssetGenImage('assets/images/dark_bb_switch_identity_iphone.png');
@@ -508,6 +516,8 @@ class $AssetsImagesGen {
         chatVideoPhoneOtherIconIphone,
         contactNavNoticeIconNewIphone,
         contactRightScanNewIphone,
+        darkBasicGeekphoneCommentCloseIphone,
+        darkBasicGuideviewCommentCloseIphone,
         darkBbSwitchIdentityIphone,
         darkBbSwitchIdentityNewIphone,
         darkBhChatBubbleBlueIphone,
