@@ -10,6 +10,14 @@ class FollowListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          actions: [
+            IconButton(
+                onPressed: null,
+                icon: Assets.images.bzGetNaviSearchIconIphone.image()),
+            IconButton(
+                onPressed: null,
+                icon: Assets.images.bzGetNaviMsgGrayIconIphone.image()),
+          ],
           flexibleSpace: FlexibleSpaceBar(
               background: Assets.images.basicBgNaviBackImgIphone
                   .image(fit: BoxFit.cover))),
