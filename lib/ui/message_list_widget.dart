@@ -60,10 +60,18 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
         children: [
           Text(
             "全部",
+            style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.normal,
+                color: appearance.titleColor),
           ),
           SizedBox(width: 15),
           Text(
             "我发起",
+            style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: appearance.titleColor),
           ),
         ],
       ),
