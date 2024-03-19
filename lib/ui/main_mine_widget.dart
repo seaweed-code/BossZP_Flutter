@@ -127,22 +127,18 @@ class _AnimatedAppBarState extends State<_AnimatedAppBar> {
   @override
   Widget build(BuildContext context) {
     final opacity = offset * (1.0 / widget.maxOffset);
-    final Appearance appear = context.read();
+    // final Appearance appear = context.read();
     return SliverAppBar(
       pinned: true,
       actions: [
         IconButton(
             onPressed: null,
-            icon: Icon(
-              Icons.person,
-              color: appear.titleColor,
-            )),
+            icon: Assets.images.geekMyNavSwitchNewIphone.image()),
         IconButton(
             onPressed: null,
-            icon: Icon(Icons.document_scanner, color: appear.titleColor)),
+            icon: Assets.images.geekMyNavScanNewIphone.image()),
         IconButton(
-            onPressed: null,
-            icon: Icon(Icons.settings, color: appear.titleColor))
+            onPressed: null, icon: Assets.images.geekMyNavSetNewIphone.image())
       ],
       flexibleSpace: FlexibleSpaceBar(
           background: Opacity(opacity: opacity, child: backNavigation)),
