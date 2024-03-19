@@ -327,8 +327,8 @@ class _NumberRowWidget extends StatelessWidget {
               maxLines: 2,
               style: TextStyle(
                   color: appear.titleColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
               TextSpan(
                 text: "740",
                 children: [
@@ -336,7 +336,7 @@ class _NumberRowWidget extends StatelessWidget {
                       text: "\n沟通过",
                       style: TextStyle(
                           color: appear.subTitleColor,
-                          fontSize: 12,
+                          fontSize: 14,
                           fontWeight: FontWeight.normal))
                 ],
               ),
