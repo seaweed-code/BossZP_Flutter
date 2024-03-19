@@ -1,6 +1,8 @@
 import 'dart:math';
 
+import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -12,6 +14,7 @@ class PostionItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
+    const avatarWidth = 32.0;
     return Container(
       color: appear.backgroundColor,
       child: Card(
@@ -71,9 +74,13 @@ class PostionItemWidget extends StatelessWidget {
                     )
                 ],
               ),
+              SizedBox(height: 8),
               Row(
                 children: [
-                  Icon(Icons.ac_unit_rounded),
+                  ClipRRect(
+                      borderRadius: BorderRadius.circular(avatarWidth / 2),
+                      child: Assets.images.avatar1Iphone
+                          .image(width: avatarWidth, height: avatarWidth)),
                   SizedBox(width: 6),
                   _PersonInfoWidget(colorDark: appear.subTitleColor),
                   Spacer(),
