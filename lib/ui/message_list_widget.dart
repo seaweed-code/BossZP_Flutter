@@ -26,27 +26,7 @@ class MessageListWidget extends StatelessWidget {
             flexibleSpace: FlexibleSpaceBar(
                 background: Assets.images.basicBgNaviBackImgIphone
                     .image(fit: BoxFit.cover))),
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.only(left: leading, right: leading),
-            child: SizedBox(
-              height: 40,
-              child: TextField(
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: appear.backgroundColor,
-                    hintText: '搜索联系人、公司、聊天记录',
-                    hintStyle: TextStyle(color: appear.timeColor),
-                    prefixIcon:
-                        Assets.images.settingContactSearchIconIphone.image(),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(10)),
-                    contentPadding: EdgeInsets.symmetric(vertical: 9.0)),
-              ),
-            ),
-          ),
-        ),
+        _SearchBarWidget(leading: leading, appear: appear),
         SliverList.builder(
           itemCount: 30,
           itemBuilder: (context, index) {
@@ -56,6 +36,42 @@ class MessageListWidget extends StatelessWidget {
           },
         )
       ],
+    );
+  }
+}
+
+class _SearchBarWidget extends StatelessWidget {
+  const _SearchBarWidget({
+    super.key,
+    required this.leading,
+    required this.appear,
+  });
+
+  final double leading;
+  final Appearance appear;
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.only(left: leading, right: leading),
+        child: SizedBox(
+          height: 40,
+          child: TextField(
+            decoration: InputDecoration(
+                filled: true,
+                fillColor: appear.backgroundColor,
+                hintText: '搜索联系人、公司、聊天记录',
+                hintStyle: TextStyle(color: appear.timeColor),
+                prefixIcon:
+                    Assets.images.settingContactSearchIconIphone.image(),
+                border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(10)),
+                contentPadding: EdgeInsets.symmetric(vertical: 9.0)),
+          ),
+        ),
+      ),
     );
   }
 }
