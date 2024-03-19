@@ -105,7 +105,9 @@ class _AnimatedAppBarState extends State<_AnimatedAppBar> {
 
   @override
   void didUpdateWidget(covariant _AnimatedAppBar oldWidget) {
-    print("didUpdateWidget-----");
+    oldWidget.controller.removeListener(_onscroll);
+    widget.controller.addListener(_onscroll);
+
     super.didUpdateWidget(oldWidget);
   }
 
