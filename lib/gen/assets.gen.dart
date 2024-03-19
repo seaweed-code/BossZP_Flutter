@@ -245,6 +245,10 @@ class $AssetsImagesGen {
   AssetGenImage get bzGetCardDetailLikeIconIphone => const AssetGenImage(
       'assets/images/bz_get_card_detail_like_icon_iphone.png');
 
+  /// File path: assets/images/bz_get_interview_expect_menu_add_icon.png
+  AssetGenImage get bzGetInterviewExpectMenuAddIcon => const AssetGenImage(
+      'assets/images/bz_get_interview_expect_menu_add_icon.png');
+
   /// File path: assets/images/bz_get_msg_navi_set_icon_iphone.png
   AssetGenImage get bzGetMsgNaviSetIconIphone =>
       const AssetGenImage('assets/images/bz_get_msg_navi_set_icon_iphone.png');
@@ -276,6 +280,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/bz_refresh_cycle_iphone.png
   AssetGenImage get bzRefreshCycleIphone =>
       const AssetGenImage('assets/images/bz_refresh_cycle_iphone.png');
+
+  /// File path: assets/images/bzpublish_addImage_iphone.png
+  AssetGenImage get bzpublishAddImageIphone =>
+      const AssetGenImage('assets/images/bzpublish_addImage_iphone.png');
 
   /// File path: assets/images/cb_chat_quote_voice_other_iphone.png
   AssetGenImage get cbChatQuoteVoiceOtherIphone =>
@@ -492,6 +500,7 @@ class $AssetsImagesGen {
         bzGetCardDetailCollectionIconIphone,
         bzGetCardDetailInfoIconIphone,
         bzGetCardDetailLikeIconIphone,
+        bzGetInterviewExpectMenuAddIcon,
         bzGetMsgNaviSetIconIphone,
         bzGetNaviMsgGrayIconIphone,
         bzGetNaviSearchIconIphone,
@@ -500,6 +509,7 @@ class $AssetsImagesGen {
         bzInterviewCardCloseIconIphone,
         bzRefreshCycle2Iphone,
         bzRefreshCycleIphone,
+        bzpublishAddImageIphone,
         cbChatQuoteVoiceOtherIphone,
         cbChatRecordVoiceIphone,
         chatBottomCommonIconIphone,

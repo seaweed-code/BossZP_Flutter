@@ -30,15 +30,19 @@ class MessageListWidget extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.only(left: leading, right: leading),
             child: SizedBox(
-              height: 36,
+              height: 40,
               child: TextField(
                 decoration: InputDecoration(
+                    filled: true,
+                    fillColor: appear.backgroundColor,
                     hintText: '搜索联系人、公司、聊天记录',
                     hintStyle: TextStyle(color: appear.timeColor),
                     prefixIcon:
                         Assets.images.settingContactSearchIconIphone.image(),
-                    border: OutlineInputBorder(),
-                    contentPadding: EdgeInsets.symmetric(vertical: 8.0)),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(10)),
+                    contentPadding: EdgeInsets.symmetric(vertical: 9.0)),
               ),
             ),
           ),

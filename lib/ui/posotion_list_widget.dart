@@ -57,7 +57,7 @@ class _AppBarWidget extends StatelessWidget {
       actions: [
         IconButton(
             onPressed: null,
-            icon: Assets.images.addMoreExpressionIphone.image()),
+            icon: Assets.images.bzGetInterviewExpectMenuAddIcon.image()),
         IconButton(
             onPressed: null,
             icon: Assets.images.bzGetNaviSearchIconIphone.image()),
