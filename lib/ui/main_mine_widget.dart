@@ -382,7 +382,11 @@ class _AvatarWidget extends StatelessWidget {
           ],
         ),
         Spacer(),
-        Assets.images.settingMoreArrowIphone.image()
+        Assets.images.settingMoreArrowIphone.image(
+            fit: BoxFit.fitHeight,
+            color: appear.subTitleColor,
+            width: 18,
+            height: 18)
       ],
     );
   }
