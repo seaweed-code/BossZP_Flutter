@@ -13,7 +13,7 @@ class MessageListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
-    final leading = 15.0;
+    const leading = 15.0;
     return CustomScrollView(
       slivers: [
         SliverAppBar(
