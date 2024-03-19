@@ -67,7 +67,15 @@ class MainMineWidget extends StatelessWidget {
                       ),
                       _FrequentFunWidget(),
                       _OtherFunsWidget(),
-                      Placeholder()
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(5, 15, 5, 20),
+                        child: Text(
+                          "客服电话 400-065-5799 工作时间：8:00-22:00\n老年人直连热线 400-661-6030 工作时间：8:00-22:00",
+                          style: TextStyle(
+                              color: appear.subTitleColor, fontSize: 14),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
                     ],
                   ),
                 ),
