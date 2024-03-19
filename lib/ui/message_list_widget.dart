@@ -113,7 +113,7 @@ class _SearchBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Padding(
-        padding: EdgeInsets.only(left: leading, right: leading),
+        padding: EdgeInsets.only(left: leading, right: leading, bottom: 10),
         child: SizedBox(
           height: 40,
           child: TextField(
