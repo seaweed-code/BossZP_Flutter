@@ -7,9 +7,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 
-class MessageListWidget extends StatelessWidget {
+class MessageListWidget extends StatefulWidget {
   const MessageListWidget({super.key});
 
+  @override
+  State<MessageListWidget> createState() => _MessageListWidgetState();
+}
+
+class _MessageListWidgetState extends State<MessageListWidget> {
+  ValueNotifier<int> selected = ValueNotifier(0);
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
@@ -28,7 +34,7 @@ class MessageListWidget extends StatelessWidget {
                     .image(fit: BoxFit.cover))),
         _SearchBarWidget(leading: leading, appear: appear),
         SliverPersistentHeader(
-          delegate: _SliverHeaderDelegate(leading: leading),
+          delegate: _SliverHeaderDelegate(leading: leading, selected: selected),
           pinned: true,
           // floating: true,
         ),
@@ -46,8 +52,9 @@ class MessageListWidget extends StatelessWidget {
 }
 
 class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
-  _SliverHeaderDelegate({required this.leading});
+  _SliverHeaderDelegate({required this.leading, required this.selected});
   final double leading;
+  final ValueNotifier<int> selected;
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
@@ -57,40 +64,44 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
       padding: EdgeInsets.only(left: leading, right: leading),
       height: maxExtent,
       alignment: Alignment.center,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Text(
-            "全部",
-            style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.normal,
-                color: appearance.subTitleColor),
-          ),
-          SizedBox(width: 20),
-          Text(
-            "我发起",
-            style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                color: appearance.titleColor),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 3, bottom: 3),
-            child: Assets.images.bzGetInterviewPositionSelectedIphone
-                .image(fit: BoxFit.cover),
-          ),
-        ],
+      child: ListenableBuilder(
+        listenable: selected,
+        builder: (context, child) {
+          return Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                "全部",
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal,
+                    color: appearance.subTitleColor),
+              ),
+              SizedBox(width: 20),
+              Text(
+                "我发起",
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: appearance.titleColor),
+              ),
+              child!,
+            ],
+          );
+        },
+        child: Padding(
+          padding: const EdgeInsets.only(left: 3, bottom: 3),
+          child: Assets.images.bzGetInterviewPositionSelectedIphone
+              .image(fit: BoxFit.cover),
+        ),
       ),
     );
   }
 
   @override
-  // TODO: implement maxExtent
   double get maxExtent => 50;
 
   @override
-  // TODO: implement minExtent
   double get minExtent => 50;
 
   @override
