@@ -1,6 +1,6 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/ui/follow_item_widget.dart';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FollowListWidget extends StatelessWidget {
