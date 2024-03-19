@@ -37,15 +37,14 @@ class MainMineWidget extends StatelessWidget {
                       Card(
                         color: Colors.white,
                         elevation: 0.0,
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Column(
-                            children: [
-                              Placeholder(
-                                fallbackHeight: 60,
-                              ),
-                              SizedBox(height: 15),
-                              Row(
+                        child: Column(
+                          children: [
+                            Placeholder(
+                              fallbackHeight: 60,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Row(
                                 children: [
                                   Expanded(child: _SubRowWidget()),
                                   SizedBox(width: 12),
@@ -58,8 +57,8 @@ class MainMineWidget extends StatelessWidget {
                                   Expanded(child: _SubRowWidget()),
                                 ],
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                       _FrequentFunWidget(),
