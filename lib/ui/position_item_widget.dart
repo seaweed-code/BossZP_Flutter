@@ -34,7 +34,7 @@ class PostionItemWidget extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                           fontSize: 20,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w600,
                           color: appear.titleColor),
                     ),
                   ),
