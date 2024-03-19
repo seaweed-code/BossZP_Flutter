@@ -63,14 +63,14 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
             style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.normal,
-                color: appearance.titleColor),
+                color: appearance.subTitleColor),
           ),
-          SizedBox(width: 15),
+          SizedBox(width: 20),
           Text(
             "我发起",
             style: TextStyle(
                 fontSize: 14,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w700,
                 color: appearance.titleColor),
           ),
         ],
