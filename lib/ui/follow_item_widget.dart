@@ -69,6 +69,10 @@ class FollowItemWidget extends StatelessWidget {
                         "面试岗位:：移动开发——iOS\n面试题目：谈谈Block与函数的区别？\n回答参考：Block可以写在方法里面",
                     children: []),
                 textAlign: TextAlign.start,
+                style: TextStyle(
+                    color: appearance.titleColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal),
               ),
               SizedBox(height: 10),
               Row(
