@@ -82,7 +82,7 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
       alignment: Alignment.center,
       child: ListenableBuilder(
         listenable: selected,
-        builder: (context, child) {
+        builder: (context, _) {
           return Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -105,15 +105,18 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
                   style: _getStyle(context, 1),
                 ),
               ),
-              child!,
+              Padding(
+                padding: const EdgeInsets.only(left: 3, bottom: 3),
+                child: selected.value == 0
+                    ? Assets.images.bzGetInterviewPositionNormalIphone
+                        .image(fit: BoxFit.cover)
+                    : Assets.images.bzGetInterviewPositionSelectedIphone
+                        .image(fit: BoxFit.cover),
+              )
             ],
           );
         },
-        child: Padding(
-          padding: const EdgeInsets.only(left: 3, bottom: 3),
-          child: Assets.images.bzGetInterviewPositionSelectedIphone
-              .image(fit: BoxFit.cover),
-        ),
+        // child: ,
       ),
     );
   }
