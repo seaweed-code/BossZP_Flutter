@@ -61,7 +61,20 @@ class PostionDetailWidget extends StatelessWidget {
                           )
                         ]),
                         SizedBox(height: 20),
-                        _AttributesWiget(),
+                        Wrap(
+                          direction: Axis.horizontal,
+                          spacing: 15,
+                          alignment: WrapAlignment.start,
+                          runSpacing: 10,
+                          children: [
+                            _IconTextWidget(
+                              prefix: Assets.images
+                                  .darkBossCityCbdLocationSelectIconIphone
+                                  .image(color: appear.subTitleColor),
+                              text: "北京·西城区·西直门",
+                            )
+                          ],
+                        ),
                         SizedBox(height: 20),
                         line,
                         SizedBox(height: 20),
@@ -219,6 +232,33 @@ class PostionDetailWidget extends StatelessWidget {
   }
 }
 
+class _IconTextWidget extends StatelessWidget {
+  _IconTextWidget({
+    super.key,
+    required this.prefix,
+    required this.text,
+  });
+
+  final Widget prefix;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        prefix,
+        SizedBox(width: 5),
+        Text(
+          text,
+          style: TextStyle(color: appear.subTitleColor, fontSize: 16),
+        )
+      ],
+    );
+  }
+}
+
 class _TagsWidget extends StatelessWidget {
   const _TagsWidget({
     super.key,
@@ -246,38 +286,6 @@ class _TagsWidget extends StatelessWidget {
       ],
       spacing: 8,
       runSpacing: 10,
-    );
-  }
-}
-
-class _AttributesWiget extends StatelessWidget {
-  const _AttributesWiget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final Appearance appear = context.read();
-    return Wrap(
-      direction: Axis.horizontal,
-      spacing: 15,
-      alignment: WrapAlignment.start,
-      runSpacing: 10,
-      children: [
-        for (int i = 0; i < 3; i++)
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Assets.images.darkBossCityCbdLocationSelectIconIphone
-                  .image(color: appear.subTitleColor),
-              SizedBox(width: 5),
-              Text(
-                "北京～庄$i",
-                style: TextStyle(color: appear.subTitleColor, fontSize: 16),
-              )
-            ],
-          )
-      ],
     );
   }
 }
