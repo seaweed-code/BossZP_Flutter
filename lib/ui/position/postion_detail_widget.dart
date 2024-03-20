@@ -176,28 +176,38 @@ class PostionDetailWidget extends StatelessWidget {
             SafeArea(
               child: SizedBox(
                 width: double.infinity,
-                height: 50,
+                height: 65,
                 child: Padding(
                   padding: EdgeInsets.only(left: leading, right: leading),
-                  child: TextButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.circular(10.0), // 设置圆角为20
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      line,
+                      SizedBox(height: 10),
+                      SizedBox(
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {},
+                          style: ButtonStyle(
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.circular(10.0), // 设置圆角为20
+                                ),
+                              ),
+                              backgroundColor:
+                                  MaterialStateProperty.all(Color(0xFF17b3b3))),
+                          child: Text(
+                            "立即沟通",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
-                        backgroundColor:
-                            MaterialStateProperty.all(Color(0xFF17b3b3))),
-                    child: Text(
-                      "立即沟通",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold),
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
