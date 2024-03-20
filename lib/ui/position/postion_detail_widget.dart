@@ -82,14 +82,13 @@ class PostionDetailWidget extends StatelessWidget {
                                   style: TextStyle(
                                       color: appear.titleColor,
                                       fontSize: 18,
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.w600),
                                 ),
                                 SizedBox(height: 4),
                                 Text(
                                   "贝壳找房·专家",
                                   style: TextStyle(
-                                      color: appear.subTitleColor,
-                                      fontSize: 16),
+                                      color: Color(0xFF8b8b8b), fontSize: 16),
                                 )
                               ],
                             ),
@@ -103,7 +102,7 @@ class PostionDetailWidget extends StatelessWidget {
                           child: Text(
                             "今日回复1次",
                             style: TextStyle(
-                                color: appear.subTitleColor, fontSize: 13),
+                                color: Color(0xFFb8b8b8), fontSize: 14),
                           ),
                         ),
                         SizedBox(height: 30),
@@ -141,8 +140,8 @@ class PostionDetailWidget extends StatelessWidget {
         4、亲和力强，有很好的沟通能力和需要表达能力。
         5、工作踏实负责，学习能力强""",
                           style: TextStyle(
-                              color: appear.titleColor,
-                              fontSize: 18,
+                              color: Color(0xFF484848),
+                              fontSize: 17,
                               fontWeight: FontWeight.normal,
                               height: 1.8),
                           textAlign: TextAlign.left,
@@ -165,7 +164,7 @@ class PostionDetailWidget extends StatelessWidget {
                                 fit: BoxFit.fitWidth, width: 20, height: 20)
                           ],
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 10),
                         _TagsWidget(),
                         SizedBox(height: 20),
                         line,
@@ -216,11 +215,11 @@ class _TagsWidget extends StatelessWidget {
             decoration: BoxDecoration(
                 color: appear.backgroundColor,
                 borderRadius: BorderRadius.circular(4)),
-            padding: EdgeInsets.fromLTRB(4, 4, 4, 4),
+            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: Text(
               "智能硬件",
               style: TextStyle(
-                  color: appear.subTitleColor,
+                  color: Color(0xFF484848),
                   fontSize: 14,
                   fontWeight: FontWeight.normal),
             ),
