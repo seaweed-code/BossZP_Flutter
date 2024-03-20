@@ -1,7 +1,10 @@
+import 'dart:ui';
+
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
@@ -43,17 +46,16 @@ class PostionDetailWidget extends StatelessWidget {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        // Spacer(),
                         SizedBox(width: 20),
                         Text(
-                          "40-60K 15薪",
+                          "40-60K·15薪",
                           style: TextStyle(
                               color: appear.blueColor,
                               fontSize: 20,
                               fontWeight: FontWeight.w500),
                         )
                       ]),
-                      SizedBox(height: 15),
+                      SizedBox(height: 20),
                       Wrap(
                         direction: Axis.horizontal,
                         spacing: 15,
@@ -78,6 +80,33 @@ class PostionDetailWidget extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 20),
+                      line,
+                      SizedBox(height: 20),
+                      Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(25),
+                            child: Assets.images.avatar2Iphone
+                                .image(width: 50, height: 50),
+                          ),
+                          SizedBox(width: 20),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [Text("刘泽奇"), Text("贝壳找房·专家")],
+                          ),
+                          Spacer(),
+                          Assets.images.basicMoreArrowiphone.image()
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 55),
+                        child: Text(
+                          "今日回复1次",
+                          style: TextStyle(
+                              color: appear.subTitleColor, fontSize: 14),
+                        ),
+                      ),
+                      SizedBox(height: 30),
                       line
                     ],
                   ),
