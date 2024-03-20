@@ -29,7 +29,18 @@ class _MessageListWidgetState extends State<MessageListWidget> {
             leadingWidth: double.infinity,
             leading: Padding(
               padding: const EdgeInsets.only(left: leading),
-              child: _NavigationSwitchWidget(selected: selected2),
+              child: SegementWdiget(
+                selected: selected2,
+                titles: ["聊天", "互动"],
+                selectedStyle: TextStyle(
+                    color: appear.titleColor,
+                    fontSize: 32,
+                    fontWeight: FontWeight.w900),
+                unselectedStyle: TextStyle(
+                    color: appear.subTitleColor,
+                    fontSize: 22,
+                    fontWeight: FontWeight.w900),
+              ),
             ),
             actions: [
               IconButton(
@@ -56,30 +67,6 @@ class _MessageListWidgetState extends State<MessageListWidget> {
           },
         )
       ],
-    );
-  }
-}
-
-class _NavigationSwitchWidget extends StatelessWidget {
-  const _NavigationSwitchWidget({
-    super.key,
-    required this.selected,
-  });
-
-  final ValueNotifier<int> selected;
-
-  @override
-  Widget build(BuildContext context) {
-    final Appearance appear = context.read();
-    return SegementWdiget(
-      selected: selected,
-      titles: ["聊天", "互动"],
-      selectedStyle: TextStyle(
-          color: appear.titleColor, fontSize: 32, fontWeight: FontWeight.w900),
-      unselectedStyle: TextStyle(
-          color: appear.subTitleColor,
-          fontSize: 22,
-          fontWeight: FontWeight.w900),
     );
   }
 }
