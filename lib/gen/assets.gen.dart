@@ -456,6 +456,10 @@ class $AssetsImagesGen {
   AssetGenImage get darkBossNewGeekIconEducationAIphone => const AssetGenImage(
       'assets/images/dark_boss_new_geek_icon_education_a_iphone.png');
 
+  /// File path: assets/images/dark_boss_new_geek_icon_education_iphone.png
+  AssetGenImage get darkBossNewGeekIconEducationIphone => const AssetGenImage(
+      'assets/images/dark_boss_new_geek_icon_education_iphone.png');
+
   /// File path: assets/images/dark_boss_new_geek_icon_expect_a_iphone.png
   AssetGenImage get darkBossNewGeekIconExpectAIphone => const AssetGenImage(
       'assets/images/dark_boss_new_geek_icon_expect_a_iphone.png');
@@ -632,6 +636,7 @@ class $AssetsImagesGen {
         darkBossNewGeekIconBriefcaseAIphone,
         darkBossNewGeekIconBriefcaseIphone,
         darkBossNewGeekIconEducationAIphone,
+        darkBossNewGeekIconEducationIphone,
         darkBossNewGeekIconExpectAIphone,
         darkBossNewGeekIconExpectIphone,
         darkBossPositionPreviewEducationIphone,

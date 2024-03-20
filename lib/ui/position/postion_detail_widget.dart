@@ -84,8 +84,9 @@ class PostionDetailWidget extends StatelessWidget {
                               text: "5-10年",
                             ),
                             _IconTextWidget(
+                              ///dark_boss_new_geek_icon_education_iphone
                               prefix: Assets
-                                  .images.darkBossNewGeekIconEducationAIphone
+                                  .images.darkBossNewGeekIconEducationIphone
                                   .image(),
                               text: "本科",
                             )
