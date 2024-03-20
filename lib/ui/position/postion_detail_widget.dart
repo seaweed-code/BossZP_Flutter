@@ -24,6 +24,11 @@ class PostionDetailWidget extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        flexibleSpace: FlexibleSpaceBar(
+          background: ColoredBox(
+            color: Colors.white,
+          ),
+        ),
         actions: [
           IconButton(
               onPressed: () {},
