@@ -2,6 +2,8 @@ import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+typedef SegementValueChangeCallBack = void Function(int oldValue, int newValue);
+
 class SegementWdiget extends StatelessWidget {
   const SegementWdiget(
       {super.key,
@@ -9,11 +11,13 @@ class SegementWdiget extends StatelessWidget {
       required this.titles,
       this.selectedStyle,
       this.unselectedStyle,
-      this.space = 20});
+      this.space = 20,
+      this.valueDidChange});
   final ValueNotifier<int> selected;
   final List<String> titles;
   final double space;
   final TextStyle? selectedStyle, unselectedStyle;
+  final SegementValueChangeCallBack? valueDidChange;
 
   TextStyle _textStyle(BuildContext context, bool isSelect) {
     final appearance = context.read<Appearance>();
