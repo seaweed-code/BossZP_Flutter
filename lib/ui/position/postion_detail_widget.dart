@@ -120,8 +120,6 @@ class PostionDetailWidget extends StatelessWidget {
                         SizedBox(height: 20),
                         Text(
                           """职位详情:
-HRBP 人事 招聘 面试 培训	 办公室	
-时间及福利待遇:
 1、工作时间:8:30-12:00，2:00-5:30
 2、周休一天半法定节假日正常休，年假节日福利。
 3、五险一金+补充医疗保险+意外险，定期体检。
@@ -141,9 +139,9 @@ HRBP 人事 招聘 面试 培训	 办公室
 5、工作踏实负责，学习能力强""",
                           style: TextStyle(
                               color: Color(0xFF484848),
-                              fontSize: 17,
+                              fontSize: 16,
                               fontWeight: FontWeight.normal,
-                              height: 1.8),
+                              height: 2),
                           textAlign: TextAlign.left,
                         ),
                         SizedBox(height: 20),
