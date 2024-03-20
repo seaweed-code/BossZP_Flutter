@@ -1,5 +1,6 @@
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 typedef SegementValueChangeCallBack = void Function(int oldValue, int newValue);
@@ -40,7 +41,7 @@ class SegementWdiget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListenableBuilder(
       listenable: selected,
-      builder: (context, child) {
+      builder: (context, _) {
         return Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -52,16 +53,17 @@ class SegementWdiget extends StatelessWidget {
                   selected.value = i;
                 },
                 child: Center(
-                  child: Text(titles[i],
-                      style: _textStyle(context, selected.value == i)),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: space / 2, right: space / 2),
+                    child: Text(titles[i],
+                        style: _textStyle(context, selected.value == i)),
+                  ),
                 ),
               ),
-              if (i < titles.length - 1) child!,
             ]
           ],
         );
       },
-      child: SizedBox(width: space),
     );
   }
 }
