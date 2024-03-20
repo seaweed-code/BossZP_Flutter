@@ -54,7 +54,9 @@ class SegementWdiget extends StatelessWidget {
                 },
                 child: Center(
                   child: Padding(
-                    padding: EdgeInsets.only(left: space / 2, right: space / 2),
+                    padding: EdgeInsets.only(
+                        left: (i == 0) ? 0 : space / 2,
+                        right: (i == titles.length - 1) ? 0 : space / 2),
                     child: Text(titles[i],
                         style: _textStyle(context, selected.value == i)),
                   ),

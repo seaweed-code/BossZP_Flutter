@@ -48,7 +48,7 @@ class PositionListWidget extends StatelessWidget {
         Container(
           color: Colors.white,
           height: 50,
-          padding: EdgeInsets.only(left: 5),
+          padding: EdgeInsets.only(left: 15),
           child: SegementWdiget(
             titles: ["推荐", "附近", "最新"],
             selected: selected,
