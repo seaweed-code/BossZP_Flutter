@@ -12,7 +12,13 @@ class PostionDetailWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: Assets.images.bhHmpgNavShareBlackIphone.image())
+        ],
+      ),
       body: Column(
         children: [
           Expanded(
@@ -82,7 +88,7 @@ class PostionDetailWidget extends StatelessWidget {
                   "立即沟通",
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold),
                 ),
               ),
