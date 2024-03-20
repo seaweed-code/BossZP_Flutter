@@ -18,7 +18,7 @@ class PostionDetailWidget extends StatelessWidget {
         SizedBox(height: 1, child: ColoredBox(color: appear.lineColor));
     const avatarWidth = 50.0;
     const avatarTraing = 20.0;
-
+    const smallIconWidth = 20.0;
     final postionStyle = TextStyle(
         color: appear.titleColor, fontSize: 19, fontWeight: FontWeight.bold);
 
@@ -73,19 +73,31 @@ class PostionDetailWidget extends StatelessWidget {
                           children: [
                             _IconTextWidget(
                               prefix: Assets.images.darkBbJobLocationIcon1Iphone
-                                  .image(color: appear.timeColor),
+                                  .image(
+                                      color: appear.timeColor,
+                                      fit: BoxFit.contain,
+                                      width: smallIconWidth,
+                                      height: smallIconWidth),
                               text: "北京·西城区·西直门",
                             ),
                             _IconTextWidget(
                               prefix: Assets
                                   .images.darkBossNewGeekIconBriefcaseAIphone
-                                  .image(color: appear.timeColor),
+                                  .image(
+                                      color: appear.timeColor,
+                                      fit: BoxFit.contain,
+                                      width: smallIconWidth,
+                                      height: smallIconWidth),
                               text: "5-10年",
                             ),
                             _IconTextWidget(
                               prefix: Assets
                                   .images.darkBossNewGeekIconEducationAIphone
-                                  .image(color: appear.timeColor),
+                                  .image(
+                                      color: appear.timeColor,
+                                      fit: BoxFit.contain,
+                                      width: smallIconWidth,
+                                      height: smallIconWidth),
                               text: "本科",
                             )
                           ],
