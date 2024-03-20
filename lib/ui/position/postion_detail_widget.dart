@@ -18,6 +18,10 @@ class PostionDetailWidget extends StatelessWidget {
         SizedBox(height: 1, child: ColoredBox(color: appear.lineColor));
     const avatarWidth = 50.0;
     const avatarTraing = 20.0;
+
+    final postionStyle = TextStyle(
+        color: appear.titleColor, fontSize: 19, fontWeight: FontWeight.bold);
+
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -135,10 +139,7 @@ class PostionDetailWidget extends StatelessWidget {
                         SizedBox(height: 25),
                         Text(
                           "职位详情",
-                          style: TextStyle(
-                              color: appear.titleColor,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
+                          style: postionStyle,
                         ),
                         SizedBox(height: 15),
                         _TagsWidget(),
@@ -176,11 +177,7 @@ class PostionDetailWidget extends StatelessWidget {
                           children: [
                             Text(
                               "员工福利",
-                              style: TextStyle(
-                                  color: appear.titleColor,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.normal,
-                                  height: 1.8),
+                              style: postionStyle,
                             ),
                             SizedBox(width: 4),
                             Assets.images.bhChatRobotQuesIconIphone.image(
