@@ -175,9 +175,9 @@ class PostionDetailWidget extends StatelessWidget {
             ),
             SafeArea(
               child: Container(
-                color: appear.blueColor,
+                color: Color(0xFF17b3b3),
                 width: double.infinity,
-                height: 60,
+                height: 50,
                 margin: EdgeInsets.only(left: leading, right: leading),
                 child: TextButton(
                   onPressed: () {},
