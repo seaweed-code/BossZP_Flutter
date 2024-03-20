@@ -56,7 +56,7 @@ class PostionDetailWidget extends StatelessWidget {
                         )
                       ]),
                       SizedBox(height: 20),
-                      _TagListWidget(),
+                      _AttributesWiget(),
                       SizedBox(height: 20),
                       line,
                       SizedBox(height: 20),
@@ -95,29 +95,29 @@ class PostionDetailWidget extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 25),
-                      Wrap(
-                        children: [
-                          for (int i = 0; i < 14; i++)
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: appear.backgroundColor,
-                                  borderRadius: BorderRadius.circular(4)),
-                              padding: EdgeInsets.fromLTRB(4, 4, 4, 4),
-                              child: Text(
-                                "智能硬件",
-                                style: TextStyle(
-                                    color: appear.subTitleColor,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal),
-                              ),
-                            ),
-                        ],
-                        spacing: 8,
-                        runSpacing: 10,
-                      ),
+                      _TagsWidget(),
                       SizedBox(height: 20),
                       Text(
-                        "职责描述:\n1、负责客户端产品开发",
+                        """职位详情:
+HRBP 人事 招聘 面试 培训	 办公室	
+时间及福利待遇:
+1、工作时间:8:30-12:00，2:00-5:30
+2、周休一天半法定节假日正常休，年假节日福利。
+3、五险一金+补充医疗保险+意外险，定期体检。
+4、员工旅游，不定时团建。
+5、绩效奖金，年终分红等。
+岗位职责:
+1、负责所管辖部门的数据汇总
+2、员工基本技能培训
+3、员工福利及活动福利的发放
+4、员工考核及沟通面谈
+5、员工选拔和筛选
+岗位要求:
+1、党员优先
+2、退伍军人优先
+3、年龄25岁-40岁，大专及以上学历。
+4、亲和力强，有很好的沟通能力和需要表达能力。
+5、工作踏实负责，学习能力强""",
                         style: TextStyle(
                             color: appear.titleColor,
                             fontSize: 18,
@@ -141,7 +141,12 @@ class PostionDetailWidget extends StatelessWidget {
                           Assets.images.bhChatRobotQuesIconIphone.image(
                               fit: BoxFit.fitWidth, width: 20, height: 20)
                         ],
-                      )
+                      ),
+                      SizedBox(height: 20),
+                      _TagsWidget(),
+                      SizedBox(height: 20),
+                      line,
+                      SizedBox(height: 20),
                     ],
                   ),
                 )
@@ -172,8 +177,39 @@ class PostionDetailWidget extends StatelessWidget {
   }
 }
 
-class _TagListWidget extends StatelessWidget {
-  const _TagListWidget({
+class _TagsWidget extends StatelessWidget {
+  const _TagsWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    return Wrap(
+      children: [
+        for (int i = 0; i < 14; i++)
+          Container(
+            decoration: BoxDecoration(
+                color: appear.backgroundColor,
+                borderRadius: BorderRadius.circular(4)),
+            padding: EdgeInsets.fromLTRB(4, 4, 4, 4),
+            child: Text(
+              "智能硬件",
+              style: TextStyle(
+                  color: appear.subTitleColor,
+                  fontSize: 14,
+                  fontWeight: FontWeight.normal),
+            ),
+          ),
+      ],
+      spacing: 8,
+      runSpacing: 10,
+    );
+  }
+}
+
+class _AttributesWiget extends StatelessWidget {
+  const _AttributesWiget({
     super.key,
   });
 
