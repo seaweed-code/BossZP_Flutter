@@ -28,7 +28,7 @@ class SegementWdiget extends StatelessWidget {
     return ListenableBuilder(
       listenable: selected,
       builder: (context, child) {
-        return Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
+        return Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
           for (int i = 0; i < titles.length; i++) ...[
             GestureDetector(
               onTap: () {
