@@ -374,6 +374,23 @@ class $AssetsImagesGen {
   AssetGenImage get darkBasicGuideviewCommentCloseIphone => const AssetGenImage(
       'assets/images/dark_basic_guideview_comment_close_iphone.png');
 
+  /// File path: assets/images/dark_bb_job_location_icon1_iphone.png
+  AssetGenImage get darkBbJobLocationIcon1Iphone => const AssetGenImage(
+      'assets/images/dark_bb_job_location_icon1_iphone.png');
+
+  /// File path: assets/images/dark_bb_mine_new_row_iphone.png
+  AssetGenImage get darkBbMineNewRowIphone =>
+      const AssetGenImage('assets/images/dark_bb_mine_new_row_iphone.png');
+
+  /// File path: assets/images/dark_bb_position_lengthen_icon_iphone.png
+  AssetGenImage get darkBbPositionLengthenIconIphone => const AssetGenImage(
+      'assets/images/dark_bb_position_lengthen_icon_iphone.png');
+
+  /// File path: assets/images/dark_bb_revise_filed_has_change_arrow_iphone.png
+  AssetGenImage get darkBbReviseFiledHasChangeArrowIphone =>
+      const AssetGenImage(
+          'assets/images/dark_bb_revise_filed_has_change_arrow_iphone.png');
+
   /// File path: assets/images/dark_bb_switch_identity_iphone.png
   AssetGenImage get darkBbSwitchIdentityIphone =>
       const AssetGenImage('assets/images/dark_bb_switch_identity_iphone.png');
@@ -409,6 +426,53 @@ class $AssetsImagesGen {
   /// File path: assets/images/dark_bh_chat_eva_unStar_iphone.png
   AssetGenImage get darkBhChatEvaUnStarIphone =>
       const AssetGenImage('assets/images/dark_bh_chat_eva_unStar_iphone.png');
+
+  /// File path: assets/images/dark_boss_city_cbd_location_select_icon_iphone.png
+  AssetGenImage get darkBossCityCbdLocationSelectIconIphone =>
+      const AssetGenImage(
+          'assets/images/dark_boss_city_cbd_location_select_icon_iphone.png');
+
+  /// File path: assets/images/dark_boss_help_iphone.png
+  AssetGenImage get darkBossHelpIphone =>
+      const AssetGenImage('assets/images/dark_boss_help_iphone.png');
+
+  /// File path: assets/images/dark_boss_home_add_iphone.png
+  AssetGenImage get darkBossHomeAddIphone =>
+      const AssetGenImage('assets/images/dark_boss_home_add_iphone.png');
+
+  /// File path: assets/images/dark_boss_home_add_new_iphone.png
+  AssetGenImage get darkBossHomeAddNewIphone =>
+      const AssetGenImage('assets/images/dark_boss_home_add_new_iphone.png');
+
+  /// File path: assets/images/dark_boss_new_geek_icon_briefcase_a_iphone.png
+  AssetGenImage get darkBossNewGeekIconBriefcaseAIphone => const AssetGenImage(
+      'assets/images/dark_boss_new_geek_icon_briefcase_a_iphone.png');
+
+  /// File path: assets/images/dark_boss_new_geek_icon_briefcase_iphone.png
+  AssetGenImage get darkBossNewGeekIconBriefcaseIphone => const AssetGenImage(
+      'assets/images/dark_boss_new_geek_icon_briefcase_iphone.png');
+
+  /// File path: assets/images/dark_boss_new_geek_icon_education_a_iphone.png
+  AssetGenImage get darkBossNewGeekIconEducationAIphone => const AssetGenImage(
+      'assets/images/dark_boss_new_geek_icon_education_a_iphone.png');
+
+  /// File path: assets/images/dark_boss_new_geek_icon_expect_a_iphone.png
+  AssetGenImage get darkBossNewGeekIconExpectAIphone => const AssetGenImage(
+      'assets/images/dark_boss_new_geek_icon_expect_a_iphone.png');
+
+  /// File path: assets/images/dark_boss_new_geek_icon_expect_iphone.png
+  AssetGenImage get darkBossNewGeekIconExpectIphone => const AssetGenImage(
+      'assets/images/dark_boss_new_geek_icon_expect_iphone.png');
+
+  /// File path: assets/images/dark_boss_position_preview_education_iphone.png
+  AssetGenImage get darkBossPositionPreviewEducationIphone =>
+      const AssetGenImage(
+          'assets/images/dark_boss_position_preview_education_iphone.png');
+
+  /// File path: assets/images/dark_boss_position_preview_working_age_iphone.png
+  AssetGenImage get darkBossPositionPreviewWorkingAgeIphone =>
+      const AssetGenImage(
+          'assets/images/dark_boss_position_preview_working_age_iphone.png');
 
   /// File path: assets/images/geek_apply_phone_icon_iphone.png
   AssetGenImage get geekApplyPhoneIconIphone =>
@@ -548,6 +612,10 @@ class $AssetsImagesGen {
         contactRightScanNewIphone,
         darkBasicGeekphoneCommentCloseIphone,
         darkBasicGuideviewCommentCloseIphone,
+        darkBbJobLocationIcon1Iphone,
+        darkBbMineNewRowIphone,
+        darkBbPositionLengthenIconIphone,
+        darkBbReviseFiledHasChangeArrowIphone,
         darkBbSwitchIdentityIphone,
         darkBbSwitchIdentityNewIphone,
         darkBhChatBubbleBlueIphone,
@@ -557,6 +625,17 @@ class $AssetsImagesGen {
         darkBhChatChoosedTakePhotoIconIphone,
         darkBhChatChoosedVideoIconIphone,
         darkBhChatEvaUnStarIphone,
+        darkBossCityCbdLocationSelectIconIphone,
+        darkBossHelpIphone,
+        darkBossHomeAddIphone,
+        darkBossHomeAddNewIphone,
+        darkBossNewGeekIconBriefcaseAIphone,
+        darkBossNewGeekIconBriefcaseIphone,
+        darkBossNewGeekIconEducationAIphone,
+        darkBossNewGeekIconExpectAIphone,
+        darkBossNewGeekIconExpectIphone,
+        darkBossPositionPreviewEducationIphone,
+        darkBossPositionPreviewWorkingAgeIphone,
         geekApplyPhoneIconIphone,
         geekApplyWechatIconIphone,
         geekMyNavScanNewIphone,
