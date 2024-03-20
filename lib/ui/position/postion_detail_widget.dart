@@ -174,19 +174,30 @@ class PostionDetailWidget extends StatelessWidget {
               ),
             ),
             SafeArea(
-              child: Container(
-                color: Color(0xFF17b3b3),
+              child: SizedBox(
                 width: double.infinity,
                 height: 50,
-                margin: EdgeInsets.only(left: leading, right: leading),
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "立即沟通",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                child: Padding(
+                  padding: EdgeInsets.only(left: leading, right: leading),
+                  child: TextButton(
+                    onPressed: () {},
+                    style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.circular(10.0), // 设置圆角为20
+                          ),
+                        ),
+                        backgroundColor:
+                            MaterialStateProperty.all(Color(0xFF17b3b3))),
+                    child: Text(
+                      "立即沟通",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ),
