@@ -41,19 +41,25 @@ class SegementWdiget extends StatelessWidget {
     return ListenableBuilder(
       listenable: selected,
       builder: (context, child) {
-        return Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
-          for (int i = 0; i < titles.length; i++) ...[
-            GestureDetector(
-              onTap: () {
-                valueWillChange?.call(selected.value, i);
-                selected.value = i;
-              },
-              child: Text(titles[i],
-                  style: _textStyle(context, selected.value == i)),
-            ),
-            if (i < titles.length - 1) child!,
-          ]
-        ]);
+        return Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            for (int i = 0; i < titles.length; i++) ...[
+              GestureDetector(
+                behavior: HitTestBehavior.translucent,
+                onTap: () {
+                  valueWillChange?.call(selected.value, i);
+                  selected.value = i;
+                },
+                child: Center(
+                  child: Text(titles[i],
+                      style: _textStyle(context, selected.value == i)),
+                ),
+              ),
+              if (i < titles.length - 1) child!,
+            ]
+          ],
+        );
       },
       child: SizedBox(width: space),
     );
