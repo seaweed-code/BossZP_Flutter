@@ -11,6 +11,7 @@ class PostionDetailWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
+    final line = SizedBox(height: 1, child: ColoredBox(color: Colors.black12));
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -33,14 +34,17 @@ class PostionDetailWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Row(children: [
-                        Text(
-                          "iOS技术专家",
-                          style: TextStyle(
-                              color: appear.titleColor,
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold),
+                        Expanded(
+                          child: Text(
+                            "高级iOS开发工程师",
+                            style: TextStyle(
+                                color: appear.titleColor,
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        Spacer(),
+                        // Spacer(),
+                        SizedBox(width: 20),
                         Text(
                           "40-60K 15薪",
                           style: TextStyle(
@@ -72,7 +76,9 @@ class PostionDetailWidget extends StatelessWidget {
                               ],
                             )
                         ],
-                      )
+                      ),
+                      SizedBox(height: 20),
+                      line
                     ],
                   ),
                 )
