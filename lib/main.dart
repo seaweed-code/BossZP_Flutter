@@ -17,14 +17,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-          appBarTheme: AppBarTheme(color: Colors.transparent),
-          shadowColor: Colors.green),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    return Provider(
+      create: (context) => Appearance(),
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+            appBarTheme: AppBarTheme(color: Colors.transparent),
+            shadowColor: Colors.green),
+        home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      ),
     );
   }
 }
@@ -59,18 +62,15 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   Widget build(BuildContext context) {
     final iconSize = 45.0;
-    return Provider<Appearance>(
-      create: (context) => Appearance(),
-      child: Scaffold(
-        body: TabBarView(
-          controller: _tabController,
-          children: pages.map((e) => e.$3).toList(),
-          physics: NeverScrollableScrollPhysics(),
-        ),
-        bottomNavigationBar: BottomBarWidget(
-          tabController: _tabController,
-          items: pages.map((e) => (e.$1, e.$2)).toList(),
-        ),
+    return Scaffold(
+      body: TabBarView(
+        controller: _tabController,
+        children: pages.map((e) => e.$3).toList(),
+        physics: NeverScrollableScrollPhysics(),
+      ),
+      bottomNavigationBar: BottomBarWidget(
+        tabController: _tabController,
+        items: pages.map((e) => (e.$1, e.$2)).toList(),
       ),
     );
   }
