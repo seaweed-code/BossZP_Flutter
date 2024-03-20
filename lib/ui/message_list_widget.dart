@@ -99,11 +99,16 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 3, bottom: 3),
-            child: selected.value == 0
-                ? Assets.images.bzGetInterviewPositionNormalIphone
-                    .image(fit: BoxFit.cover)
-                : Assets.images.bzGetInterviewPositionSelectedIphone
-                    .image(fit: BoxFit.cover),
+            child: ListenableBuilder(
+              listenable: selected,
+              builder: (context, child) {
+                return selected.value == 0
+                    ? Assets.images.bzGetInterviewPositionNormalIphone
+                        .image(fit: BoxFit.cover)
+                    : Assets.images.bzGetInterviewPositionSelectedIphone
+                        .image(fit: BoxFit.cover);
+              },
+            ),
           )
         ],
       ),
