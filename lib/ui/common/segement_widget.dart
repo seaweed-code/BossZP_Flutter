@@ -27,7 +27,7 @@ class SegementWdiget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListenableBuilder(
       listenable: selected,
-      builder: (context, _) {
+      builder: (context, child) {
         return Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
           for (int i = 0; i < titles.length; i++) ...[
             GestureDetector(
@@ -37,10 +37,11 @@ class SegementWdiget extends StatelessWidget {
               child: Text(titles[i],
                   style: _textStyle(context, selected.value == i)),
             ),
-            if (i < titles.length - 1) SizedBox(width: space),
+            if (i < titles.length - 1) child!,
           ]
         ]);
       },
+      child: SizedBox(width: space),
     );
   }
 }
