@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 class PostionDetailWidget extends StatelessWidget {
-  const PostionDetailWidget({super.key, this.leading = 25});
+  const PostionDetailWidget({super.key, this.leading = 20});
   final double leading;
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,10 @@ class PostionDetailWidget extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {},
-              icon: Assets.images.bhHmpgNavShareBlackIphone.image())
+              icon: Assets.images.bhHmpgNavShareBlackIphone.image()),
+          IconButton(
+              onPressed: () {},
+              icon: Assets.images.chatNavRightIconIphone.image())
         ],
       ),
       body: Column(
