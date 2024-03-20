@@ -56,29 +56,7 @@ class PostionDetailWidget extends StatelessWidget {
                         )
                       ]),
                       SizedBox(height: 20),
-                      Wrap(
-                        direction: Axis.horizontal,
-                        spacing: 15,
-                        alignment: WrapAlignment.start,
-                        runSpacing: 10,
-                        children: [
-                          for (int i = 0; i < 3; i++)
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Assets.images.bzGetCardDetailInfoIconIphone
-                                    .image(),
-                                SizedBox(width: 5),
-                                Text(
-                                  "北京～庄$i",
-                                  style: TextStyle(
-                                      color: appear.subTitleColor,
-                                      fontSize: 15),
-                                )
-                              ],
-                            )
-                        ],
-                      ),
+                      _TagListWidget(),
                       SizedBox(height: 20),
                       line,
                       SizedBox(height: 20),
@@ -159,7 +137,9 @@ class PostionDetailWidget extends StatelessWidget {
                                 fontWeight: FontWeight.normal,
                                 height: 1.8),
                           ),
-                          Assets.images.bhChatRobotQuesIconIphone.image()
+                          SizedBox(width: 4),
+                          Assets.images.bhChatRobotQuesIconIphone.image(
+                              fit: BoxFit.fitWidth, width: 20, height: 20)
                         ],
                       )
                     ],
@@ -188,6 +168,37 @@ class PostionDetailWidget extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class _TagListWidget extends StatelessWidget {
+  const _TagListWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    return Wrap(
+      direction: Axis.horizontal,
+      spacing: 15,
+      alignment: WrapAlignment.start,
+      runSpacing: 10,
+      children: [
+        for (int i = 0; i < 3; i++)
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Assets.images.bzGetCardDetailInfoIconIphone.image(),
+              SizedBox(width: 5),
+              Text(
+                "北京～庄$i",
+                style: TextStyle(color: appear.subTitleColor, fontSize: 15),
+              )
+            ],
+          )
+      ],
     );
   }
 }
