@@ -16,11 +16,20 @@ class SegementWdiget extends StatelessWidget {
   final TextStyle? selectedStyle, unselectedStyle;
 
   TextStyle _textStyle(BuildContext context, bool isSelect) {
+    final appearance = context.read<Appearance>();
     final style = isSelect ? selectedStyle : unselectedStyle;
     if (style != null) {
       return style;
     }
-    return TextStyle();
+    return isSelect
+        ? TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: appearance.titleColor)
+        : TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.normal,
+            color: appearance.subTitleColor);
   }
 
   @override
