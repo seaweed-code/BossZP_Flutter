@@ -1,3 +1,4 @@
+import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,24 +21,47 @@ class PostionDetailWidget extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.fromLTRB(leading, 10, leading, 10),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Row(
+                      Row(children: [
+                        Text(
+                          "iOS技术专家",
+                          style: TextStyle(
+                              color: appear.titleColor,
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Text(
+                          "40-60K 15薪",
+                          style: TextStyle(
+                              color: appear.blueColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500),
+                        )
+                      ]),
+                      SizedBox(height: 15),
+                      Wrap(
+                        direction: Axis.horizontal,
+                        spacing: 15,
+                        alignment: WrapAlignment.start,
+                        runSpacing: 10,
                         children: [
-                          Text(
-                            "iOS技术专家",
-                            style: TextStyle(
-                                color: appear.titleColor,
-                                fontSize: 28,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Spacer(),
-                          Text(
-                            "40-60K 15薪",
-                            style: TextStyle(
-                                color: appear.blueColor,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500),
-                          )
+                          for (int i = 0; i < 3; i++)
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Assets.images.bzGetCardDetailInfoIconIphone
+                                    .image(),
+                                SizedBox(width: 5),
+                                Text(
+                                  "北京～庄$i",
+                                  style: TextStyle(
+                                      color: appear.subTitleColor,
+                                      fontSize: 15),
+                                )
+                              ],
+                            )
                         ],
                       )
                     ],
