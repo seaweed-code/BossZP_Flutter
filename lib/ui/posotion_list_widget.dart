@@ -55,11 +55,18 @@ class PositionListWidget extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: ListView.builder(
-            itemCount: 30,
-            itemBuilder: (context, index) {
-              return PostionItemWidget();
+          child: RefreshIndicator(
+            onRefresh: () async {
+              return Future.delayed(Duration(seconds: 2));
             },
+            child: Scrollbar(
+              child: ListView.builder(
+                itemCount: 30,
+                itemBuilder: (context, index) {
+                  return PostionItemWidget();
+                },
+              ),
+            ),
           ),
         )
       ]),
