@@ -1,5 +1,6 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:bosszp/ui/common/segement_widget.dart';
 // import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/message_item_widget.dart';
 import 'package:flutter/cupertino.dart';
@@ -67,45 +68,19 @@ class _NavigationSwitchWidget extends StatelessWidget {
 
   final ValueNotifier<int> selected;
 
-  TextStyle _getStyle(BuildContext context, int index) {
-    final Appearance appear = context.read();
-    if (index == selected.value) {
-      return TextStyle(
-          color: appear.titleColor, fontSize: 32, fontWeight: FontWeight.w900);
-    }
-    return TextStyle(
-        color: appear.subTitleColor, fontSize: 22, fontWeight: FontWeight.w900);
-  }
-
   @override
   Widget build(BuildContext context) {
-    return ListenableBuilder(
-        listenable: selected,
-        builder: (context, _) {
-          return Row(
-            children: [
-              GestureDetector(
-                onTap: () {
-                  selected.value = 0;
-                },
-                child: Text(
-                  "聊天",
-                  style: _getStyle(context, 0),
-                ),
-              ),
-              SizedBox(width: 20),
-              GestureDetector(
-                onTap: () {
-                  selected.value = 1;
-                },
-                child: Text(
-                  "互动",
-                  style: _getStyle(context, 1),
-                ),
-              )
-            ],
-          );
-        });
+    final Appearance appear = context.read();
+    return SegementWdiget(
+      selected: selected,
+      titles: ["聊天", "互动"],
+      selectedStyle: TextStyle(
+          color: appear.titleColor, fontSize: 32, fontWeight: FontWeight.w900),
+      unselectedStyle: TextStyle(
+          color: appear.subTitleColor,
+          fontSize: 22,
+          fontWeight: FontWeight.w900),
+    );
   }
 }
 
