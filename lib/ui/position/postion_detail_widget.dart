@@ -132,8 +132,10 @@ class PostionDetailWidget extends StatelessWidget {
                                 )
                               ],
                             ),
-                            Spacer(),
-                            Assets.images.basicMoreArrowiphone.image()
+                            Spacer(), //dark_bb_revise_filed_has_change_arrow_iphone
+                            Assets.images.darkBbReviseFiledHasChangeArrowIphone
+                                .image(
+                                    width: 18, height: 18, fit: BoxFit.contain)
                           ],
                         ),
                         Padding(
