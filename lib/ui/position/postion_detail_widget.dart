@@ -268,7 +268,8 @@ class _AttributesWiget extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Assets.images.bzGetCardDetailInfoIconIphone.image(),
+              Assets.images.darkBossCityCbdLocationSelectIconIphone
+                  .image(color: appear.subTitleColor),
               SizedBox(width: 5),
               Text(
                 "北京～庄$i",
