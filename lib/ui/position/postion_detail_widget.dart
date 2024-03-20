@@ -14,7 +14,10 @@ class PostionDetailWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
-    final line = SizedBox(height: 1, child: ColoredBox(color: Colors.black12));
+    final line =
+        SizedBox(height: 1, child: ColoredBox(color: appear.lineColor));
+    const avatarWidth = 50.0;
+    const avatarTraing = 20.0;
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -63,25 +66,41 @@ class PostionDetailWidget extends StatelessWidget {
                       Row(
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(25),
+                            borderRadius:
+                                BorderRadius.circular(avatarWidth / 2),
                             child: Assets.images.avatar2Iphone
-                                .image(width: 50, height: 50),
+                                .image(width: avatarWidth, height: avatarWidth),
                           ),
-                          SizedBox(width: 20),
+                          SizedBox(width: avatarTraing),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [Text("刘泽奇"), Text("贝壳找房·专家")],
+                            children: [
+                              Text(
+                                "刘泽奇",
+                                style: TextStyle(
+                                    color: appear.titleColor,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                "贝壳找房·专家",
+                                style: TextStyle(
+                                    color: appear.subTitleColor, fontSize: 16),
+                              )
+                            ],
                           ),
                           Spacer(),
                           Assets.images.basicMoreArrowiphone.image()
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 55),
+                        padding: const EdgeInsets.only(
+                            left: avatarWidth + avatarTraing, top: 4),
                         child: Text(
                           "今日回复1次",
                           style: TextStyle(
-                              color: appear.subTitleColor, fontSize: 14),
+                              color: appear.subTitleColor, fontSize: 13),
                         ),
                       ),
                       SizedBox(height: 30),
@@ -230,7 +249,7 @@ class _AttributesWiget extends StatelessWidget {
               SizedBox(width: 5),
               Text(
                 "北京～庄$i",
-                style: TextStyle(color: appear.subTitleColor, fontSize: 15),
+                style: TextStyle(color: appear.subTitleColor, fontSize: 16),
               )
             ],
           )

@@ -7,4 +7,5 @@ class Appearance {
   var darkColor = const Color(0xFF848484);
   var blueColor = const Color(0xFF00888C);
   var timeColor = const Color(0xFFB8B8B8);
+  var lineColor = const Color(0xFFf8f8f8);
 }
