@@ -136,6 +136,15 @@ class PostionDetailWidget extends StatelessWidget {
                         ],
                         spacing: 8,
                         runSpacing: 10,
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                        "职责描述:\n1、负责客户端产品开发",
+                        style: TextStyle(
+                            color: appear.titleColor,
+                            fontSize: 18,
+                            fontWeight: FontWeight.normal,
+                            height: 1.8),
                       )
                     ],
                   ),
