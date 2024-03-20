@@ -73,19 +73,19 @@ class PostionDetailWidget extends StatelessWidget {
                           children: [
                             _IconTextWidget(
                               prefix: Assets.images.darkBbJobLocationIcon1Iphone
-                                  .image(color: appear.subTitleColor),
+                                  .image(color: appear.timeColor),
                               text: "北京·西城区·西直门",
                             ),
                             _IconTextWidget(
                               prefix: Assets
                                   .images.darkBossNewGeekIconBriefcaseAIphone
-                                  .image(color: appear.subTitleColor),
+                                  .image(color: appear.timeColor),
                               text: "5-10年",
                             ),
                             _IconTextWidget(
                               prefix: Assets
                                   .images.darkBossNewGeekIconEducationAIphone
-                                  .image(color: appear.subTitleColor),
+                                  .image(color: appear.timeColor),
                               text: "本科",
                             )
                           ],
