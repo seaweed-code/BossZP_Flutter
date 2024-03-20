@@ -12,12 +12,12 @@ class SegementWdiget extends StatelessWidget {
       this.selectedStyle,
       this.unselectedStyle,
       this.space = 20,
-      this.valueDidChange});
+      this.valueWillChange});
   final ValueNotifier<int> selected;
   final List<String> titles;
   final double space;
   final TextStyle? selectedStyle, unselectedStyle;
-  final SegementValueChangeCallBack? valueDidChange;
+  final SegementValueChangeCallBack? valueWillChange;
 
   TextStyle _textStyle(BuildContext context, bool isSelect) {
     final appearance = context.read<Appearance>();
@@ -45,6 +45,7 @@ class SegementWdiget extends StatelessWidget {
           for (int i = 0; i < titles.length; i++) ...[
             GestureDetector(
               onTap: () {
+                valueWillChange?.call(selected.value, i);
                 selected.value = i;
               },
               child: Text(titles[i],
