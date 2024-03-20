@@ -107,7 +107,36 @@ class PostionDetailWidget extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 30),
-                      line
+                      line,
+                      SizedBox(height: 30),
+                      Text(
+                        "职位详情",
+                        style: TextStyle(
+                            color: appear.titleColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: 25),
+                      Wrap(
+                        children: [
+                          for (int i = 0; i < 14; i++)
+                            Container(
+                              decoration: BoxDecoration(
+                                  color: appear.backgroundColor,
+                                  borderRadius: BorderRadius.circular(4)),
+                              padding: EdgeInsets.fromLTRB(4, 4, 4, 4),
+                              child: Text(
+                                "智能硬件",
+                                style: TextStyle(
+                                    color: appear.subTitleColor,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ),
+                        ],
+                        spacing: 8,
+                        runSpacing: 10,
+                      )
                     ],
                   ),
                 )
