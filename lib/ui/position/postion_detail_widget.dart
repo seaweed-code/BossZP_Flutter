@@ -177,15 +177,15 @@ class PostionDetailWidget extends StatelessWidget {
               child: SizedBox(
                 width: double.infinity,
                 height: 65,
-                child: Padding(
-                  padding: EdgeInsets.only(left: leading, right: leading),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      line,
-                      SizedBox(height: 10),
-                      SizedBox(
-                        height: 50,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    line,
+                    SizedBox(height: 10),
+                    SizedBox(
+                      height: 50,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: leading, right: leading),
                         child: TextButton(
                           onPressed: () {},
                           style: ButtonStyle(
@@ -207,8 +207,8 @@ class PostionDetailWidget extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             )
