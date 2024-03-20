@@ -76,20 +76,6 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
   final double leading;
   final ValueNotifier<int> selected;
 
-  TextStyle _getStyle(BuildContext context, int index) {
-    final Appearance appearance = context.read();
-    if (index == selected.value) {
-      return TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.w600,
-          color: appearance.titleColor);
-    }
-    return TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.normal,
-        color: appearance.subTitleColor);
-  }
-
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
@@ -99,42 +85,27 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
       padding: EdgeInsets.only(left: leading, right: leading),
       height: maxExtent,
       alignment: Alignment.center,
-      child: ListenableBuilder(
-        listenable: selected,
-        builder: (context, _) {
-          return Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  selected.value = 0;
-                },
-                child: Text(
-                  "全部",
-                  style: _getStyle(context, 0),
-                ),
-              ),
-              const SizedBox(width: 20),
-              GestureDetector(
-                onTap: () {
-                  selected.value = 1;
-                },
-                child: Text(
-                  "我发起",
-                  style: _getStyle(context, 1),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 3, bottom: 3),
-                child: selected.value == 0
-                    ? Assets.images.bzGetInterviewPositionNormalIphone
-                        .image(fit: BoxFit.cover)
-                    : Assets.images.bzGetInterviewPositionSelectedIphone
-                        .image(fit: BoxFit.cover),
-              )
-            ],
-          );
-        },
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          SegementWdiget(
+            selected: selected,
+            titles: ["全部", "我发起"],
+            valueWillChange: (oldValue, newValue) {
+              if (oldValue == newValue && newValue == 1) {
+                print("repeated click click 2, show popView");
+              }
+            },
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 3, bottom: 3),
+            child: selected.value == 0
+                ? Assets.images.bzGetInterviewPositionNormalIphone
+                    .image(fit: BoxFit.cover)
+                : Assets.images.bzGetInterviewPositionSelectedIphone
+                    .image(fit: BoxFit.cover),
+          )
+        ],
       ),
     );
   }
