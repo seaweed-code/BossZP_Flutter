@@ -219,7 +219,7 @@ class _TagsWidget extends StatelessWidget {
     final Appearance appear = context.read();
     return Wrap(
       children: [
-        for (int i = 0; i < 14; i++)
+        for (int i = 0; i < 4; i++)
           Container(
             decoration: BoxDecoration(
                 color: appear.backgroundColor,
