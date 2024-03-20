@@ -159,7 +159,7 @@ class PostionDetailWidget extends StatelessWidget {
                                 fontWeight: FontWeight.normal,
                                 height: 1.8),
                           ),
-                          Assets.images.basicBackCycleIphone.image()
+                          Assets.images.bhChatRobotQuesIconIphone.image()
                         ],
                       )
                     ],
