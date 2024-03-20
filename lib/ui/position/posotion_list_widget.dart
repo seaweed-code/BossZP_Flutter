@@ -1,6 +1,7 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/common/segement_widget.dart';
+import 'package:bosszp/ui/position/postion_detail_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -63,7 +64,14 @@ class PositionListWidget extends StatelessWidget {
               child: ListView.builder(
                 itemCount: 30,
                 itemBuilder: (context, index) {
-                  return PostionItemWidget();
+                  return GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return PostionDetailWidget();
+                        }));
+                      },
+                      child: PostionItemWidget());
                 },
               ),
             ),

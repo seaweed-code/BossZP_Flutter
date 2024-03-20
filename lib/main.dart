@@ -3,7 +3,7 @@ import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/follow_list_widget.dart';
 import 'package:bosszp/ui/main_mine_widget.dart';
 import 'package:bosszp/ui/recent_message_list_widget.dart';
-import 'package:bosszp/ui/posotion_list_widget.dart';
+import 'package:bosszp/ui/position/posotion_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:bosszp/ui/bottom_bar_widget.dart';
