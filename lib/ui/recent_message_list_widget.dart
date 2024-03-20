@@ -87,7 +87,7 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
       height: maxExtent,
       alignment: Alignment.center,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SegementWdiget(
             selected: selected,
@@ -99,7 +99,7 @@ class _SliverHeaderDelegate extends SliverPersistentHeaderDelegate {
             },
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 3, bottom: 3),
+            padding: const EdgeInsets.only(left: 3, top: 6),
             child: ListenableBuilder(
               listenable: selected,
               builder: (context, child) {
