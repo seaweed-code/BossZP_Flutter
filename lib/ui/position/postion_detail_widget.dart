@@ -145,7 +145,9 @@ class PostionDetailWidget extends StatelessWidget {
                             fontSize: 18,
                             fontWeight: FontWeight.normal,
                             height: 1.8),
-                      )
+                      ),
+                      SizedBox(height: 20),
+                      line
                     ],
                   ),
                 )
