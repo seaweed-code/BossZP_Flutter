@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:provider/provider.dart';
 
-class MessageItemWidget extends StatelessWidget {
-  const MessageItemWidget({super.key, this.leading = 15.0});
+class RecentMessageItemWidget extends StatelessWidget {
+  const RecentMessageItemWidget({super.key, this.leading = 15.0});
   final leading;
   @override
   Widget build(BuildContext context) {

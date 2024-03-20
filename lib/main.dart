@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage>
   final List<(String, String, Widget)> pages = [
     ("zhiwei", "职位", PositionListWidget()),
     ("youle", "有了", FollowListWidget()),
-    ("xiaoxi-b", "消息", MessageListWidget()),
+    ("xiaoxi-b", "消息", RecentMessageListWidget()),
     ("wode-b", "我的", MainMineWidget())
   ];
 
