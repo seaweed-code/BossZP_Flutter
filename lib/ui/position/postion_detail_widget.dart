@@ -147,7 +147,21 @@ class PostionDetailWidget extends StatelessWidget {
                             height: 1.8),
                       ),
                       SizedBox(height: 20),
-                      line
+                      line,
+                      SizedBox(height: 20),
+                      Row(
+                        children: [
+                          Text(
+                            "员工福利",
+                            style: TextStyle(
+                                color: appear.titleColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.normal,
+                                height: 1.8),
+                          ),
+                          Assets.images.basicBackCycleIphone.image()
+                        ],
+                      )
                     ],
                   ),
                 )

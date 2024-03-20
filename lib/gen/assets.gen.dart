@@ -269,6 +269,14 @@ class $AssetsImagesGen {
   AssetGenImage get bzGetNaviSearchIconIphone =>
       const AssetGenImage('assets/images/bz_get_navi_search_icon_iphone.png');
 
+  /// File path: assets/images/bz_get_post_video_topic_icon_iphone.png
+  AssetGenImage get bzGetPostVideoTopicIconIphone => const AssetGenImage(
+      'assets/images/bz_get_post_video_topic_icon_iphone.png');
+
+  /// File path: assets/images/bz_get_search_bar_search_iphone.png
+  AssetGenImage get bzGetSearchBarSearchIphone =>
+      const AssetGenImage('assets/images/bz_get_search_bar_search_iphone.png');
+
   /// File path: assets/images/bz_intelli_customer_thumb_like_iphone.png
   AssetGenImage get bzIntelliCustomerThumbLikeIphone => const AssetGenImage(
       'assets/images/bz_intelli_customer_thumb_like_iphone.png');
@@ -514,6 +522,8 @@ class $AssetsImagesGen {
         bzGetMsgNaviSetIconIphone,
         bzGetNaviMsgGrayIconIphone,
         bzGetNaviSearchIconIphone,
+        bzGetPostVideoTopicIconIphone,
+        bzGetSearchBarSearchIphone,
         bzIntelliCustomerThumbLikeIphone,
         bzIntelliCustomerThumbUnlikeIphone,
         bzInterviewCardCloseIconIphone,
