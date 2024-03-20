@@ -72,6 +72,18 @@ class PostionDetailWidget extends StatelessWidget {
                                   .darkBossCityCbdLocationSelectIconIphone
                                   .image(color: appear.subTitleColor),
                               text: "北京·西城区·西直门",
+                            ),
+                            _IconTextWidget(
+                              prefix: Assets
+                                  .images.darkBossNewGeekIconBriefcaseAIphone
+                                  .image(color: appear.subTitleColor),
+                              text: "5-10年",
+                            ),
+                            _IconTextWidget(
+                              prefix: Assets
+                                  .images.darkBossNewGeekIconEducationAIphone
+                                  .image(),
+                              text: "本科",
                             )
                           ],
                         ),
