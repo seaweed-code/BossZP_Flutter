@@ -1,12 +1,16 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:bosszp/ui/common/segement_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'position_item_widget.dart';
 
 class PositionListWidget extends StatelessWidget {
-  const PositionListWidget({super.key});
+  PositionListWidget({super.key});
+
+  final selected = ValueNotifier<int>(0);
 
   @override
   Widget build(BuildContext context) {
@@ -40,12 +44,25 @@ class PositionListWidget extends StatelessWidget {
           flexibleSpace: FlexibleSpaceBar(
               background: Assets.images.basicBgNaviBackImgIphone
                   .image(fit: BoxFit.cover))),
-      body: ListView.builder(
-        itemCount: 30,
-        itemBuilder: (context, index) {
-          return PostionItemWidget();
-        },
-      ),
+      body: Column(children: [
+        Container(
+          color: Colors.white,
+          height: 50,
+          padding: EdgeInsets.only(left: 15),
+          child: SegementWdiget(
+            titles: ["推荐", "附近", "最新"],
+            selected: selected,
+          ),
+        ),
+        Expanded(
+          child: ListView.builder(
+            itemCount: 30,
+            itemBuilder: (context, index) {
+              return PostionItemWidget();
+            },
+          ),
+        )
+      ]),
     );
   }
 }
