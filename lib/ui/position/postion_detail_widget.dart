@@ -105,17 +105,17 @@ class PostionDetailWidget extends StatelessWidget {
                                 color: Color(0xFFb8b8b8), fontSize: 14),
                           ),
                         ),
-                        SizedBox(height: 30),
+                        SizedBox(height: 25),
                         line,
-                        SizedBox(height: 30),
+                        SizedBox(height: 25),
                         Text(
                           "职位详情",
                           style: TextStyle(
                               color: appear.titleColor,
-                              fontSize: 20,
+                              fontSize: 18,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 25),
+                        SizedBox(height: 15),
                         _TagsWidget(),
                         SizedBox(height: 20),
                         Text(
