@@ -72,8 +72,7 @@ class PostionDetailWidget extends StatelessWidget {
                           runSpacing: 10,
                           children: [
                             _IconTextWidget(
-                              prefix: Assets.images
-                                  .darkBossCityCbdLocationSelectIconIphone
+                              prefix: Assets.images.darkBbJobLocationIcon1Iphone
                                   .image(color: appear.subTitleColor),
                               text: "北京·西城区·西直门",
                             ),
@@ -84,10 +83,9 @@ class PostionDetailWidget extends StatelessWidget {
                               text: "5-10年",
                             ),
                             _IconTextWidget(
-                              ///dark_boss_new_geek_icon_education_iphone
                               prefix: Assets
-                                  .images.darkBossNewGeekIconEducationIphone
-                                  .image(),
+                                  .images.darkBossNewGeekIconEducationAIphone
+                                  .image(color: appear.subTitleColor),
                               text: "本科",
                             )
                           ],
