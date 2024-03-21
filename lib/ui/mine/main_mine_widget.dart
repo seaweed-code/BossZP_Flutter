@@ -14,6 +14,7 @@ class MainMineWidget extends StatelessWidget {
     const avatarWidth = 58.0;
     final scrollControlller = ScrollController();
     final appear = context.read<Appearance>();
+    final leaidng = 15.0;
     return Container(
       color: appear.backgroundColor,
       child: Stack(
@@ -26,11 +27,13 @@ class MainMineWidget extends StatelessWidget {
           _ScrollView(
               scrollControlller: scrollControlller,
               avatarWidth: avatarWidth,
+              leading: leaidng,
               appear: appear),
           Positioned(
-              child: _AvatarWidget(
-            avatarWidth: avatarWidth,
-          ))
+              left: leaidng,
+              right: leaidng,
+              top: 60,
+              child: _AvatarWidget(avatarWidth: avatarWidth))
         ],
       ),
     );
@@ -38,16 +41,17 @@ class MainMineWidget extends StatelessWidget {
 }
 
 class _ScrollView extends StatelessWidget {
-  const _ScrollView({
-    super.key,
-    required this.scrollControlller,
-    required this.avatarWidth,
-    required this.appear,
-  });
+  const _ScrollView(
+      {super.key,
+      required this.scrollControlller,
+      required this.avatarWidth,
+      required this.appear,
+      required this.leading});
 
   final ScrollController scrollControlller;
   final double avatarWidth;
   final Appearance appear;
+  final double leading;
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +61,7 @@ class _ScrollView extends StatelessWidget {
         _AnimatedAppBar(controller: scrollControlller),
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.only(left: 15, right: 15),
+            padding: EdgeInsets.only(left: leading, right: leading),
             child: Column(
               children: [
                 _AvatarWidget(avatarWidth: avatarWidth),
