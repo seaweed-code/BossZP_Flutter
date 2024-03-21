@@ -43,15 +43,14 @@ class MainMineWidget extends StatelessWidget {
               top: appBarHeight,
               child: ListenScrollController(
                 scrollController: scrollControlller,
-                builder: (progress, context, child) {
+                builder: (progress, context, _) {
                   return Visibility(
                       visible: progress > 0,
                       maintainSize: true,
                       maintainAnimation: true,
                       maintainState: true,
-                      child: child!);
+                      child: _AvatarWidget(avatarWidth: avatarWidth));
                 },
-                child: _AvatarWidget(avatarWidth: avatarWidth),
                 didUpdate: () => _scrollProgress(scrollControlller.position),
               ))
         ],
