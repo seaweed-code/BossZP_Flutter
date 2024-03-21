@@ -6,6 +6,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+int _scrollProgress(ScrollPosition position) {
+  const maxOffset = 28.0;
+  final dx = clampDouble(position.pixels, 0, maxOffset);
+  return (dx * (100 / maxOffset)).toInt();
+}
+
 class MainMineWidget extends StatelessWidget {
   const MainMineWidget({super.key});
 
@@ -145,12 +151,7 @@ class _AnimatedAppBar extends StatelessWidget {
           opacity: progress,
           child: child!,
         ),
-        didUpdate: () {
-          final position = controller.position;
-          const maxOffset = 28.0;
-          final dx = clampDouble(position.pixels, 0, maxOffset);
-          return (dx * (100 / maxOffset)).toInt();
-        },
+        didUpdate: () => _scrollProgress(controller.position),
         child: Assets.images.basicBgNaviBackImgIphone.image(fit: BoxFit.cover),
       )),
     );
