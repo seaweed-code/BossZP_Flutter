@@ -21,7 +21,7 @@ class PostionDetailWidget extends StatelessWidget {
     const smallIconWidth = 20.0;
     final postionStyle = TextStyle(
         color: appear.titleColor, fontSize: 19, fontWeight: FontWeight.bold);
-
+    final scrollCtr = ScrollController();
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: FlexibleSpaceBar(
@@ -51,6 +51,7 @@ class PostionDetailWidget extends StatelessWidget {
           children: [
             Expanded(
               child: ListView(
+                controller: scrollCtr,
                 children: [
                   Padding(
                     padding: EdgeInsets.fromLTRB(leading, 10, leading, 10),
