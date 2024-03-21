@@ -99,32 +99,32 @@ class _AnimatedAppBar extends StatelessWidget {
       Assets.images.basicBgNaviBackImgIphone.image(fit: BoxFit.cover);
   @override
   Widget build(BuildContext context) {
-    return ListenScrollController(
-        scrollController: controller,
-        builder: (progress, context) {
-          return SliverAppBar(
-            pinned: true,
-            actions: [
-              IconButton(
-                  onPressed: null,
-                  icon: Assets.images.geekMyNavSwitchNewIphone.image()),
-              IconButton(
-                  onPressed: null,
-                  icon: Assets.images.geekMyNavScanNewIphone.image()),
-              IconButton(
-                  onPressed: null,
-                  icon: Assets.images.geekMyNavSetNewIphone.image())
-            ],
-            flexibleSpace: FlexibleSpaceBar(
-                background: Opacity(opacity: progress, child: backNavigation)),
-          );
-        },
-        didUpdate: () {
-          final position = controller.position;
-          const maxOffset = 28.0;
-          final dx = clampDouble(position.pixels, 0, maxOffset);
-          return (dx * (100 / maxOffset)).toInt();
-        });
+    return SliverAppBar(
+      pinned: true,
+      actions: [
+        IconButton(
+            onPressed: null,
+            icon: Assets.images.geekMyNavSwitchNewIphone.image()),
+        IconButton(
+            onPressed: null,
+            icon: Assets.images.geekMyNavScanNewIphone.image()),
+        IconButton(
+            onPressed: null, icon: Assets.images.geekMyNavSetNewIphone.image())
+      ],
+      flexibleSpace: FlexibleSpaceBar(
+          background: ListenScrollController(
+              scrollController: controller,
+              builder: (progress, context) => Opacity(
+                    opacity: progress,
+                    child: backNavigation,
+                  ),
+              didUpdate: () {
+                final position = controller.position;
+                const maxOffset = 28.0;
+                final dx = clampDouble(position.pixels, 0, maxOffset);
+                return (dx * (100 / maxOffset)).toInt();
+              })),
+    );
   }
 }
 
