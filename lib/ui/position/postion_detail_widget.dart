@@ -39,7 +39,7 @@ class PostionDetailWidget extends StatelessWidget {
                 icon: Assets.images.chatNavLeftIconIphone.image()),
             ListenScrollController(
                 scrollController: scrollCtr,
-                builder: (progress, context) => Text("高级iOS开发工程师",
+                builder: (progress, context, _) => Text("高级iOS开发工程师",
                     style: TextStyle(
                         color: appear.titleColor
                             .withAlpha((progress * 255.0).toInt()),
@@ -57,7 +57,7 @@ class PostionDetailWidget extends StatelessWidget {
           preferredSize: Size.fromHeight(2),
           child: ListenScrollController(
               scrollController: scrollCtr,
-              builder: (progress, context) => Container(
+              builder: (progress, context, _) => Container(
                     height: 2,
                     color:
                         appear.lineColor.withAlpha((progress * 255.0).toInt()),

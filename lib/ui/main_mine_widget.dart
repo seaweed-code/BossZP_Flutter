@@ -95,8 +95,7 @@ class _AnimatedAppBar extends StatelessWidget {
   _AnimatedAppBar({super.key, required this.controller});
 
   final ScrollController controller;
-  final backNavigation =
-      Assets.images.basicBgNaviBackImgIphone.image(fit: BoxFit.cover);
+
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
@@ -113,17 +112,19 @@ class _AnimatedAppBar extends StatelessWidget {
       ],
       flexibleSpace: FlexibleSpaceBar(
           background: ListenScrollController(
-              scrollController: controller,
-              builder: (progress, context) => Opacity(
-                    opacity: progress,
-                    child: backNavigation,
-                  ),
-              didUpdate: () {
-                final position = controller.position;
-                const maxOffset = 28.0;
-                final dx = clampDouble(position.pixels, 0, maxOffset);
-                return (dx * (100 / maxOffset)).toInt();
-              })),
+        scrollController: controller,
+        builder: (progress, context, child) => Opacity(
+          opacity: progress,
+          child: child!,
+        ),
+        didUpdate: () {
+          final position = controller.position;
+          const maxOffset = 28.0;
+          final dx = clampDouble(position.pixels, 0, maxOffset);
+          return (dx * (100 / maxOffset)).toInt();
+        },
+        child: Assets.images.basicBgNaviBackImgIphone.image(fit: BoxFit.cover),
+      )),
     );
   }
 }
