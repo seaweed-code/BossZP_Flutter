@@ -25,7 +25,7 @@ class PostionDetailWidget extends StatelessWidget {
     final scrollCtr = ScrollController();
 
     final updateProgress = () {
-      final maxOffset = 30.0;
+      final maxOffset = 60.0;
       final position = scrollCtr.position;
       final dx = clampDouble(position.pixels, 0, maxOffset);
       if (dx == 0) {
