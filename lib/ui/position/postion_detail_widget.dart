@@ -33,7 +33,9 @@ class PostionDetailWidget extends StatelessWidget {
         leading: Row(
           children: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 icon: Assets.images.chatNavLeftIconIphone.image()),
             ListenScrollController(
                 scrollController: scrollCtr,
