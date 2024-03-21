@@ -376,11 +376,14 @@ class _AvatarWidget extends StatelessWidget {
     super.key,
     required this.avatarWidth,
     this.avatarOffset = Offset.zero,
+    this.nameOffset = Offset.zero,
+    this.nameFontSize = 20,
   });
 
   final double avatarWidth;
   final Offset avatarOffset;
-
+  final Offset nameOffset;
+  final double nameFontSize;
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
@@ -397,12 +400,15 @@ class _AvatarWidget extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "李孝利",
-              style: TextStyle(
-                  color: appear.titleColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w900),
+            Transform.translate(
+              offset: nameOffset,
+              child: Text(
+                "李孝利",
+                style: TextStyle(
+                    color: appear.titleColor,
+                    fontSize: nameFontSize,
+                    fontWeight: FontWeight.w900),
+              ),
             ),
             // SizedBox(height: 3),
             Text(
