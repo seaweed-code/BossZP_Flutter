@@ -24,9 +24,6 @@ class PostionDetailWidget extends StatelessWidget {
       const maxOffset = 60.0;
       final position = scrollCtr.position;
       final dx = clampDouble(position.pixels, 0, maxOffset);
-      if (dx == 0) {
-        return 0;
-      }
       return (dx * (100 / maxOffset)).toInt();
     }
 
