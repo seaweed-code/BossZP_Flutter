@@ -15,10 +15,11 @@ class MainMineWidget extends StatelessWidget {
     final scrollControlller = ScrollController();
     final appear = context.read<Appearance>();
     final leaidng = 15.0;
+    double appBarHeight =
+        MediaQuery.of(context).padding.top + AppBar().preferredSize.height;
     return Container(
       color: appear.backgroundColor,
       child: Stack(
-        // alignment: Alignment.topCenter,
         children: [
           SizedBox(
               width: double.infinity,
@@ -32,7 +33,7 @@ class MainMineWidget extends StatelessWidget {
           Positioned(
               left: leaidng,
               right: leaidng,
-              top: 60,
+              top: appBarHeight,
               child: _AvatarWidget(avatarWidth: avatarWidth))
         ],
       ),
