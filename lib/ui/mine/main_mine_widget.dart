@@ -58,7 +58,9 @@ class MainMineWidget extends StatelessWidget {
                     offstage: progress == 0, // 0 - 1
                     //  from to
                     // pro/1 =  x-from / to-f
+                    // 255 0
                     child: _AvatarWidget(
+                        subNameAlaph: (progress * -255).toInt() + 255,
                         avatarOffset: Offset(0, _maxYavatar * -progress),
                         nameOffset: Offset(0, _maxYName * -progress),
                         nameFontSize: progress * (toFont - nameFont) + nameFont,
@@ -438,7 +440,7 @@ class _AvatarWidget extends StatelessWidget {
               "简历评分80分，建议优化",
               style: TextStyle(
                   color: appear.subTitleColor.withAlpha(subNameAlaph),
-                  fontSize: 13),
+                  fontSize: 14),
             )
           ],
         ),
