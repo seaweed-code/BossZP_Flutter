@@ -50,12 +50,17 @@ class MainMineWidget extends StatelessWidget {
                   const toSize = avatarWidth / 2;
 
                   final toFont = nameFont - 4;
+
+                  const _maxYName = 35.0;
+                  const _maxYavatar = 45.0;
                   // final
                   return Offstage(
                     offstage: progress == 0, // 0 - 1
                     //  from to
                     // pro/1 =  x-from / to-f
                     child: _AvatarWidget(
+                        avatarOffset: Offset(0, _maxYavatar * -progress),
+                        nameOffset: Offset(0, _maxYName * -progress),
                         nameFontSize: progress * (toFont - nameFont) + nameFont,
                         avatarWidth: progress * (toSize - fromSize) + fromSize),
                   );
