@@ -394,18 +394,19 @@ class _NumberRowWidget extends StatelessWidget {
 }
 
 class _AvatarWidget extends StatelessWidget {
-  const _AvatarWidget({
-    super.key,
-    required this.avatarWidth,
-    this.avatarOffset = Offset.zero,
-    this.nameOffset = Offset.zero,
-    required this.nameFontSize,
-  });
+  const _AvatarWidget(
+      {super.key,
+      required this.avatarWidth,
+      this.avatarOffset = Offset.zero,
+      this.nameOffset = Offset.zero,
+      required this.nameFontSize,
+      this.subNameAlaph = 255});
 
   final double avatarWidth;
   final Offset avatarOffset;
   final Offset nameOffset;
   final double nameFontSize;
+  final int subNameAlaph;
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
@@ -435,14 +436,16 @@ class _AvatarWidget extends StatelessWidget {
             // SizedBox(height: 3),
             Text(
               "简历评分80分，建议优化",
-              style: TextStyle(color: appear.subTitleColor, fontSize: 13),
+              style: TextStyle(
+                  color: appear.subTitleColor.withAlpha(subNameAlaph),
+                  fontSize: 13),
             )
           ],
         ),
         Spacer(),
         Assets.images.settingMoreArrowIphone.image(
             fit: BoxFit.fitHeight,
-            color: appear.subTitleColor,
+            color: appear.subTitleColor.withAlpha(subNameAlaph),
             width: 18,
             height: 18)
       ],
