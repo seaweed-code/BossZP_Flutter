@@ -17,7 +17,7 @@ class MainMineWidget extends StatelessWidget {
     return Container(
       color: appear.backgroundColor,
       child: Stack(
-        alignment: Alignment.topCenter,
+        // alignment: Alignment.topCenter,
         children: [
           SizedBox(
               width: double.infinity,
