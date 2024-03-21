@@ -30,24 +30,21 @@ class PostionDetailWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 400,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 18.0),
-          child: Row(
-            children: [
-              IconButton(
-                  onPressed: () {},
-                  icon: Assets.images.chatNavLeftIconIphone.image()),
-              ListenScrollController(
-                  scrollController: scrollCtr,
-                  builder: (progress, context) => Text("高级iOS开发工程师",
-                      style: TextStyle(
-                          color: appear.titleColor
-                              .withAlpha((progress * 255.0).toInt()),
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500)),
-                  didUpdate: updateProgress)
-            ],
-          ),
+        leading: Row(
+          children: [
+            IconButton(
+                onPressed: () {},
+                icon: Assets.images.chatNavLeftIconIphone.image()),
+            ListenScrollController(
+                scrollController: scrollCtr,
+                builder: (progress, context) => Text("高级iOS开发工程师",
+                    style: TextStyle(
+                        color: appear.titleColor
+                            .withAlpha((progress * 255.0).toInt()),
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500)),
+                didUpdate: updateProgress)
+          ],
         ),
         flexibleSpace: FlexibleSpaceBar(
           background: ColoredBox(
