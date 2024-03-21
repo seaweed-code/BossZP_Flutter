@@ -48,18 +48,15 @@ class MainMineWidget extends StatelessWidget {
                 builder: (progress, context, _) {
                   const fromSize = avatarWidth;
                   const toSize = avatarWidth / 2;
-
                   final toFont = nameFont - 4;
-
                   const _maxYName = 35.0;
+                  const _maxYsubname = 20.0;
                   const _maxYavatar = 45.0;
-                  // final
+
                   return Offstage(
-                    offstage: progress == 0, // 0 - 1
-                    //  from to
-                    // pro/1 =  x-from / to-f
-                    // 255 0
+                    offstage: progress == 0,
                     child: _AvatarWidget(
+                        subnameOffset: Offset(0, _maxYsubname * -progress),
                         subNameAlaph: (progress * -255).toInt() + 255,
                         avatarOffset: Offset(0, _maxYavatar * -progress),
                         nameOffset: Offset(0, _maxYName * -progress),
@@ -401,12 +398,14 @@ class _AvatarWidget extends StatelessWidget {
       required this.avatarWidth,
       this.avatarOffset = Offset.zero,
       this.nameOffset = Offset.zero,
+      this.subnameOffset = Offset.zero,
       required this.nameFontSize,
       this.subNameAlaph = 255});
 
   final double avatarWidth;
   final Offset avatarOffset;
   final Offset nameOffset;
+  final Offset subnameOffset;
   final double nameFontSize;
   final int subNameAlaph;
   @override
@@ -436,11 +435,14 @@ class _AvatarWidget extends StatelessWidget {
               ),
             ),
             // SizedBox(height: 3),
-            Text(
-              "简历评分80分，建议优化",
-              style: TextStyle(
-                  color: appear.subTitleColor.withAlpha(subNameAlaph),
-                  fontSize: 14),
+            Transform.translate(
+              offset: subnameOffset,
+              child: Text(
+                "简历评分80分，建议优化",
+                style: TextStyle(
+                    color: appear.subTitleColor.withAlpha(subNameAlaph),
+                    fontSize: 14),
+              ),
             )
           ],
         ),
