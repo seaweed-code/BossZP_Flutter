@@ -2,55 +2,12 @@ import 'dart:ui';
 
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:bosszp/ui/common/listen_scroll_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
-
-typedef ListenScrollControllerBuilder = Widget Function(
-    double progress, BuildContext context);
-
-class ListenScrollController extends StatefulWidget {
-  ListenScrollController({
-    super.key,
-    required this.scrollController,
-    required this.builder,
-  });
-  final ScrollController scrollController;
-  final ListenScrollControllerBuilder builder;
-  @override
-  State<ListenScrollController> createState() =>
-      __ListenScrollControllerState();
-}
-
-class __ListenScrollControllerState extends State<ListenScrollController> {
-  @override
-  void initState() {
-    widget.scrollController.addListener(_onScroll);
-    super.initState();
-  }
-
-  @override
-  void didUpdateWidget(covariant ListenScrollController oldWidget) {
-    oldWidget.scrollController.removeListener(_onScroll);
-    widget.scrollController.addListener(_onScroll);
-    super.didUpdateWidget(oldWidget);
-  }
-
-  void _onScroll() {}
-
-  @override
-  void dispose() {
-    widget.scrollController.removeListener(_onScroll);
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return widget.builder(0, context);
-  }
-}
 
 class PostionDetailWidget extends StatelessWidget {
   const PostionDetailWidget({super.key, this.leading = 20});
@@ -75,10 +32,16 @@ class PostionDetailWidget extends StatelessWidget {
         ),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(2),
-          child: Container(
-            height: 2,
-            color: appear.lineColor.withAlpha(0),
-          ),
+          child: ListenScrollController(
+              scrollController: scrollCtr,
+              builder: (progress, context) => Container(
+                    height: 2,
+                    color:
+                        appear.lineColor.withAlpha((progress * 255.0).toInt()),
+                  ),
+              didUpdate: () {
+                return 100;
+              }),
         ),
         actions: [
           IconButton(
