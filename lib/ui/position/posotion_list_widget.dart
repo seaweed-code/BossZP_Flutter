@@ -12,7 +12,7 @@ class PositionListWidget extends StatelessWidget {
   PositionListWidget({super.key});
 
   final selected = ValueNotifier<int>(0);
-
+  final scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
@@ -61,7 +61,9 @@ class PositionListWidget extends StatelessWidget {
               return Future.delayed(Duration(seconds: 2));
             },
             child: Scrollbar(
+              controller: scrollController,
               child: ListView.builder(
+                controller: scrollController,
                 itemCount: 30,
                 itemBuilder: (context, index) {
                   return GestureDetector(
