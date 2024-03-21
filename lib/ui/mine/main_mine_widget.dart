@@ -44,11 +44,8 @@ class MainMineWidget extends StatelessWidget {
               child: ListenScrollController(
                 scrollController: scrollControlller,
                 builder: (progress, context, _) {
-                  return Visibility(
-                      visible: progress > 0,
-                      maintainSize: true,
-                      maintainAnimation: true,
-                      maintainState: true,
+                  return Offstage(
+                      offstage: progress == 0,
                       child: _AvatarWidget(avatarWidth: avatarWidth));
                 },
                 didUpdate: () => _scrollProgress(scrollControlller.position),
