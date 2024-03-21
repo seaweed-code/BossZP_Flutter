@@ -51,7 +51,7 @@ class MainMineWidget extends StatelessWidget {
                   final toFont = nameFont - 4;
                   const _maxYName = 35.0;
                   const _maxYsubname = 20.0;
-                  const _maxYavatar = 45.0;
+                  const _maxYavatar = 48.0;
 
                   return Offstage(
                     offstage: progress == 0,
