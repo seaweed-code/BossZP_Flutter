@@ -4,6 +4,7 @@ import 'package:bosszp/ui/common/listen_scroll_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 int _scrollProgress(ScrollPosition position) {
@@ -71,7 +72,20 @@ class _ScrollView extends StatelessWidget {
             padding: EdgeInsets.only(left: leading, right: leading),
             child: Column(
               children: [
-                _AvatarWidget(avatarWidth: avatarWidth),
+                ListenScrollController(
+                  scrollController: scrollControlller,
+                  builder: (progress, context, child) {
+                    print(progress);
+                    return Visibility(
+                        visible: progress == 0,
+                        maintainSize: true,
+                        maintainAnimation: true,
+                        maintainState: true,
+                        child: child!);
+                  },
+                  child: _AvatarWidget(avatarWidth: avatarWidth),
+                  didUpdate: () => _scrollProgress(scrollControlller.position),
+                ),
                 SizedBox(height: 16),
                 _NumberRowWidget(appear: appear),
                 SizedBox(height: 10),
