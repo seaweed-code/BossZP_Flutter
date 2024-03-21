@@ -8,6 +8,50 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
+typedef ListenScrollControllerBuilder = Widget Function(
+    double progress, BuildContext context);
+
+class ListenScrollController extends StatefulWidget {
+  ListenScrollController({
+    super.key,
+    required this.scrollController,
+    required this.builder,
+  });
+  final ScrollController scrollController;
+  final ListenScrollControllerBuilder builder;
+  @override
+  State<ListenScrollController> createState() =>
+      __ListenScrollControllerState();
+}
+
+class __ListenScrollControllerState extends State<ListenScrollController> {
+  @override
+  void initState() {
+    widget.scrollController.addListener(_onScroll);
+    super.initState();
+  }
+
+  @override
+  void didUpdateWidget(covariant ListenScrollController oldWidget) {
+    oldWidget.scrollController.removeListener(_onScroll);
+    widget.scrollController.addListener(_onScroll);
+    super.didUpdateWidget(oldWidget);
+  }
+
+  void _onScroll() {}
+
+  @override
+  void dispose() {
+    widget.scrollController.removeListener(_onScroll);
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.builder(0, context);
+  }
+}
+
 class PostionDetailWidget extends StatelessWidget {
   const PostionDetailWidget({super.key, this.leading = 20});
   final double leading;
@@ -33,7 +77,7 @@ class PostionDetailWidget extends StatelessWidget {
           preferredSize: Size.fromHeight(2),
           child: Container(
             height: 2,
-            color: appear.lineColor,
+            color: appear.lineColor.withAlpha(0),
           ),
         ),
         actions: [
