@@ -1,5 +1,6 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:bosszp/ui/common/listen_scroll_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -90,69 +91,40 @@ class MainMineWidget extends StatelessWidget {
   }
 }
 
-class _AnimatedAppBar extends StatefulWidget {
-  _AnimatedAppBar({super.key, required this.controller, this.maxOffset = 28.0});
+class _AnimatedAppBar extends StatelessWidget {
+  _AnimatedAppBar({super.key, required this.controller});
+
   final ScrollController controller;
-
-  final maxOffset;
-  @override
-  State<_AnimatedAppBar> createState() => _AnimatedAppBarState();
-}
-
-class _AnimatedAppBarState extends State<_AnimatedAppBar> {
-  double offset = 0;
   final backNavigation =
       Assets.images.basicBgNaviBackImgIphone.image(fit: BoxFit.cover);
   @override
-  void initState() {
-    widget.controller.addListener(_onscroll);
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    widget.controller.removeListener(_onscroll);
-    super.dispose();
-  }
-
-  @override
-  void didUpdateWidget(covariant _AnimatedAppBar oldWidget) {
-    oldWidget.controller.removeListener(_onscroll);
-    widget.controller.addListener(_onscroll);
-
-    super.didUpdateWidget(oldWidget);
-  }
-
-  void _onscroll() {
-    final position = widget.controller.position;
-    final dx = clampDouble(position.pixels, 0, widget.maxOffset);
-
-    if (offset != dx) {
-      setState(() {
-        offset = dx;
-      });
-    }
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final opacity = offset * (1.0 / widget.maxOffset);
-    // final Appearance appear = context.read();
-    return SliverAppBar(
-      pinned: true,
-      actions: [
-        IconButton(
-            onPressed: null,
-            icon: Assets.images.geekMyNavSwitchNewIphone.image()),
-        IconButton(
-            onPressed: null,
-            icon: Assets.images.geekMyNavScanNewIphone.image()),
-        IconButton(
-            onPressed: null, icon: Assets.images.geekMyNavSetNewIphone.image())
-      ],
-      flexibleSpace: FlexibleSpaceBar(
-          background: Opacity(opacity: opacity, child: backNavigation)),
-    );
+    return ListenScrollController(
+        scrollController: controller,
+        builder: (progress, context) {
+          return SliverAppBar(
+            pinned: true,
+            actions: [
+              IconButton(
+                  onPressed: null,
+                  icon: Assets.images.geekMyNavSwitchNewIphone.image()),
+              IconButton(
+                  onPressed: null,
+                  icon: Assets.images.geekMyNavScanNewIphone.image()),
+              IconButton(
+                  onPressed: null,
+                  icon: Assets.images.geekMyNavSetNewIphone.image())
+            ],
+            flexibleSpace: FlexibleSpaceBar(
+                background: Opacity(opacity: progress, child: backNavigation)),
+          );
+        },
+        didUpdate: () {
+          final position = controller.position;
+          const maxOffset = 28.0;
+          final dx = clampDouble(position.pixels, 0, maxOffset);
+          return (dx * (100 / maxOffset)).toInt();
+        });
   }
 }
 
