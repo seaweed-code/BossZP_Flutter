@@ -375,19 +375,24 @@ class _AvatarWidget extends StatelessWidget {
   const _AvatarWidget({
     super.key,
     required this.avatarWidth,
+    this.avatarOffset = Offset.zero,
   });
 
   final double avatarWidth;
+  final Offset avatarOffset;
 
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
     return Row(
       children: [
-        ClipRRect(
-            borderRadius: BorderRadius.circular(avatarWidth / 2),
-            child: Assets.images.avatar1Iphone
-                .image(width: avatarWidth, height: avatarWidth)),
+        Transform.translate(
+          offset: avatarOffset,
+          child: ClipRRect(
+              borderRadius: BorderRadius.circular(avatarWidth / 2),
+              child: Assets.images.avatar1Iphone
+                  .image(width: avatarWidth, height: avatarWidth)),
+        ),
         SizedBox(width: 10),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
