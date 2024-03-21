@@ -36,6 +36,20 @@ class PostionDetailWidget extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        leadingWidth: 400,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 18.0),
+          child: Row(
+            children: [
+              Assets.images.chatNavLeftIconIphone.image(),
+              Text("高级iOS开发工程师",
+                  style: TextStyle(
+                      color: appear.titleColor,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500))
+            ],
+          ),
+        ),
         flexibleSpace: FlexibleSpaceBar(
           background: ColoredBox(
             color: Colors.white,
