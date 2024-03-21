@@ -22,6 +22,7 @@ class MainMineWidget extends StatelessWidget {
     final scrollControlller = ScrollController();
     final appear = context.read<Appearance>();
     final leaidng = 15.0;
+    final nameFont = 20.0;
     double appBarHeight =
         MediaQuery.of(context).padding.top + AppBar().preferredSize.height;
     return Container(
@@ -36,6 +37,7 @@ class MainMineWidget extends StatelessWidget {
               scrollControlller: scrollControlller,
               avatarWidth: avatarWidth,
               leading: leaidng,
+              nameFont: nameFont,
               appear: appear),
           Positioned(
               left: leaidng,
@@ -44,9 +46,19 @@ class MainMineWidget extends StatelessWidget {
               child: ListenScrollController(
                 scrollController: scrollControlller,
                 builder: (progress, context, _) {
+                  const fromSize = avatarWidth;
+                  const toSize = avatarWidth / 2;
+
+                  final toFont = nameFont - 4;
+                  // final
                   return Offstage(
-                      offstage: progress == 0,
-                      child: _AvatarWidget(avatarWidth: avatarWidth));
+                    offstage: progress == 0, // 0 - 1
+                    //  from to
+                    // pro/1 =  x-from / to-f
+                    child: _AvatarWidget(
+                        nameFontSize: progress * (toFont - nameFont) + nameFont,
+                        avatarWidth: progress * (toSize - fromSize) + fromSize),
+                  );
                 },
                 didUpdate: () => _scrollProgress(scrollControlller.position),
               ))
@@ -62,12 +74,14 @@ class _ScrollView extends StatelessWidget {
       required this.scrollControlller,
       required this.avatarWidth,
       required this.appear,
+      required this.nameFont,
       required this.leading});
 
   final ScrollController scrollControlller;
   final double avatarWidth;
   final Appearance appear;
   final double leading;
+  final nameFont;
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +104,10 @@ class _ScrollView extends StatelessWidget {
                         maintainState: true,
                         child: child!);
                   },
-                  child: _AvatarWidget(avatarWidth: avatarWidth),
+                  child: _AvatarWidget(
+                    avatarWidth: avatarWidth,
+                    nameFontSize: nameFont,
+                  ),
                   didUpdate: () => _scrollProgress(scrollControlller.position),
                 ),
                 SizedBox(height: 16),
@@ -377,7 +394,7 @@ class _AvatarWidget extends StatelessWidget {
     required this.avatarWidth,
     this.avatarOffset = Offset.zero,
     this.nameOffset = Offset.zero,
-    this.nameFontSize = 20,
+    required this.nameFontSize,
   });
 
   final double avatarWidth;
