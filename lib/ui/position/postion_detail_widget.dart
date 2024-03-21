@@ -29,6 +29,13 @@ class PostionDetailWidget extends StatelessWidget {
             color: Colors.white,
           ),
         ),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(2),
+          child: Container(
+            height: 2,
+            color: appear.lineColor,
+          ),
+        ),
         actions: [
           IconButton(
               onPressed: () {},
