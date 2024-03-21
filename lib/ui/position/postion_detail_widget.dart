@@ -33,6 +33,7 @@ class PostionDetailWidget extends StatelessWidget {
       }
       return (dx * (100 / maxOffset)).toInt();
     };
+
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: FlexibleSpaceBar(
