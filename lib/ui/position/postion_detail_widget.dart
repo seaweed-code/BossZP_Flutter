@@ -25,7 +25,7 @@ class PostionDetailWidget extends StatelessWidget {
     final scrollCtr = ScrollController();
 
     final updateProgress = () {
-      final maxOffset = 80.0;
+      final maxOffset = 60.0;
       final position = scrollCtr.position;
       final dx = clampDouble(position.pixels, 0, maxOffset);
       if (dx == 0) {
@@ -41,7 +41,9 @@ class PostionDetailWidget extends StatelessWidget {
           padding: const EdgeInsets.only(left: 18.0),
           child: Row(
             children: [
-              Assets.images.chatNavLeftIconIphone.image(),
+              IconButton(
+                  onPressed: () {},
+                  icon: Assets.images.chatNavLeftIconIphone.image()),
               ListenScrollController(
                   scrollController: scrollCtr,
                   builder: (progress, context) => Text("高级iOS开发工程师",
