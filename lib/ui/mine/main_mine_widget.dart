@@ -23,70 +23,93 @@ class MainMineWidget extends StatelessWidget {
               width: double.infinity,
               child: Assets.images.basicBgNavMineBackImgIphone
                   .image(fit: BoxFit.fitWidth)),
-          CustomScrollView(
-            controller: scrollControlller,
-            slivers: [
-              _AnimatedAppBar(controller: scrollControlller),
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 15, right: 15),
+          _ScrollView(
+              scrollControlller: scrollControlller,
+              avatarWidth: avatarWidth,
+              appear: appear),
+          Positioned(
+              child: _AvatarWidget(
+            avatarWidth: avatarWidth,
+          ))
+        ],
+      ),
+    );
+  }
+}
+
+class _ScrollView extends StatelessWidget {
+  const _ScrollView({
+    super.key,
+    required this.scrollControlller,
+    required this.avatarWidth,
+    required this.appear,
+  });
+
+  final ScrollController scrollControlller;
+  final double avatarWidth;
+  final Appearance appear;
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomScrollView(
+      controller: scrollControlller,
+      slivers: [
+        _AnimatedAppBar(controller: scrollControlller),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 15, right: 15),
+            child: Column(
+              children: [
+                _AvatarWidget(avatarWidth: avatarWidth),
+                SizedBox(height: 16),
+                _NumberRowWidget(appear: appear),
+                SizedBox(height: 10),
+                Card(
+                  color: Colors.white,
+                  elevation: 0.0,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      _AvatarWidget(avatarWidth: avatarWidth, appear: appear),
-                      SizedBox(height: 16),
-                      _NumberRowWidget(appear: appear),
-                      SizedBox(height: 10),
-                      Card(
-                        color: Colors.white,
-                        elevation: 0.0,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(12),
-                              child: Assets.images.newBannerIphone
-                                  .image(fit: BoxFit.fill, height: 80),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Row(
-                                children: [
-                                  Expanded(child: _SubRowWidget()),
-                                  SizedBox(width: 12),
-                                  Text(
-                                    "|",
-                                    style: TextStyle(
-                                        color: Colors.black12, fontSize: 14),
-                                  ),
-                                  SizedBox(width: 12),
-                                  Expanded(child: _SubRowWidget()),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Assets.images.newBannerIphone
+                            .image(fit: BoxFit.fill, height: 80),
                       ),
-                      _FrequentFunWidget(),
-                      _OtherFunsWidget(),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(5, 15, 5, 40),
-                        child: Text(
-                          "客服电话 400-065-5799 工作时间 8:00-22:00\n老年人直连热线 400-661-6030 工作时间 8:00-22:00\n推荐算法举报与未成年人举报渠道同上\n人力资源服务许可证  营业执照  朝阳区人社局监督电话\n京ICP备案14013441号-23A  京ICP证150923号",
-                          style: TextStyle(
-                              color: appear.subTitleColor,
-                              fontSize: 13,
-                              height: 2.2),
-                          textAlign: TextAlign.center,
+                        padding: const EdgeInsets.all(15.0),
+                        child: Row(
+                          children: [
+                            Expanded(child: _SubRowWidget()),
+                            SizedBox(width: 12),
+                            Text(
+                              "|",
+                              style: TextStyle(
+                                  color: Colors.black12, fontSize: 14),
+                            ),
+                            SizedBox(width: 12),
+                            Expanded(child: _SubRowWidget()),
+                          ],
                         ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            ],
+                _FrequentFunWidget(),
+                _OtherFunsWidget(),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(5, 15, 5, 40),
+                  child: Text(
+                    "客服电话 400-065-5799 工作时间 8:00-22:00\n老年人直连热线 400-661-6030 工作时间 8:00-22:00\n推荐算法举报与未成年人举报渠道同上\n人力资源服务许可证  营业执照  朝阳区人社局监督电话\n京ICP备案14013441号-23A  京ICP证150923号",
+                    style: TextStyle(
+                        color: appear.subTitleColor, fontSize: 13, height: 2.2),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
@@ -325,14 +348,13 @@ class _AvatarWidget extends StatelessWidget {
   const _AvatarWidget({
     super.key,
     required this.avatarWidth,
-    required this.appear,
   });
 
   final double avatarWidth;
-  final Appearance appear;
 
   @override
   Widget build(BuildContext context) {
+    final appear = context.read<Appearance>();
     return Row(
       children: [
         ClipRRect(
