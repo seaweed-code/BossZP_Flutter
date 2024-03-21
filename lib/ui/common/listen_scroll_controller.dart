@@ -4,15 +4,17 @@ import 'package:flutter/material.dart';
 
 typedef ListenScrollControllerBuilder = Widget Function(
     double progress, BuildContext context);
+typedef ListenScrollControllerDidUpdate = int Function();
 
 class ListenScrollController extends StatefulWidget {
-  ListenScrollController({
-    super.key,
-    required this.scrollController,
-    required this.builder,
-  });
+  ListenScrollController(
+      {super.key,
+      required this.scrollController,
+      required this.builder,
+      required this.didUpdate});
   final ScrollController scrollController;
   final ListenScrollControllerBuilder builder;
+  final ListenScrollControllerDidUpdate didUpdate;
   @override
   State<ListenScrollController> createState() =>
       __ListenScrollControllerState();
@@ -34,7 +36,14 @@ class __ListenScrollControllerState extends State<ListenScrollController> {
     super.didUpdateWidget(oldWidget);
   }
 
-  void _onScroll() {}
+  void _onScroll() {
+    final newProgress = widget.didUpdate();
+    if (progress != newProgress) {
+      setState(() {
+        progress = newProgress;
+      });
+    }
+  }
 
   @override
   void dispose() {
