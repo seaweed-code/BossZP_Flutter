@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 typedef ListenScrollControllerBuilder = Widget Function(
@@ -17,6 +19,8 @@ class ListenScrollController extends StatefulWidget {
 }
 
 class __ListenScrollControllerState extends State<ListenScrollController> {
+  int progress = 0;
+
   @override
   void initState() {
     widget.scrollController.addListener(_onScroll);
@@ -40,6 +44,7 @@ class __ListenScrollControllerState extends State<ListenScrollController> {
 
   @override
   Widget build(BuildContext context) {
-    return widget.builder(0, context);
+    return widget.builder(
+        clampDouble(progress.toDouble(), 0, 100) / 100, context);
   }
 }
