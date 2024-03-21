@@ -23,6 +23,16 @@ class PostionDetailWidget extends StatelessWidget {
     final postionStyle = TextStyle(
         color: appear.titleColor, fontSize: 19, fontWeight: FontWeight.bold);
     final scrollCtr = ScrollController();
+
+    final updateProgress = () {
+      final maxOffset = 30.0;
+      final position = scrollCtr.position;
+      final dx = clampDouble(position.pixels, 0, maxOffset);
+      if (dx == 0) {
+        return 0;
+      }
+      return (dx * (100 / maxOffset)).toInt();
+    };
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: FlexibleSpaceBar(
@@ -39,15 +49,7 @@ class PostionDetailWidget extends StatelessWidget {
                     color:
                         appear.lineColor.withAlpha((progress * 255.0).toInt()),
                   ),
-              didUpdate: () {
-                final maxOffset = 30.0;
-                final position = scrollCtr.position;
-                final dx = clampDouble(position.pixels, 0, maxOffset);
-                if (dx == 0) {
-                  return 0;
-                }
-                return (dx * (100 / maxOffset)).toInt();
-              }),
+              didUpdate: updateProgress),
         ),
         actions: [
           IconButton(
