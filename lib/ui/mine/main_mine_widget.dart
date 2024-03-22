@@ -415,8 +415,7 @@ class _AvatarWidget extends StatelessWidget {
       children: [
         Transform.translate(
           offset: avatarOffset,
-          child: ClipRRect(
-              borderRadius: BorderRadius.circular(avatarWidth / 2),
+          child: ClipOval(
               child: Assets.images.avatar1Iphone
                   .image(width: avatarWidth, height: avatarWidth)),
         ),
