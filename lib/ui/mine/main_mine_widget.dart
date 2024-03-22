@@ -21,8 +21,8 @@ class MainMineWidget extends StatelessWidget {
     const avatarWidth = 58.0;
     final scrollControlller = ScrollController();
     final appear = context.read<Appearance>();
-    final leaidng = 15.0;
-    final nameFont = 20.0;
+    const leaidng = 15.0;
+    const nameFont = 20.0;
     double appBarHeight =
         MediaQuery.of(context).padding.top + AppBar().preferredSize.height;
     return Container(
