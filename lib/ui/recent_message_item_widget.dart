@@ -2,6 +2,7 @@ import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 class RecentMessageItemWidget extends StatelessWidget {
@@ -16,8 +17,7 @@ class RecentMessageItemWidget extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(leading, 15, leading, 15),
       child: Row(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(avatarWidth / 2),
+          ClipOval(
             child: Assets.images.avatar3Iphone
                 .image(width: avatarWidth, height: avatarWidth),
             // child: CachedNetworkImage(
