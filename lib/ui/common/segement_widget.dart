@@ -5,6 +5,28 @@ import 'package:provider/provider.dart';
 
 typedef SegementValueChangeCallBack = void Function(int oldValue, int newValue);
 
+class TextStyleTween extends Tween<TextStyle?> {
+  TextStyleTween({begin, end}) : super(begin: begin, end: end);
+
+  double lerpDouble(double? a, double? b, double t) {
+    if (a != null && b != null) {
+      return a! + (b! - a!) * t;
+    }
+
+// if(a == null && b)
+    return 0;
+  }
+
+  @override
+  TextStyle lerp(double t) {
+    return TextStyle(
+      color: Color.lerp(begin?.color, end?.color, t),
+      fontSize: lerpDouble(begin?.fontSize, end?.fontSize, t),
+      fontWeight: FontWeight.lerp(begin?.fontWeight, end?.fontWeight, t),
+    );
+  }
+}
+
 class SegementWdiget extends StatelessWidget {
   const SegementWdiget(
       {super.key,
@@ -56,8 +78,14 @@ class SegementWdiget extends StatelessWidget {
                     padding: EdgeInsets.only(
                         left: (i == 0) ? 0 : space / 2,
                         right: (i == titles.length - 1) ? 0 : space / 2),
-                    child: Text(titles[i],
-                        style: _textStyle(context, selected.value == i)),
+                    child: TweenAnimationBuilder(
+                      duration: Duration(milliseconds: 500),
+                      tween: TextStyleTween(
+                          end: _textStyle(context, selected.value == i)),
+                      builder: (context, value, child) {
+                        return Text(titles[i], style: value);
+                      },
+                    ),
                   ),
                 ),
               ),
