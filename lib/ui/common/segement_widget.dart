@@ -36,12 +36,14 @@ class SegementWdiget extends StatelessWidget {
       this.selectedStyle,
       this.unselectedStyle,
       this.space = 20,
+      this.duration = const Duration(milliseconds: 300),
       this.valueWillChange});
   final ValueNotifier<int> selected;
   final List<String> titles;
   final double space;
   final TextStyle? selectedStyle, unselectedStyle;
   final SegementValueChangeCallBack? valueWillChange;
+  final Duration duration;
 
   TextStyle _textStyle(BuildContext context, bool isSelect) {
     final appearance = context.read<Appearance>();
@@ -80,7 +82,7 @@ class SegementWdiget extends StatelessWidget {
                         left: (i == 0) ? 0 : space / 2,
                         right: (i == titles.length - 1) ? 0 : space / 2),
                     child: TweenAnimationBuilder(
-                      duration: Duration(milliseconds: 500),
+                      duration: duration,
                       tween: TextStyleTween(
                           end: _textStyle(context, selected.value == i)),
                       builder: (context, value, child) {
