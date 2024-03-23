@@ -20,7 +20,7 @@ class TextStyleTween extends Tween<TextStyle?> {
 
   @override
   TextStyle lerp(double t) {
-    return TextStyle(
+    return end!.copyWith(
       color: Color.lerp(begin?.color, end?.color, t),
       fontSize: lerpDouble(begin?.fontSize, end?.fontSize, t),
       fontWeight: FontWeight.lerp(begin?.fontWeight, end?.fontWeight, t),
