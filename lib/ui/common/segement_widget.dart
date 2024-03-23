@@ -10,12 +10,12 @@ class TextStyleTween extends Tween<TextStyle?> {
 
   double lerpDouble(double? a, double? b, double t) {
     if (a != null && b != null) {
-      return a! + (b! - a!) * t;
+      return a + (b - a) * t;
     }
     if (a == null && b == null) {
       return 0;
     }
-    return (a != null) ? a! : b!;
+    return (a != null) ? a : b!;
   }
 
   @override
