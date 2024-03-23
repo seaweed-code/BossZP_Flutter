@@ -12,10 +12,10 @@ class TextStyleTween extends Tween<TextStyle?> {
     if (a != null && b != null) {
       return a! + (b! - a!) * t;
     }
-    if (a == null && b==null) {
+    if (a == null && b == null) {
       return 0;
     }
-    return (a != null) ? a! : b!
+    return (a != null) ? a! : b!;
   }
 
   @override
