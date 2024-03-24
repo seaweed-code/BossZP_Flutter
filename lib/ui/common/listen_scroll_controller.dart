@@ -7,7 +7,7 @@ typedef ListenScrollControllerBuilder = Widget Function(
 typedef ListenScrollControllerDidUpdate = int Function();
 
 class ListenScrollController extends StatefulWidget {
-  ListenScrollController(
+  const ListenScrollController(
       {super.key,
       required this.scrollController,
       required this.builder,
