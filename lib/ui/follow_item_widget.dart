@@ -75,6 +75,9 @@ class FollowItemWidget extends StatelessWidget {
                         )),
                   ),
                   IconButton(
+                      style: const ButtonStyle(
+                          overlayColor:
+                              MaterialStatePropertyAll(Colors.transparent)),
                       onPressed: () {},
                       icon: Assets.images.bzCompanyBlackIconMoreIphone.image())
                 ],
