@@ -113,29 +113,25 @@ class PostionDetailWidget extends StatelessWidget {
                           runSpacing: 10,
                           children: [
                             _IconTextWidget(
-                              prefix: Assets.images.darkBbJobLocationIcon1Iphone
+                              prefix: Assets
+                                  .images.bzVideoPositionLocationIphone
                                   .image(
-                                      color: appear.timeColor,
                                       fit: BoxFit.contain,
                                       width: smallIconWidth,
                                       height: smallIconWidth),
                               text: "北京·西城区·西直门",
                             ),
                             _IconTextWidget(
-                              prefix: Assets
-                                  .images.darkBossNewGeekIconBriefcaseAIphone
+                              prefix: Assets.images.bzVideoPositionExpIphone
                                   .image(
-                                      color: appear.timeColor,
                                       fit: BoxFit.contain,
                                       width: smallIconWidth,
                                       height: smallIconWidth),
                               text: "5-10年",
                             ),
                             _IconTextWidget(
-                              prefix: Assets
-                                  .images.darkBossNewGeekIconEducationAIphone
+                              prefix: Assets.images.bzVideoPositionEduIphone
                                   .image(
-                                      color: appear.timeColor,
                                       fit: BoxFit.contain,
                                       width: smallIconWidth,
                                       height: smallIconWidth),
