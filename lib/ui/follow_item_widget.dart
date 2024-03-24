@@ -120,7 +120,7 @@ class FollowItemWidget extends StatelessWidget {
                         "技术面试题交流",
                         style: TextStyle(
                             color: appearance.titleColor,
-                            fontSize: 14,
+                            fontSize: 13,
                             fontWeight: FontWeight.w500),
                       )
                     ],
