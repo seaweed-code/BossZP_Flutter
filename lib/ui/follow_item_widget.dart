@@ -106,7 +106,7 @@ class FollowItemWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: appearance.backgroundColor,
                       borderRadius: BorderRadius.circular(14)),
-                  padding: EdgeInsets.fromLTRB(8, 4, 8, 4),
+                  padding: EdgeInsets.fromLTRB(12, 4, 12, 4),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
