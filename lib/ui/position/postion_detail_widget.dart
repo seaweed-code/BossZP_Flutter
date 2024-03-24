@@ -239,6 +239,38 @@ class PostionDetailWidget extends StatelessWidget {
                         SizedBox(height: 20),
                         line,
                         SizedBox(height: 20),
+                        Row(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(4),
+                              child: Assets.images.avatar2Iphone.image(
+                                  width: avatarWidth, height: avatarWidth),
+                            ),
+                            SizedBox(width: avatarTraing),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "北京中电远科技有限公司",
+                                  style: TextStyle(
+                                      color: appear.titleColor,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                                SizedBox(height: 4),
+                                Text(
+                                  "不需要融资·100-10000人",
+                                  style: TextStyle(
+                                      color: Color(0xFF8b8b8b), fontSize: 16),
+                                )
+                              ],
+                            ),
+                            Spacer(),
+                            Assets.images.darkBbReviseFiledHasChangeArrowIphone
+                                .image(
+                                    width: 16, height: 16, fit: BoxFit.contain)
+                          ],
+                        )
                       ],
                     ),
                   )
