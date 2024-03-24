@@ -125,17 +125,16 @@ class FollowItemWidget extends StatelessWidget {
               ),
               SizedBox(height: 6),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   _IconTextWIdget(
                       image:
                           Assets.images.bzGetCardDetailInfoIconIphone.image(),
                       text: "评论"),
-                  Spacer(),
                   _IconTextWIdget(
                       image: Assets.images.bzGetCardDetailCollectionIconIphone
                           .image(),
                       text: "12"),
-                  Spacer(),
                   _IconTextWIdget(
                       image:
                           Assets.images.bzGetCardDetailLikeIconIphone.image(),
