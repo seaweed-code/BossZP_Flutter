@@ -42,14 +42,27 @@ class FollowItemWidget extends StatelessWidget {
                   ElevatedButton(
                       onPressed: () {},
                       style: ButtonStyle(
+                          shape: MaterialStateProperty.all<OutlinedBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20))),
+                          side: MaterialStateProperty.all<BorderSide>(
+                              BorderSide(
+                                  color: appearance.blueColor, width: 1)),
+                          elevation: MaterialStateProperty.all<double>(0),
                           backgroundColor:
                               MaterialStatePropertyAll(Colors.white),
                           overlayColor:
                               MaterialStatePropertyAll(Colors.transparent)),
-                      child: Text(
-                        "关注",
-                        style: TextStyle(
-                            color: appearance.blueColor, fontSize: 12),
+                      child: Row(
+                        children: [
+                          Assets.images.bbChatTagAddIphone.image(),
+                          SizedBox(width: 4),
+                          Text(
+                            "关注",
+                            style: TextStyle(
+                                color: appearance.blueColor, fontSize: 12),
+                          ),
+                        ],
                       )),
                   IconButton(
                       onPressed: () {},
