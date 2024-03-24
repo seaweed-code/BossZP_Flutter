@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:ui';
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/cupertino.dart';
@@ -124,22 +125,25 @@ class FollowItemWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 6),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  _IconTextWIdget(
-                      image:
-                          Assets.images.bzGetCardDetailInfoIconIphone.image(),
-                      text: "评论"),
-                  _IconTextWIdget(
-                      image: Assets.images.bzGetCardDetailCollectionIconIphone
-                          .image(),
-                      text: "12"),
-                  _IconTextWIdget(
-                      image:
-                          Assets.images.bzGetCardDetailLikeIconIphone.image(),
-                      text: "45"),
-                ],
+              ConstrainedBox(
+                constraints: BoxConstraints(maxHeight: 35),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    _IconTextWIdget(
+                        image:
+                            Assets.images.bzGetCardDetailInfoIconIphone.image(),
+                        text: "评论"),
+                    _IconTextWIdget(
+                        image: Assets.images.bzGetCardDetailCollectionIconIphone
+                            .image(),
+                        text: "12"),
+                    _IconTextWIdget(
+                        image:
+                            Assets.images.bzGetCardDetailLikeIconIphone.image(),
+                        text: "45"),
+                  ],
+                ),
               )
             ],
           ),
