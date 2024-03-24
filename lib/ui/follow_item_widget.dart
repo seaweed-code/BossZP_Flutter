@@ -127,16 +127,19 @@ class FollowItemWidget extends StatelessWidget {
               Row(
                 children: [
                   _IconTextWIdget(
-                      image: Assets.images.bhFindCommentIconIphone.image(),
+                      image:
+                          Assets.images.bzGetCardDetailInfoIconIphone.image(),
                       text: "评论"),
                   Spacer(),
                   _IconTextWIdget(
-                      image: Assets.images.bhFindCommentIconIphone.image(),
-                      text: "评论"),
+                      image: Assets.images.bzGetCardDetailCollectionIconIphone
+                          .image(),
+                      text: "12"),
                   Spacer(),
                   _IconTextWIdget(
-                      image: Assets.images.bhFindCommentIconIphone.image(),
-                      text: "评论"),
+                      image:
+                          Assets.images.bzGetCardDetailLikeIconIphone.image(),
+                      text: "45"),
                 ],
               )
             ],
@@ -160,7 +163,7 @@ class _IconTextWIdget extends StatelessWidget {
         icon: image,
         label: Text(
           text,
-          style: TextStyle(fontSize: 12, color: appear.subTitleColor),
+          style: TextStyle(fontSize: 14, color: appear.subTitleColor),
         ));
   }
 }
