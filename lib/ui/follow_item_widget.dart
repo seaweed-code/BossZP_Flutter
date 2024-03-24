@@ -123,14 +123,20 @@ class FollowItemWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 6),
               Row(
                 children: [
-                  _IconTextWIdget(),
+                  _IconTextWIdget(
+                      image: Assets.images.bhFindCommentIconIphone.image(),
+                      text: "评论"),
                   Spacer(),
-                  _IconTextWIdget(),
+                  _IconTextWIdget(
+                      image: Assets.images.bhFindCommentIconIphone.image(),
+                      text: "评论"),
                   Spacer(),
-                  _IconTextWIdget()
+                  _IconTextWIdget(
+                      image: Assets.images.bhFindCommentIconIphone.image(),
+                      text: "评论"),
                 ],
               )
             ],
@@ -142,22 +148,18 @@ class FollowItemWidget extends StatelessWidget {
 }
 
 class _IconTextWIdget extends StatelessWidget {
-  const _IconTextWIdget({
-    super.key,
-  });
+  const _IconTextWIdget({super.key, required this.text, required this.image});
 
+  final String text;
+  final Widget image;
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
     return TextButton.icon(
         onPressed: () {},
-        icon: Icon(
-          Icons.access_alarm_outlined,
-          color: appear.subTitleColor,
-          size: 22,
-        ),
+        icon: image,
         label: Text(
-          "426",
+          text,
           style: TextStyle(fontSize: 12, color: appear.subTitleColor),
         ));
   }
