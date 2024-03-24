@@ -3,6 +3,7 @@ import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 class FollowItemWidget extends StatelessWidget {
@@ -30,8 +31,7 @@ class FollowItemWidget extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(avatarWidth / 2),
+                  ClipOval(
                     child: Assets.images.avatar2Iphone
                         .image(width: avatarWidth, height: avatarWidth),
                   ),
