@@ -277,6 +277,10 @@ class $AssetsImagesGen {
   AssetGenImage get bzGetSearchBarSearchIphone =>
       const AssetGenImage('assets/images/bz_get_search_bar_search_iphone.png');
 
+  /// File path: assets/images/bz_get_topic_navi_share_black_iphone.png
+  AssetGenImage get bzGetTopicNaviShareBlackIphone => const AssetGenImage(
+      'assets/images/bz_get_topic_navi_share_black_iphone.png');
+
   /// File path: assets/images/bz_intelli_customer_thumb_like_iphone.png
   AssetGenImage get bzIntelliCustomerThumbLikeIphone => const AssetGenImage(
       'assets/images/bz_intelli_customer_thumb_like_iphone.png');
@@ -296,6 +300,22 @@ class $AssetsImagesGen {
   /// File path: assets/images/bz_refresh_cycle_iphone.png
   AssetGenImage get bzRefreshCycleIphone =>
       const AssetGenImage('assets/images/bz_refresh_cycle_iphone.png');
+
+  /// File path: assets/images/bz_video_position_edu_iphone.png
+  AssetGenImage get bzVideoPositionEduIphone =>
+      const AssetGenImage('assets/images/bz_video_position_edu_iphone.png');
+
+  /// File path: assets/images/bz_video_position_exp_iphone.png
+  AssetGenImage get bzVideoPositionExpIphone =>
+      const AssetGenImage('assets/images/bz_video_position_exp_iphone.png');
+
+  /// File path: assets/images/bz_video_position_hunter_icon_iphone.png
+  AssetGenImage get bzVideoPositionHunterIconIphone => const AssetGenImage(
+      'assets/images/bz_video_position_hunter_icon_iphone.png');
+
+  /// File path: assets/images/bz_video_position_location_iphone.png
+  AssetGenImage get bzVideoPositionLocationIphone => const AssetGenImage(
+      'assets/images/bz_video_position_location_iphone.png');
 
   /// File path: assets/images/bzpublish_addImage_iphone.png
   AssetGenImage get bzpublishAddImageIphone =>
@@ -478,6 +498,34 @@ class $AssetsImagesGen {
       const AssetGenImage(
           'assets/images/dark_boss_position_preview_working_age_iphone.png');
 
+  /// File path: assets/images/dark_bz_video_position_edu_iphone.png
+  AssetGenImage get darkBzVideoPositionEduIphone => const AssetGenImage(
+      'assets/images/dark_bz_video_position_edu_iphone.png');
+
+  /// File path: assets/images/dark_bz_video_position_exp_iphone.png
+  AssetGenImage get darkBzVideoPositionExpIphone => const AssetGenImage(
+      'assets/images/dark_bz_video_position_exp_iphone.png');
+
+  /// File path: assets/images/dark_bz_video_position_hunter_icon_iphone.png
+  AssetGenImage get darkBzVideoPositionHunterIconIphone => const AssetGenImage(
+      'assets/images/dark_bz_video_position_hunter_icon_iphone.png');
+
+  /// File path: assets/images/dark_bz_video_position_location_iphone.png
+  AssetGenImage get darkBzVideoPositionLocationIphone => const AssetGenImage(
+      'assets/images/dark_bz_video_position_location_iphone.png');
+
+  /// File path: assets/images/dark_bzpublish_addImage_iphone.png
+  AssetGenImage get darkBzpublishAddImageIphone =>
+      const AssetGenImage('assets/images/dark_bzpublish_addImage_iphone.png');
+
+  /// File path: assets/images/dark_homepage_nav_back_iphone.png
+  AssetGenImage get darkHomepageNavBackIphone =>
+      const AssetGenImage('assets/images/dark_homepage_nav_back_iphone.png');
+
+  /// File path: assets/images/dark_homepage_nav_back_white_iphone.png
+  AssetGenImage get darkHomepageNavBackWhiteIphone => const AssetGenImage(
+      'assets/images/dark_homepage_nav_back_white_iphone.png');
+
   /// File path: assets/images/geek_apply_phone_icon_iphone.png
   AssetGenImage get geekApplyPhoneIconIphone =>
       const AssetGenImage('assets/images/geek_apply_phone_icon_iphone.png');
@@ -502,6 +550,38 @@ class $AssetsImagesGen {
   AssetGenImage get geekNavSettingIconIphone =>
       const AssetGenImage('assets/images/geek_nav_setting_icon_iphone.png');
 
+  /// File path: assets/images/geek_position_brand_icon_iphone.png
+  AssetGenImage get geekPositionBrandIconIphone =>
+      const AssetGenImage('assets/images/geek_position_brand_icon_iphone.png');
+
+  /// File path: assets/images/geek_position_degree_icon_iphone.png
+  AssetGenImage get geekPositionDegreeIconIphone =>
+      const AssetGenImage('assets/images/geek_position_degree_icon_iphone.png');
+
+  /// File path: assets/images/geek_position_exp_icon_iphone.png
+  AssetGenImage get geekPositionExpIconIphone =>
+      const AssetGenImage('assets/images/geek_position_exp_icon_iphone.png');
+
+  /// File path: assets/images/geek_position_home_icon_iphone.png
+  AssetGenImage get geekPositionHomeIconIphone =>
+      const AssetGenImage('assets/images/geek_position_home_icon_iphone.png');
+
+  /// File path: assets/images/geek_position_location_icon_iphone.png
+  AssetGenImage get geekPositionLocationIconIphone => const AssetGenImage(
+      'assets/images/geek_position_location_icon_iphone.png');
+
+  /// File path: assets/images/geek_position_moreaddress_icon_iphone.png
+  AssetGenImage get geekPositionMoreaddressIconIphone => const AssetGenImage(
+      'assets/images/geek_position_moreaddress_icon_iphone.png');
+
+  /// File path: assets/images/geek_search_icon_iphone.png
+  AssetGenImage get geekSearchIconIphone =>
+      const AssetGenImage('assets/images/geek_search_icon_iphone.png');
+
+  /// File path: assets/images/geek_snap_feedback_iphone.png
+  AssetGenImage get geekSnapFeedbackIphone =>
+      const AssetGenImage('assets/images/geek_snap_feedback_iphone.png');
+
   /// File path: assets/images/nav_theme_bgiphone.png
   AssetGenImage get navThemeBgiphone =>
       const AssetGenImage('assets/images/nav_theme_bgiphone.png');
@@ -509,6 +589,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/new_banner_iphone.png
   AssetGenImage get newBannerIphone =>
       const AssetGenImage('assets/images/new_banner_iphone.png');
+
+  /// File path: assets/images/resume_score_icon_new_iphone.png
+  AssetGenImage get resumeScoreIconNewIphone =>
+      const AssetGenImage('assets/images/resume_score_icon_new_iphone.png');
 
   /// File path: assets/images/setting_contact_search_icon_iphone.png
   AssetGenImage get settingContactSearchIconIphone => const AssetGenImage(
@@ -592,11 +676,16 @@ class $AssetsImagesGen {
         bzGetNaviSearchIconIphone,
         bzGetPostVideoTopicIconIphone,
         bzGetSearchBarSearchIphone,
+        bzGetTopicNaviShareBlackIphone,
         bzIntelliCustomerThumbLikeIphone,
         bzIntelliCustomerThumbUnlikeIphone,
         bzInterviewCardCloseIconIphone,
         bzRefreshCycle2Iphone,
         bzRefreshCycleIphone,
+        bzVideoPositionEduIphone,
+        bzVideoPositionExpIphone,
+        bzVideoPositionHunterIconIphone,
+        bzVideoPositionLocationIphone,
         bzpublishAddImageIphone,
         cbChatQuoteVoiceOtherIphone,
         cbChatRecordVoiceIphone,
@@ -641,14 +730,30 @@ class $AssetsImagesGen {
         darkBossNewGeekIconExpectIphone,
         darkBossPositionPreviewEducationIphone,
         darkBossPositionPreviewWorkingAgeIphone,
+        darkBzVideoPositionEduIphone,
+        darkBzVideoPositionExpIphone,
+        darkBzVideoPositionHunterIconIphone,
+        darkBzVideoPositionLocationIphone,
+        darkBzpublishAddImageIphone,
+        darkHomepageNavBackIphone,
+        darkHomepageNavBackWhiteIphone,
         geekApplyPhoneIconIphone,
         geekApplyWechatIconIphone,
         geekMyNavScanNewIphone,
         geekMyNavSetNewIphone,
         geekMyNavSwitchNewIphone,
         geekNavSettingIconIphone,
+        geekPositionBrandIconIphone,
+        geekPositionDegreeIconIphone,
+        geekPositionExpIconIphone,
+        geekPositionHomeIconIphone,
+        geekPositionLocationIconIphone,
+        geekPositionMoreaddressIconIphone,
+        geekSearchIconIphone,
+        geekSnapFeedbackIphone,
         navThemeBgiphone,
         newBannerIphone,
+        resumeScoreIconNewIphone,
         settingContactSearchIconIphone,
         settingDetailIconIphone,
         settingMoreArrowIphone
