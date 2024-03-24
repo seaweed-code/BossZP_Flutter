@@ -82,14 +82,15 @@ class FollowItemWidget extends StatelessWidget {
                       icon: Assets.images.bzCompanyBlackIconMoreIphone.image())
                 ],
               ),
-              if (answeredQuestion != null) SizedBox(height: 6),
-              if (answeredQuestion != null)
+              if (answeredQuestion != null) ...[
+                SizedBox(height: 6),
                 Text(
                   answeredQuestion!,
                   style: TextStyle(
                       fontSize: 12,
                       color: context.read<Appearance>().subTitleColor),
-                ),
+                )
+              ],
               SizedBox(height: 8),
               Text.rich(
                 TextSpan(
