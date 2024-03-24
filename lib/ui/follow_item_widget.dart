@@ -3,6 +3,7 @@ import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
@@ -95,7 +96,32 @@ class FollowItemWidget extends StatelessWidget {
                 style: TextStyle(
                     color: appearance.titleColor,
                     fontSize: 16,
+                    height: 1.6,
                     fontWeight: FontWeight.normal),
+              ),
+              SizedBox(height: 10),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: appearance.backgroundColor,
+                      borderRadius: BorderRadius.circular(14)),
+                  padding: EdgeInsets.fromLTRB(8, 4, 8, 4),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Assets.images.bzGetPostVideoTopicIconIphone.image(),
+                      SizedBox(width: 4),
+                      Text(
+                        "技术面试题交流",
+                        style: TextStyle(
+                            color: appearance.titleColor,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500),
+                      )
+                    ],
+                  ),
+                ),
               ),
               SizedBox(height: 10),
               Row(
