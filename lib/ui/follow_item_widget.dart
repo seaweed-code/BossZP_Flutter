@@ -157,13 +157,23 @@ class _IconTextWIdget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
-    return TextButton.icon(
-        onPressed: () {},
-        icon: image,
-        label: Text(
-          text,
-          style: TextStyle(fontSize: 14, color: appear.subTitleColor),
-        ));
+    return TextButton(
+      style: ButtonStyle(
+        overlayColor: MaterialStateProperty.all<Color>(
+            Colors.transparent), // 设置点击时的背景色为透明
+      ),
+      onPressed: () {},
+      child: Row(
+        children: [
+          image,
+          SizedBox(width: 4),
+          Text(
+            text,
+            style: TextStyle(fontSize: 14, color: appear.subTitleColor),
+          )
+        ],
+      ),
+    );
   }
 }
 
