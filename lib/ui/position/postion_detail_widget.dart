@@ -248,12 +248,15 @@ class PostionDetailWidget extends StatelessWidget {
                         SizedBox(height: 20),
                         ConstrainedBox(
                           constraints: BoxConstraints(maxHeight: 250),
-                          child: GoogleMap(
-                            myLocationButtonEnabled: false,
-                            onMapCreated: (controller) {},
-                            initialCameraPosition: CameraPosition(
-                              target: const LatLng(45.521563, -122.677433),
-                              zoom: 11.0,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: GoogleMap(
+                              myLocationButtonEnabled: false,
+                              onMapCreated: (controller) {},
+                              initialCameraPosition: CameraPosition(
+                                target: const LatLng(45.521563, -122.677433),
+                                zoom: 11.0,
+                              ),
                             ),
                           ),
                         ),
