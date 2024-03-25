@@ -245,8 +245,9 @@ class PostionDetailWidget extends StatelessWidget {
                         _CompanyWidget(
                             avatarWidth: avatarWidth,
                             avatarTraing: avatarTraing),
+                        SizedBox(height: 20),
                         ConstrainedBox(
-                          constraints: BoxConstraints(maxHeight: 100),
+                          constraints: BoxConstraints(maxHeight: 250),
                           child: GoogleMap(
                             onMapCreated: (controller) {},
                             initialCameraPosition: CameraPosition(
