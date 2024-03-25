@@ -242,7 +242,14 @@ class PostionDetailWidget extends StatelessWidget {
                         SizedBox(height: 20),
                         _CompanyWidget(
                             avatarWidth: avatarWidth,
-                            avatarTraing: avatarTraing)
+                            avatarTraing: avatarTraing),
+                        GoogleMap(
+                          onMapCreated: (controller) {},
+                          initialCameraPosition: CameraPosition(
+                            target: const LatLng(45.521563, -122.677433),
+                            zoom: 11.0,
+                          ),
+                        ),
                       ],
                     ),
                   )
