@@ -2,7 +2,7 @@ import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/common/segement_widget.dart';
 // import 'package:bosszp/model/appearance.dart';
-import 'package:bosszp/ui/recent_message_item_widget.dart';
+import 'package:bosszp/ui/chat/recent_message_item_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
