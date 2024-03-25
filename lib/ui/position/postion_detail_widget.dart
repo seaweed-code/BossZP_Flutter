@@ -264,7 +264,7 @@ class PostionDetailWidget extends StatelessWidget {
                         Row(
                           children: [
                             Assets.images.geekPositionHomeIconIphone.image(),
-                            SizedBox(width: 10),
+                            SizedBox(width: 8),
                             Text(
                               "距离我的住址14.5千米",
                               style: TextStyle(
