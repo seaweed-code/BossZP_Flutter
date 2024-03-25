@@ -249,6 +249,7 @@ class PostionDetailWidget extends StatelessWidget {
                         ConstrainedBox(
                           constraints: BoxConstraints(maxHeight: 250),
                           child: GoogleMap(
+                            myLocationButtonEnabled: false,
                             onMapCreated: (controller) {},
                             initialCameraPosition: CameraPosition(
                               target: const LatLng(45.521563, -122.677433),
