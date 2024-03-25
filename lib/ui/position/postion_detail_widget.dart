@@ -252,6 +252,7 @@ class PostionDetailWidget extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                             child: GoogleMap(
                               myLocationButtonEnabled: false,
+                              myLocationEnabled: false,
                               onMapCreated: (controller) {},
                               initialCameraPosition: CameraPosition(
                                 target: const LatLng(45.521563, -122.677433),
