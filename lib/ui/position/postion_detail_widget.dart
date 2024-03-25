@@ -257,6 +257,9 @@ class PostionDetailWidget extends StatelessWidget {
                                 target: const LatLng(45.521563, -122.677433),
                                 zoom: 11.0,
                               ),
+                              onTap: (argument) {
+                                print(argument);
+                              },
                             ),
                           ),
                         ),
