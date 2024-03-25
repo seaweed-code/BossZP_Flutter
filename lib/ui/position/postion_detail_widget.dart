@@ -2,7 +2,9 @@ import 'dart:ui';
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/common/listen_scroll_controller.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -243,11 +245,14 @@ class PostionDetailWidget extends StatelessWidget {
                         _CompanyWidget(
                             avatarWidth: avatarWidth,
                             avatarTraing: avatarTraing),
-                        GoogleMap(
-                          onMapCreated: (controller) {},
-                          initialCameraPosition: CameraPosition(
-                            target: const LatLng(45.521563, -122.677433),
-                            zoom: 11.0,
+                        ConstrainedBox(
+                          constraints: BoxConstraints(maxHeight: 100),
+                          child: GoogleMap(
+                            onMapCreated: (controller) {},
+                            initialCameraPosition: CameraPosition(
+                              target: const LatLng(45.521563, -122.677433),
+                              zoom: 11.0,
+                            ),
                           ),
                         ),
                       ],
