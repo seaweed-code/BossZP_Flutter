@@ -4,6 +4,7 @@ import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/common/listen_scroll_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class PostionDetailWidget extends StatelessWidget {
   const PostionDetailWidget({super.key, this.leading = 20});
@@ -239,38 +240,9 @@ class PostionDetailWidget extends StatelessWidget {
                         SizedBox(height: 20),
                         line,
                         SizedBox(height: 20),
-                        Row(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(4),
-                              child: Assets.images.avatar2Iphone.image(
-                                  width: avatarWidth, height: avatarWidth),
-                            ),
-                            SizedBox(width: avatarTraing),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "北京中电远科技有限公司",
-                                  style: TextStyle(
-                                      color: appear.titleColor,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.normal),
-                                ),
-                                SizedBox(height: 4),
-                                Text(
-                                  "不需要融资·100-10000人",
-                                  style: TextStyle(
-                                      color: Color(0xFF8b8b8b), fontSize: 16),
-                                )
-                              ],
-                            ),
-                            Spacer(),
-                            Assets.images.darkBbReviseFiledHasChangeArrowIphone
-                                .image(
-                                    width: 16, height: 16, fit: BoxFit.contain)
-                          ],
-                        )
+                        _CompanyWidget(
+                            avatarWidth: avatarWidth,
+                            avatarTraing: avatarTraing)
                       ],
                     ),
                   )
@@ -319,6 +291,52 @@ class PostionDetailWidget extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class _CompanyWidget extends StatelessWidget {
+  const _CompanyWidget({
+    super.key,
+    required this.avatarWidth,
+    required this.avatarTraing,
+  });
+
+  final double avatarWidth;
+  final double avatarTraing;
+
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    return Row(
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(4),
+          child: Assets.images.avatar2Iphone
+              .image(width: avatarWidth, height: avatarWidth),
+        ),
+        SizedBox(width: avatarTraing),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "北京中电远科技有限公司",
+              style: TextStyle(
+                  color: appear.titleColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal),
+            ),
+            SizedBox(height: 4),
+            Text(
+              "不需要融资·100-10000人",
+              style: TextStyle(color: Color(0xFF8b8b8b), fontSize: 16),
+            )
+          ],
+        ),
+        Spacer(),
+        Assets.images.darkBbReviseFiledHasChangeArrowIphone
+            .image(width: 16, height: 16, fit: BoxFit.contain)
+      ],
     );
   }
 }
