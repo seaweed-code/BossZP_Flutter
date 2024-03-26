@@ -13,6 +13,14 @@ class ChatDetailWidget extends StatelessWidget {
     final appear = context.read<Appearance>();
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: Assets.images.chatNavRightTagsIconIphone.image()),
+          IconButton(
+              onPressed: () {},
+              icon: Assets.images.chatNavRightIconIphone.image())
+        ],
         title: Column(
           children: [
             Text(
