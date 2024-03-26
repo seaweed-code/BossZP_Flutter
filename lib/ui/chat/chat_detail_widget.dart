@@ -114,10 +114,12 @@ class ChatDetailWidget extends StatelessWidget {
                       Assets.images.chatBottomMoreDefaultIconIphone.path,
                   normalIcon: Assets.images.chatBottomMoreCloseIconIphone.path,
                 ),
-                IconButton(
-                    onPressed: () {},
-                    icon:
-                        Assets.images.chatBottomMoreDefaultIconIphone.image()),
+                _InputPannelButton(
+                  selected: emojSelected,
+                  selectedIcon:
+                      Assets.images.chatBottomMoreDefaultIconIphone.path,
+                  normalIcon: Assets.images.chatBottomMoreCloseIconIphone.path,
+                ),
               ],
             ),
           )
