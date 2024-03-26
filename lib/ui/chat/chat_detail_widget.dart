@@ -108,6 +108,9 @@ class ChatDetailWidget extends StatelessWidget {
                 )),
                 SizedBox(width: 10),
                 IconButton(
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    style: ButtonStyle(),
                     onPressed: () {},
                     icon:
                         Assets.images.chatBottomMoreDefaultIconIphone.image()),
