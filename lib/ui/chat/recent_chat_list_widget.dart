@@ -2,22 +2,21 @@ import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/common/segement_widget.dart';
 // import 'package:bosszp/model/appearance.dart';
-import 'package:bosszp/ui/chat/recent_message_item_widget.dart';
+import 'package:bosszp/ui/chat/recent_chat_item_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
-class RecentMessageListWidget extends StatefulWidget {
-  const RecentMessageListWidget({super.key});
+class RecentChatListWidget extends StatefulWidget {
+  const RecentChatListWidget({super.key});
 
   @override
-  State<RecentMessageListWidget> createState() =>
-      _RecentMessageListWidgetState();
+  State<RecentChatListWidget> createState() => _RecentChatListWidgetState();
 }
 
-class _RecentMessageListWidgetState extends State<RecentMessageListWidget> {
+class _RecentChatListWidgetState extends State<RecentChatListWidget> {
   ValueNotifier<int> selected = ValueNotifier(0);
   ValueNotifier<int> selected2 = ValueNotifier(0);
   @override
@@ -59,10 +58,10 @@ class _RecentMessageListWidgetState extends State<RecentMessageListWidget> {
           // floating: true,
         ),
         SliverPrototypeExtentList.builder(
-          prototypeItem: RecentMessageItemWidget(leading: leading),
+          prototypeItem: RecentChatItemWidget(leading: leading),
           itemCount: 30,
           itemBuilder: (context, index) {
-            return RecentMessageItemWidget(
+            return RecentChatItemWidget(
               leading: leading,
             );
           },

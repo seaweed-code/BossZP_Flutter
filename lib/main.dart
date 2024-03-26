@@ -2,7 +2,7 @@ import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/follow_list_widget.dart';
 import 'package:bosszp/ui/mine/main_mine_widget.dart';
-import 'package:bosszp/ui/chat/recent_message_list_widget.dart';
+import 'package:bosszp/ui/chat/recent_chat_list_widget.dart';
 import 'package:bosszp/ui/position/posotion_list_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage>
   final List<(String, String, Widget)> pages = [
     ("zhiwei", "职位", PositionListWidget()),
     ("youle", "有了", FollowListWidget()),
-    ("xiaoxi-b", "消息", RecentMessageListWidget()),
+    ("xiaoxi-b", "消息", RecentChatListWidget()),
     ("wode-b", "我的", MainMineWidget())
   ];
 
