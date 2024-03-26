@@ -21,23 +21,25 @@ class ChatDetailWidget extends StatelessWidget {
               onPressed: () {},
               icon: Assets.images.chatNavRightIconIphone.image())
         ],
-        title: Column(
-          children: [
-            Text(
-              "李响",
-              style: TextStyle(
-                  color: appear.titleColor,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600),
-            ),
-            Text(
-              "5min-hr",
-              style: TextStyle(
-                  color: appear.titleColor,
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal),
-            )
-          ],
+        title: Center(
+          child: Column(
+            children: [
+              Text(
+                "李响",
+                style: TextStyle(
+                    color: appear.titleColor,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600),
+              ),
+              Text(
+                "5min-hr",
+                style: TextStyle(
+                    color: appear.titleColor,
+                    fontSize: 14,
+                    fontWeight: FontWeight.normal),
+              )
+            ],
+          ),
         ),
       ),
       body: SafeArea(
