@@ -58,6 +58,7 @@ class ChatDetailWidget extends StatelessWidget {
           ),
           Expanded(
             child: ListView.builder(
+              itemCount: 30,
               itemBuilder: (context, index) {
                 return Container(
                   color: appear.backgroundColor,
@@ -80,7 +81,9 @@ class ChatDetailWidget extends StatelessWidget {
                               Positioned.fill(
                                   child: Assets
                                       .images.darkBhChatBubbleWhiteLeftIphone
-                                      .image(fit: BoxFit.cover)),
+                                      .image(
+                                          centerSlice:
+                                              Rect.fromLTRB(15, 15, 25, 25))),
                               Padding(
                                 padding: const EdgeInsets.all(12.0),
                                 child: Text(
