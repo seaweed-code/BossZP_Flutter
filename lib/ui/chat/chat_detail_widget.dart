@@ -35,7 +35,24 @@ class ChatDetailWidget extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [_ButtonWidget()],
+            children: [
+              _ButtonWidget(
+                icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                text: "打电话",
+              ),
+              _ButtonWidget(
+                icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                text: "换微信",
+              ),
+              _ButtonWidget(
+                icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                text: "发简历",
+              ),
+              _ButtonWidget(
+                icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                text: "不感兴趣",
+              )
+            ],
           )
         ],
       )),
@@ -44,10 +61,10 @@ class ChatDetailWidget extends StatelessWidget {
 }
 
 class _ButtonWidget extends StatelessWidget {
-  const _ButtonWidget({
-    super.key,
-  });
+  const _ButtonWidget({super.key, required this.text, required this.icon});
 
+  final String text;
+  final Widget icon;
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
@@ -56,7 +73,7 @@ class _ButtonWidget extends StatelessWidget {
         onPressed: () {},
         child: Column(
           children: [
-            Assets.images.chatVideoPhoneOtherIconIphone.image(),
+            icon,
             Text(
               "打电话",
               style: TextStyle(color: appear.titleColor, fontSize: 14),
