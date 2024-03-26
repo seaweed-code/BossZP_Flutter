@@ -100,6 +100,7 @@ class ChatDetailWidget extends StatelessWidget {
                   minLines: 1,
                   maxLines: 5,
                   decoration: InputDecoration(
+                      border: InputBorder.none,
                       hintText: "新信息",
                       hintStyle: TextStyle(color: appear.timeColor)),
                 )),
