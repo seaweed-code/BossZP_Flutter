@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:bosszp/ui/chat/chat_detail_widget.dart';
 import 'package:bosszp/ui/common/listen_scroll_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -302,7 +303,13 @@ class PostionDetailWidget extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.only(left: leading, right: leading),
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(
+                              builder: (context) {
+                                return ChatDetailWidget();
+                              },
+                            ));
+                          },
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all<
                                   RoundedRectangleBorder>(
