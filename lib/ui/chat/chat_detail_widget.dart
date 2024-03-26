@@ -1,5 +1,6 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -53,6 +54,25 @@ class ChatDetailWidget extends StatelessWidget {
                 text: "不感兴趣",
               )
             ],
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return Row(
+                  children: [
+                    Assets.images.avatar2Iphone.image(),
+                    SizedBox(width: 5),
+                    Text(
+                      "您好，您考虑外包岗位吗？",
+                      style: TextStyle(
+                          color: appear.titleColor,
+                          fontSize: 16,
+                          fontWeight: FontWeight.normal),
+                    )
+                  ],
+                );
+              },
+            ),
           )
         ],
       )),
