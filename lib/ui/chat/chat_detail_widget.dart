@@ -60,7 +60,7 @@ class ChatDetailWidget extends StatelessWidget {
             child: ListView.builder(
               itemCount: 30,
               itemBuilder: (context, index) {
-                return _ChatRowWidget();
+                return _ChatRowWidget(isSender: index % 2 == 0);
               },
             ),
           )
@@ -71,10 +71,8 @@ class ChatDetailWidget extends StatelessWidget {
 }
 
 class _ChatRowWidget extends StatelessWidget {
-  const _ChatRowWidget({
-    super.key,
-  });
-
+  const _ChatRowWidget({super.key, required this.isSender});
+  final bool isSender;
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
@@ -85,7 +83,7 @@ class _ChatRowWidget extends StatelessWidget {
         return Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisSize: MainAxisSize.min,
-          textDirection: TextDirection.ltr,
+          textDirection: isSender ? TextDirection.rtl : TextDirection.ltr,
           children: [
             ClipOval(
                 child:
@@ -96,7 +94,9 @@ class _ChatRowWidget extends StatelessWidget {
               child: Stack(
                 children: [
                   Positioned.fill(
-                      child: Assets.images.bhChatBubbleWhiteLeftIphone
+                      child: (isSender
+                              ? Assets.images.bhChatBubbleBlueIphone
+                              : Assets.images.bhChatBubbleWhiteLeftIphone)
                           .image(centerSlice: Rect.fromLTRB(15, 15, 25, 25))),
                   Padding(
                     padding: const EdgeInsets.all(12.0),
