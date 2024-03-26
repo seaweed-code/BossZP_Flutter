@@ -92,7 +92,7 @@ class _ChatRowWidget extends StatelessWidget {
                     Assets.images.avatar2Iphone.image(width: 35, height: 35)),
             SizedBox(width: 5),
             SizedBox(
-              width: constraints.maxWidth * 0.7,
+              width: constraints.maxWidth * 0.75,
               child: Stack(
                 children: [
                   Positioned.fill(
