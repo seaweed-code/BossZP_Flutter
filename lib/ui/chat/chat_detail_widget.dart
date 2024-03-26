@@ -77,10 +77,14 @@ class ChatDetailWidget extends StatelessWidget {
                           width: constraints.maxWidth * 0.7,
                           child: Stack(
                             children: [
+                              Positioned.fill(
+                                  child: Assets
+                                      .images.darkBhChatBubbleWhiteLeftIphone
+                                      .image(fit: BoxFit.cover)),
                               Text(
                                 "您好，您考虑外包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==-=-=-=-=",
                                 style: TextStyle(
-                                    color: appear.titleColor,
+                                    color: Colors.red,
                                     fontSize: 16,
                                     fontWeight: FontWeight.normal),
                               ),
