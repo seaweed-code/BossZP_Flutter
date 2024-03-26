@@ -59,34 +59,38 @@ class ChatDetailWidget extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               itemBuilder: (context, index) {
-                return LayoutBuilder(builder: (context, constraints) {
-                  return Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    mainAxisSize: MainAxisSize.min,
-                    textDirection: TextDirection.ltr,
-                    children: [
-                      SizedBox(width: 6),
-                      ClipOval(
-                          child: Assets.images.avatar2Iphone
-                              .image(width: 35, height: 35)),
-                      SizedBox(width: 5),
-                      SizedBox(
-                        width: constraints.maxWidth * 0.7,
-                        child: Stack(
-                          children: [
-                            Text(
-                              "您好，您考虑外包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==-=-=-=-=",
-                              style: TextStyle(
-                                  color: appear.titleColor,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.normal),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  );
-                });
+                return Container(
+                  color: appear.backgroundColor,
+                  padding: const EdgeInsets.only(
+                      left: 5, right: 5, top: 15, bottom: 15),
+                  child: LayoutBuilder(builder: (context, constraints) {
+                    return Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisSize: MainAxisSize.min,
+                      textDirection: TextDirection.ltr,
+                      children: [
+                        ClipOval(
+                            child: Assets.images.avatar2Iphone
+                                .image(width: 35, height: 35)),
+                        SizedBox(width: 5),
+                        SizedBox(
+                          width: constraints.maxWidth * 0.7,
+                          child: Stack(
+                            children: [
+                              Text(
+                                "您好，您考虑外包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==-=-=-=-=",
+                                style: TextStyle(
+                                    color: appear.titleColor,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    );
+                  }),
+                );
               },
             ),
           )
