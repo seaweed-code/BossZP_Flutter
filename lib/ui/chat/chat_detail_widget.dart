@@ -81,12 +81,15 @@ class ChatDetailWidget extends StatelessWidget {
                                   child: Assets
                                       .images.darkBhChatBubbleWhiteLeftIphone
                                       .image(fit: BoxFit.cover)),
-                              Text(
-                                "您好，您考虑外包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==-=-=-=-=",
-                                style: TextStyle(
-                                    color: Colors.red,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.normal),
+                              Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Text(
+                                  "您好，您考虑外包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==-=-=-=-=",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal),
+                                ),
                               ),
                             ],
                           ),
