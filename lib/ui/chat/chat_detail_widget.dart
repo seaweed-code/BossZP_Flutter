@@ -91,8 +91,13 @@ class _ChatRowWidget extends StatelessWidget {
                 child:
                     Assets.images.avatar2Iphone.image(width: 35, height: 35)),
             SizedBox(width: 5),
-            SizedBox(
-              width: constraints.maxWidth * 0.75,
+            ConstraintsTransformBox(
+              constraintsTransform: (pCon) => BoxConstraints(
+                minHeight: pCon.minHeight,
+                maxHeight: pCon.maxHeight,
+                minWidth: pCon.minWidth,
+                maxWidth: constraints.maxWidth * 0.75,
+              ),
               child: Stack(
                 children: [
                   Positioned.fill(
@@ -103,7 +108,7 @@ class _ChatRowWidget extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Text(
-                      "您好，您考虑外包岗位吗？7岗位吗？",
+                      "您好，您考？",
                       style: TextStyle(
                           color: isSender ? Colors.white : appear.titleColor,
                           fontSize: 16,
