@@ -87,13 +87,14 @@ class ChatDetailWidget extends StatelessWidget {
           ),
           Container(
             color: Colors.white,
-            height: 50,
+            height: 80,
             padding: EdgeInsets.only(top: 8, bottom: 8, left: 15, right: 15),
             child: Row(
               children: [
                 Assets.images.chatBottomCommonIconIphone.image(),
                 SizedBox(width: 10),
                 Expanded(child: TextField()),
+                SizedBox(width: 10),
                 Assets.images.chatBottomMoreDefaultIconIphone.image(),
                 SizedBox(width: 10),
                 Assets.images.chatBottomMoreDefaultIconIphone.image(),
