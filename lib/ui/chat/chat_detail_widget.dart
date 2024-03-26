@@ -101,7 +101,7 @@ class _ChatRowWidget extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Text(
-                      "您好，您考虑外包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==-=-=-=-=",
+                      "您好，您考虑外包岗位吗？7岗位吗？",
                       style: TextStyle(
                           color: isSender ? Colors.white : appear.titleColor,
                           fontSize: 16,
