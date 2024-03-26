@@ -93,7 +93,10 @@ class ChatDetailWidget extends StatelessWidget {
               children: [
                 Assets.images.chatBottomCommonIconIphone.image(),
                 SizedBox(width: 10),
-                Expanded(child: TextField()),
+                Expanded(
+                    child: TextField(
+                  decoration: InputDecoration(hintText: "新信息"),
+                )),
                 SizedBox(width: 10),
                 Assets.images.chatBottomMoreDefaultIconIphone.image(),
                 SizedBox(width: 10),
