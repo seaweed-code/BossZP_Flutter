@@ -2,6 +2,7 @@ import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 class ChatDetailWidget extends StatelessWidget {
@@ -58,19 +59,26 @@ class ChatDetailWidget extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               itemBuilder: (context, index) {
-                return Row(
-                  children: [
-                    Assets.images.avatar2Iphone.image(),
-                    SizedBox(width: 5),
-                    Text(
-                      "您好，您考虑外包岗位吗？",
-                      style: TextStyle(
-                          color: appear.titleColor,
-                          fontSize: 16,
-                          fontWeight: FontWeight.normal),
-                    )
-                  ],
-                );
+                return LayoutBuilder(builder: (context, constraints) {
+                  return Row(
+                    children: [
+                      ClipOval(
+                          child: Assets.images.avatar2Iphone
+                              .image(width: 40, height: 40)),
+                      SizedBox(width: 5),
+                      SizedBox(
+                        width: constraints.maxWidth * 0.5,
+                        child: Text(
+                          "您好，您考虑外包岗位吗？77777==-=-=-=-=",
+                          style: TextStyle(
+                              color: appear.titleColor,
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      )
+                    ],
+                  );
+                });
               },
             ),
           )
