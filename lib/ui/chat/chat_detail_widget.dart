@@ -13,6 +13,11 @@ class ChatDetailWidget extends StatelessWidget {
     final appear = context.read<Appearance>();
     return Scaffold(
       appBar: AppBar(
+        flexibleSpace: FlexibleSpaceBar(
+          background: Container(
+            color: Colors.white,
+          ),
+        ),
         actions: [
           IconButton(
               onPressed: () {},
