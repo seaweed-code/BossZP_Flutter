@@ -89,11 +89,13 @@ class ChatDetailWidget extends StatelessWidget {
           ),
           Container(
             color: Colors.white,
-            padding: EdgeInsets.only(top: 8, bottom: 8, left: 15, right: 15),
+            padding: EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Assets.images.chatBottomCommonIconIphone.image(),
+                IconButton(
+                    onPressed: () {},
+                    icon: Assets.images.chatBottomCommonIconIphone.image()),
                 SizedBox(width: 10),
                 Expanded(
                     child: TextField(
@@ -105,9 +107,15 @@ class ChatDetailWidget extends StatelessWidget {
                       hintStyle: TextStyle(color: appear.timeColor)),
                 )),
                 SizedBox(width: 10),
-                Assets.images.chatBottomMoreDefaultIconIphone.image(),
-                SizedBox(width: 10),
-                Assets.images.chatBottomMoreDefaultIconIphone.image(),
+                IconButton(
+                    onPressed: () {},
+                    icon:
+                        Assets.images.chatBottomMoreDefaultIconIphone.image()),
+                // SizedBox(width: 10),
+                IconButton(
+                    onPressed: () {},
+                    icon:
+                        Assets.images.chatBottomMoreDefaultIconIphone.image()),
               ],
             ),
           )
