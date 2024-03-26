@@ -80,7 +80,7 @@ class ChatDetailWidget extends StatelessWidget {
                             children: [
                               Positioned.fill(
                                   child: Assets
-                                      .images.darkBhChatBubbleWhiteLeftIphone
+                                      .images.bhChatBubbleWhiteLeftIphone
                                       .image(
                                           centerSlice:
                                               Rect.fromLTRB(15, 15, 25, 25))),
@@ -89,7 +89,7 @@ class ChatDetailWidget extends StatelessWidget {
                                 child: Text(
                                   "您好，您考虑外包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==-=-=-=-=",
                                   style: TextStyle(
-                                      color: Colors.white,
+                                      color: appear.titleColor,
                                       fontSize: 16,
                                       fontWeight: FontWeight.normal),
                                 ),
