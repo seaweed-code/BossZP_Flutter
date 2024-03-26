@@ -67,7 +67,7 @@ class ChatDetailWidget extends StatelessWidget {
                               .image(width: 40, height: 40)),
                       SizedBox(width: 5),
                       SizedBox(
-                        width: constraints.maxWidth * 0.5,
+                        width: constraints.maxWidth * 0.7,
                         child: Text(
                           "您好，您考虑外包岗位吗？77777==-=-=-=-=",
                           style: TextStyle(
