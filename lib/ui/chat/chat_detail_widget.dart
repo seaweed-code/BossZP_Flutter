@@ -13,6 +13,7 @@ class ChatDetailWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
     final emojSelected = ValueNotifier(false);
+    final inputController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: FlexibleSpaceBar(
@@ -100,11 +101,12 @@ class ChatDetailWidget extends StatelessWidget {
                 SizedBox(width: 10),
                 Expanded(
                     child: TextField(
+                  controller: inputController,
                   keyboardType: TextInputType.text,
                   minLines: 1,
                   maxLines: 5,
                   onSubmitted: (value) {
-                    print(value);
+                    inputController.clear();
                   },
                   decoration: InputDecoration(
                       border: InputBorder.none,
