@@ -19,9 +19,9 @@ class ChatDetailWidget extends StatelessWidget {
           ),
         ),
         actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Assets.images.chatNavRightTagsIconIphone.image()),
+          // IconButton(
+          //     onPressed: () {},
+          //     icon: Assets.images.chatNavRightTagsIconIphone.image()),
           IconButton(
               onPressed: () {},
               icon: Assets.images.chatNavRightIconIphone.image())
@@ -83,6 +83,20 @@ class ChatDetailWidget extends StatelessWidget {
                   return _ChatRowTextWidget(isSender: index % 2 == 0);
                 },
               ),
+            ),
+          ),
+          Container(
+            color: Colors.white,
+            height: 50,
+            child: Row(
+              children: [
+                Assets.images.chatBottomCommonIconIphone.image(),
+                SizedBox(width: 10),
+                Expanded(child: TextField()),
+                Assets.images.chatBottomMoreDefaultIconIphone.image(),
+                SizedBox(width: 10),
+                Assets.images.chatBottomMoreDefaultIconIphone.image()
+              ],
             ),
           )
         ],
