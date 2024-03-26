@@ -29,6 +29,7 @@ class RecentChatItemWidget extends StatelessWidget {
             //       'https://k.sinaimg.cn/n/sinakd20117/192/w1696h1696/20240131/3dd7-94af50d27027ceae9ccc3d13760a2f7c.jpg/w700d1q75cms.jpg',
             // ),
           ),
+          // FractionallySizedBox()
           SizedBox(width: 16),
           Expanded(
             child: Container(
