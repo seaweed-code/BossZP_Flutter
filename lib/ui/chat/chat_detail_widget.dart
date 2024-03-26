@@ -75,7 +75,7 @@ class _ButtonWidget extends StatelessWidget {
           children: [
             icon,
             Text(
-              "打电话",
+              text,
               style: TextStyle(color: appear.titleColor, fontSize: 14),
             )
           ],
