@@ -103,7 +103,7 @@ class _ChatRowWidget extends StatelessWidget {
                     child: Text(
                       "您好，您考虑外包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==-=-=-=-=",
                       style: TextStyle(
-                          color: appear.titleColor,
+                          color: isSender ? Colors.white : appear.titleColor,
                           fontSize: 16,
                           fontWeight: FontWeight.normal),
                     ),
