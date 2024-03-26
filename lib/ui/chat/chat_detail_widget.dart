@@ -61,15 +61,16 @@ class ChatDetailWidget extends StatelessWidget {
               itemBuilder: (context, index) {
                 return LayoutBuilder(builder: (context, constraints) {
                   return Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       ClipOval(
                           child: Assets.images.avatar2Iphone
-                              .image(width: 40, height: 40)),
+                              .image(width: 35, height: 35)),
                       SizedBox(width: 5),
                       SizedBox(
                         width: constraints.maxWidth * 0.7,
                         child: Text(
-                          "您好，您考虑外包岗位吗？77777==-=-=-=-=",
+                          "您好，您考虑外包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==包岗位吗？77777==-=-=-=-=",
                           style: TextStyle(
                               color: appear.titleColor,
                               fontSize: 16,
