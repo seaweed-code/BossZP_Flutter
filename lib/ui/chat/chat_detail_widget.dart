@@ -57,11 +57,14 @@ class ChatDetailWidget extends StatelessWidget {
             ],
           ),
           Expanded(
-            child: ListView.builder(
-              itemCount: 30,
-              itemBuilder: (context, index) {
-                return _ChatRowWidget(isSender: index % 2 == 0);
-              },
+            child: Container(
+              color: appear.backgroundColor,
+              child: ListView.builder(
+                itemCount: 30,
+                itemBuilder: (context, index) {
+                  return _ChatRowWidget(isSender: index % 2 == 0);
+                },
+              ),
             ),
           )
         ],
@@ -76,8 +79,7 @@ class _ChatRowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
-    return Container(
-      color: appear.backgroundColor,
+    return Padding(
       padding: const EdgeInsets.only(left: 5, right: 5, top: 15, bottom: 15),
       child: LayoutBuilder(builder: (context, constraints) {
         return Row(
