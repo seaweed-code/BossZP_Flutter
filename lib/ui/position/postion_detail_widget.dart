@@ -5,6 +5,7 @@ import 'package:bosszp/ui/chat/chat_detail_widget.dart';
 import 'package:bosszp/ui/common/listen_scroll_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -247,8 +248,8 @@ class PostionDetailWidget extends StatelessWidget {
                             avatarWidth: avatarWidth,
                             avatarTraing: avatarTraing),
                         SizedBox(height: 20),
-                        ConstrainedBox(
-                          constraints: BoxConstraints(maxHeight: 250),
+                        AspectRatio(
+                          aspectRatio: 16.0 / 9.0,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8),
                             child: GoogleMap(
