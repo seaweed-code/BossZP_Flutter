@@ -100,8 +100,12 @@ class ChatDetailWidget extends StatelessWidget {
                 SizedBox(width: 10),
                 Expanded(
                     child: TextField(
+                  keyboardType: TextInputType.text,
                   minLines: 1,
                   maxLines: 5,
+                  onSubmitted: (value) {
+                    print(value);
+                  },
                   decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "新信息",
