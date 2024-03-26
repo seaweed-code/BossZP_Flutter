@@ -12,6 +12,7 @@ class ChatDetailWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
+    final emojSelected = ValueNotifier(false);
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: FlexibleSpaceBar(
@@ -107,14 +108,12 @@ class ChatDetailWidget extends StatelessWidget {
                       hintStyle: TextStyle(color: appear.timeColor)),
                 )),
                 SizedBox(width: 10),
-                IconButton(
-                    splashColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    style: ButtonStyle(),
-                    onPressed: () {},
-                    icon:
-                        Assets.images.chatBottomMoreDefaultIconIphone.image()),
-                // SizedBox(width: 10),
+                _InputPannelButton(
+                  selected: emojSelected,
+                  selectedIcon:
+                      Assets.images.chatBottomMoreDefaultIconIphone.path,
+                  normalIcon: Assets.images.chatBottomMoreCloseIconIphone.path,
+                ),
                 IconButton(
                     onPressed: () {},
                     icon:
@@ -125,6 +124,37 @@ class ChatDetailWidget extends StatelessWidget {
         ],
       )),
     );
+  }
+}
+
+class _InputPannelButton extends StatefulWidget {
+  const _InputPannelButton(
+      {super.key,
+      required this.normalIcon,
+      required this.selectedIcon,
+      required this.selected});
+  final String normalIcon;
+  final String selectedIcon;
+  final ValueNotifier<bool> selected;
+
+  @override
+  State<_InputPannelButton> createState() => _InputPannelButtonState();
+}
+
+class _InputPannelButtonState extends State<_InputPannelButton> {
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        style: ButtonStyle(),
+        onPressed: () {
+          widget.selected.value = !widget.selected.value;
+          setState(() {});
+        },
+        icon: widget.selected.value
+            ? Image.asset(widget.normalIcon)
+            : Image.asset(widget.selectedIcon));
   }
 }
 

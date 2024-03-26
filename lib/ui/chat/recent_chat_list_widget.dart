@@ -24,6 +24,7 @@ class _RecentChatListWidgetState extends State<RecentChatListWidget> {
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
     const leading = 15.0;
+
     return CustomScrollView(
       slivers: [
         SliverAppBar(
