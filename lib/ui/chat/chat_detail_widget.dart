@@ -1,6 +1,7 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
@@ -78,6 +79,7 @@ class ChatDetailWidget extends StatelessWidget {
             child: Container(
               color: appear.backgroundColor,
               child: ListView.builder(
+                // dragStartBehavior: DragStartBehavior.down,
                 itemCount: 30,
                 itemBuilder: (context, index) {
                   return _ChatRowTextWidget(isSender: index % 2 == 0);
@@ -87,14 +89,16 @@ class ChatDetailWidget extends StatelessWidget {
           ),
           Container(
             color: Colors.white,
-            height: 80,
             padding: EdgeInsets.only(top: 8, bottom: 8, left: 15, right: 15),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Assets.images.chatBottomCommonIconIphone.image(),
                 SizedBox(width: 10),
                 Expanded(
                     child: TextField(
+                  minLines: 1,
+                  maxLines: 5,
                   decoration: InputDecoration(
                       hintText: "新信息",
                       hintStyle: TextStyle(color: appear.timeColor)),
