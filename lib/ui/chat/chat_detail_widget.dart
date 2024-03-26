@@ -50,26 +50,29 @@ class ChatDetailWidget extends StatelessWidget {
       body: SafeArea(
           child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              _ButtonWidget(
-                icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
-                text: "打电话",
-              ),
-              _ButtonWidget(
-                icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
-                text: "换微信",
-              ),
-              _ButtonWidget(
-                icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
-                text: "发简历",
-              ),
-              _ButtonWidget(
-                icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
-                text: "不感兴趣",
-              )
-            ],
+          Container(
+            color: Colors.white,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                _ButtonWidget(
+                  icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                  text: "打电话",
+                ),
+                _ButtonWidget(
+                  icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                  text: "换微信",
+                ),
+                _ButtonWidget(
+                  icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                  text: "发简历",
+                ),
+                _ButtonWidget(
+                  icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                  text: "不感兴趣",
+                )
+              ],
+            ),
           ),
           Expanded(
             child: Container(
