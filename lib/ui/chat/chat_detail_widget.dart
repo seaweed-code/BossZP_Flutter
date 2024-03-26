@@ -95,7 +95,9 @@ class ChatDetailWidget extends StatelessWidget {
                 SizedBox(width: 10),
                 Expanded(
                     child: TextField(
-                  decoration: InputDecoration(hintText: "新信息"),
+                  decoration: InputDecoration(
+                      hintText: "新信息",
+                      hintStyle: TextStyle(color: appear.timeColor)),
                 )),
                 SizedBox(width: 10),
                 Assets.images.chatBottomMoreDefaultIconIphone.image(),
