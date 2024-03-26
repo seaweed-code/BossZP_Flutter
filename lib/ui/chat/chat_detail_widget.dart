@@ -62,7 +62,7 @@ class ChatDetailWidget extends StatelessWidget {
               child: ListView.builder(
                 itemCount: 30,
                 itemBuilder: (context, index) {
-                  return _ChatRowWidget(isSender: index % 2 == 0);
+                  return _ChatRowTextWidget(isSender: index % 2 == 0);
                 },
               ),
             ),
@@ -73,8 +73,8 @@ class ChatDetailWidget extends StatelessWidget {
   }
 }
 
-class _ChatRowWidget extends StatelessWidget {
-  const _ChatRowWidget({super.key, required this.isSender});
+class _ChatRowTextWidget extends StatelessWidget {
+  const _ChatRowTextWidget({super.key, required this.isSender});
   final bool isSender;
   @override
   Widget build(BuildContext context) {
