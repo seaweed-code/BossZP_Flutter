@@ -1,5 +1,6 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:bosszp/ui/chat/chat_detail_widget.dart';
 import 'package:bosszp/ui/common/segement_widget.dart';
 // import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/chat/recent_chat_item_widget.dart';
@@ -61,8 +62,17 @@ class _RecentChatListWidgetState extends State<RecentChatListWidget> {
           prototypeItem: RecentChatItemWidget(leading: leading),
           itemCount: 30,
           itemBuilder: (context, index) {
-            return RecentChatItemWidget(
-              leading: leading,
+            return GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ChatDetailWidget();
+                  },
+                ));
+              },
+              child: RecentChatItemWidget(
+                leading: leading,
+              ),
             );
           },
         )
