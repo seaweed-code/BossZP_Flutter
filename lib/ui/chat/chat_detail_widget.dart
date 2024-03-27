@@ -59,15 +59,15 @@ class ChatDetailWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 _ButtonWidget(
-                  icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                  icon: Assets.images.exchangePhoneHighlightIphone.image(),
                   text: "打电话",
                 ),
                 _ButtonWidget(
-                  icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                  icon: Assets.images.exchangeWechatHighlightIphone.image(),
                   text: "换微信",
                 ),
                 _ButtonWidget(
-                  icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                  icon: Assets.images.exchangeResumeHighlightIphone.image(),
                   text: "发简历",
                 ),
                 _ButtonWidget(
@@ -243,9 +243,10 @@ class _ButtonWidget extends StatelessWidget {
         child: Column(
           children: [
             icon,
+            SizedBox(height: 2),
             Text(
               text,
-              style: TextStyle(color: appear.titleColor, fontSize: 14),
+              style: TextStyle(color: appear.titleColor, fontSize: 13),
             )
           ],
         ));
