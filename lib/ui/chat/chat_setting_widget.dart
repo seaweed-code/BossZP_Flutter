@@ -77,6 +77,7 @@ class ChatSettingWidget extends StatelessWidget {
                     _Row(text: "举报对方"),
                     SizedBox(height: 10),
                     line,
+                    SizedBox(height: 40),
                     Container(
                       decoration: BoxDecoration(
                           color: appear.backgroundColor,
