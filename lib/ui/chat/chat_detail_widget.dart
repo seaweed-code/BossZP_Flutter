@@ -174,7 +174,8 @@ class _InputPannelState extends State<_InputPannel> {
               onPressed: () {
                 setState(() {
                   if (select == _SelectIndex.lang) {
-                    select = _SelectIndex.none;
+                    select = _SelectIndex.texting;
+                    focus.requestFocus();
                   } else {
                     select = _SelectIndex.lang;
                   }
