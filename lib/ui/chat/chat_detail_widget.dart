@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/ui/chat/chat_setting_widget.dart';
@@ -124,9 +126,15 @@ class _InputPannel extends StatefulWidget {
   State<_InputPannel> createState() => _InputPannelState();
 }
 
+enum _SelectIndex {
+  none,
+  lang,
+  emoji,
+  more,
+}
+
 class _InputPannelState extends State<_InputPannel> {
-  bool emojSelected = false;
-  bool moreSelected = false;
+  _SelectIndex select = _SelectIndex.none;
 
   @override
   Widget build(BuildContext context) {
@@ -141,11 +149,13 @@ class _InputPannelState extends State<_InputPannel> {
               highlightColor: Colors.transparent,
               onPressed: () {
                 setState(() {
-                  emojSelected = false;
-                  moreSelected = false;
+                  select = _SelectIndex.lang;
                 });
-              },
-              icon: Assets.images.chatBottomCommonIconIphone.image(),
+              }, //Assets.images.chatBottomCommonIconIphone chat_bottom_green_common_keyboard_icon_iphone
+              icon: (select == _SelectIndex.lang
+                      ? Assets.images.chatBottomGreenCommonKeyboardIconIphone
+                      : Assets.images.chatBottomGreenCommonSmallIconIphone)
+                  .image(),
             ),
             SizedBox(width: 10),
             Expanded(
@@ -171,11 +181,10 @@ class _InputPannelState extends State<_InputPannel> {
               highlightColor: Colors.transparent,
               onPressed: () {
                 setState(() {
-                  emojSelected = !emojSelected;
-                  moreSelected = false;
+                  select = _SelectIndex.emoji;
                 });
               },
-              icon: (!emojSelected
+              icon: (select != _SelectIndex.emoji
                       ? Assets.images.chatKeyboardExpressionNormalIphone
                       : Assets.images.chatKeyboardInputIphone)
                   .image(),
@@ -185,11 +194,10 @@ class _InputPannelState extends State<_InputPannel> {
               highlightColor: Colors.transparent,
               onPressed: () {
                 setState(() {
-                  emojSelected = false;
-                  moreSelected = !moreSelected;
+                  select = _SelectIndex.more;
                 });
               },
-              icon: (!moreSelected
+              icon: (select != _SelectIndex.more
                       ? Assets.images.chatBottomMoreDefaultIconIphone
                       : Assets.images.chatBottomMoreCloseIconIphone)
                   .image(),
