@@ -422,6 +422,46 @@ class $AssetsImagesGen {
   AssetGenImage get chatKeyboardInputIphone =>
       const AssetGenImage('assets/images/chat_keyboard_input_iphone.png');
 
+  /// File path: assets/images/chat_more_online_remind_icon_iphone.png
+  AssetGenImage get chatMoreOnlineRemindIconIphone => const AssetGenImage(
+      'assets/images/chat_more_online_remind_icon_iphone.png');
+
+  /// File path: assets/images/chat_more_photo_icon_iphone.png
+  AssetGenImage get chatMorePhotoIconIphone =>
+      const AssetGenImage('assets/images/chat_more_photo_icon_iphone.png');
+
+  /// File path: assets/images/chat_more_send_address_icon_iphone.png
+  AssetGenImage get chatMoreSendAddressIconIphone => const AssetGenImage(
+      'assets/images/chat_more_send_address_icon_iphone.png');
+
+  /// File path: assets/images/chat_more_sms_icon_iphone.png
+  AssetGenImage get chatMoreSmsIconIphone =>
+      const AssetGenImage('assets/images/chat_more_sms_icon_iphone.png');
+
+  /// File path: assets/images/chat_more_speaktest_iphone.png
+  AssetGenImage get chatMoreSpeaktestIphone =>
+      const AssetGenImage('assets/images/chat_more_speaktest_iphone.png');
+
+  /// File path: assets/images/chat_more_talent_evaluation_iphone.png
+  AssetGenImage get chatMoreTalentEvaluationIphone => const AssetGenImage(
+      'assets/images/chat_more_talent_evaluation_iphone.png');
+
+  /// File path: assets/images/chat_more_video_call_icon_iphone.png
+  AssetGenImage get chatMoreVideoCallIconIphone =>
+      const AssetGenImage('assets/images/chat_more_video_call_icon_iphone.png');
+
+  /// File path: assets/images/chat_more_voice_call_icon_iphone.png
+  AssetGenImage get chatMoreVoiceCallIconIphone =>
+      const AssetGenImage('assets/images/chat_more_voice_call_icon_iphone.png');
+
+  /// File path: assets/images/chat_more_voice_icon_iphone.png
+  AssetGenImage get chatMoreVoiceIconIphone =>
+      const AssetGenImage('assets/images/chat_more_voice_icon_iphone.png');
+
+  /// File path: assets/images/chat_more_voice_video_call_iphone.png
+  AssetGenImage get chatMoreVoiceVideoCallIphone => const AssetGenImage(
+      'assets/images/chat_more_voice_video_call_iphone.png');
+
   /// File path: assets/images/chat_nav_left_icon_iphone.png
   AssetGenImage get chatNavLeftIconIphone =>
       const AssetGenImage('assets/images/chat_nav_left_icon_iphone.png');
@@ -866,6 +906,16 @@ class $AssetsImagesGen {
         chatInterviewStatusStartOtherIphone,
         chatKeyboardExpressionNormalIphone,
         chatKeyboardInputIphone,
+        chatMoreOnlineRemindIconIphone,
+        chatMorePhotoIconIphone,
+        chatMoreSendAddressIconIphone,
+        chatMoreSmsIconIphone,
+        chatMoreSpeaktestIphone,
+        chatMoreTalentEvaluationIphone,
+        chatMoreVideoCallIconIphone,
+        chatMoreVoiceCallIconIphone,
+        chatMoreVoiceIconIphone,
+        chatMoreVoiceVideoCallIphone,
         chatNavLeftIconIphone,
         chatNavRightIconIphone,
         chatNavRightTagsIconIphone,
