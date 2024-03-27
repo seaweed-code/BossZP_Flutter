@@ -129,12 +129,36 @@ class _InputPannel extends StatefulWidget {
 enum _SelectIndex {
   none,
   lang,
+  texting,
   emoji,
   more,
 }
 
 class _InputPannelState extends State<_InputPannel> {
   _SelectIndex select = _SelectIndex.none;
+  FocusNode focus = FocusNode();
+
+  void _onFocusChanged() {
+    setState(() {
+      if (focus.hasFocus) {
+        select = _SelectIndex.texting;
+      } else {
+        select = _SelectIndex.none;
+      }
+    });
+  }
+
+  @override
+  void initState() {
+    focus.addListener(_onFocusChanged);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    focus.removeListener(_onFocusChanged);
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -164,12 +188,16 @@ class _InputPannelState extends State<_InputPannel> {
             SizedBox(width: 10),
             Expanded(
                 child: TextField(
+              focusNode: focus,
               controller: widget.inputController,
               keyboardType: TextInputType.text,
               minLines: 1,
               maxLines: 5,
               onTapOutside: (event) {
                 SystemChannels.textInput.invokeMethod('TextInput.hide');
+                setState(() {
+                  select = _SelectIndex.none;
+                });
               },
               onSubmitted: (value) {
                 widget.inputController.clear();
