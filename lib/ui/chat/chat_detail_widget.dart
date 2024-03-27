@@ -71,7 +71,8 @@ class ChatDetailWidget extends StatelessWidget {
                   text: "发简历",
                 ),
                 _ButtonWidget(
-                  icon: Assets.images.chatVideoPhoneOtherIconIphone.image(),
+                  icon:
+                      Assets.images.bbChatExchangeItemNotFitAbleIphone.image(),
                   text: "不感兴趣",
                 )
               ],

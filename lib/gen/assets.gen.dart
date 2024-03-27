@@ -108,6 +108,10 @@ class $AssetsImagesGen {
   AssetGenImage get bbChatExampleChangeIconIphone => const AssetGenImage(
       'assets/images/bb_chat_example_change_icon_iphone.png');
 
+  /// File path: assets/images/bb_chat_exchangeItem_notFit_able_iphone.png
+  AssetGenImage get bbChatExchangeItemNotFitAbleIphone => const AssetGenImage(
+      'assets/images/bb_chat_exchangeItem_notFit_able_iphone.png');
+
   /// File path: assets/images/bb_chat_message_addcyy_icon_iphone.png
   AssetGenImage get bbChatMessageAddcyyIconIphone => const AssetGenImage(
       'assets/images/bb_chat_message_addcyy_icon_iphone.png');
@@ -774,6 +778,7 @@ class $AssetsImagesGen {
         basicSnapshotFeedbackIconIphone,
         bbChatAddManageTags,
         bbChatExampleChangeIconIphone,
+        bbChatExchangeItemNotFitAbleIphone,
         bbChatMessageAddcyyIconIphone,
         bbChatMessageAddexpressionIconIphone,
         bbChatMessageCopyIconIphone,
