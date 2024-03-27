@@ -17,6 +17,11 @@ class ChatSettingWidget extends StatelessWidget {
         .image(width: 14, height: 14, fit: BoxFit.fitHeight);
     return Scaffold(
       appBar: AppBar(
+        flexibleSpace: FlexibleSpaceBar(
+          background: ColoredBox(
+            color: Colors.white,
+          ),
+        ),
         title: Text(
           "聊天设置",
           style: TextStyle(
