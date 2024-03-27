@@ -162,7 +162,11 @@ class _InputPannelState extends State<_InputPannel> {
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
               style: ButtonStyle(),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  emojSelected = !emojSelected;
+                });
+              },
               icon: (!emojSelected
                       ? Assets.images.chatKeyboardExpressionNormalIphone
                       : Assets.images.chatKeyboardInputIphone)
@@ -172,7 +176,12 @@ class _InputPannelState extends State<_InputPannel> {
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
               style: ButtonStyle(),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  emojSelected = false;
+                  moreSelected = !moreSelected;
+                });
+              },
               icon: (!moreSelected
                       ? Assets.images.chatBottomMoreDefaultIconIphone
                       : Assets.images.chatBottomMoreCloseIconIphone)
