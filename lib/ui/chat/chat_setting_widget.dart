@@ -25,72 +25,75 @@ class ChatSettingWidget extends StatelessWidget {
               fontWeight: FontWeight.w600),
         ),
       ),
-      body: SafeArea(
-        child: ListView(
-          children: [
-            Padding(
-              padding:
-                  const EdgeInsets.only(left: leading, top: 8, right: leading),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 30),
-                    child: Row(
-                      children: [
-                        ClipOval(
-                            child: Assets.images.avatar2Iphone
-                                .image(width: 50, height: 50)),
-                        SizedBox(width: 8),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "郑爽",
-                              style: TextStyle(
-                                  color: appear.titleColor,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                            Text(
-                              "百车宝 招聘经理",
-                              style: TextStyle(
-                                color: appear.subTitleColor,
-                                fontSize: 15,
+      body: Container(
+        color: Colors.white,
+        child: SafeArea(
+          child: ListView(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: leading, top: 8, right: leading),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 30),
+                      child: Row(
+                        children: [
+                          ClipOval(
+                              child: Assets.images.avatar2Iphone
+                                  .image(width: 50, height: 50)),
+                          SizedBox(width: 8),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "郑爽",
+                                style: TextStyle(
+                                    color: appear.titleColor,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600),
                               ),
-                            )
-                          ],
-                        ),
-                        Spacer(),
-                        arrow
-                      ],
+                              Text(
+                                "百车宝 招聘经理",
+                                style: TextStyle(
+                                  color: appear.subTitleColor,
+                                  fontSize: 15,
+                                ),
+                              )
+                            ],
+                          ),
+                          Spacer(),
+                          arrow
+                        ],
+                      ),
                     ),
-                  ),
-                  line,
-                  SizedBox(height: 10),
-                  _Row(text: "查看近30天聊天记录"),
-                  _Row(text: "查看个人竞争力分析"),
-                  _Row(text: "查看隐私状态"),
-                  line,
-                  _Row(text: "举报对方"),
-                  SizedBox(height: 10),
-                  line,
-                  Container(
-                    decoration: BoxDecoration(
-                        color: appear.backgroundColor,
-                        borderRadius: BorderRadius.circular(6)),
-                    child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "删除联系人",
-                          style:
-                              TextStyle(color: appear.titleColor, fontSize: 18),
-                        )),
-                  )
-                ],
-              ),
-            )
-          ],
+                    line,
+                    SizedBox(height: 10),
+                    _Row(text: "查看近30天聊天记录"),
+                    _Row(text: "查看个人竞争力分析"),
+                    _Row(text: "查看隐私状态"),
+                    line,
+                    _Row(text: "举报对方"),
+                    SizedBox(height: 10),
+                    line,
+                    Container(
+                      decoration: BoxDecoration(
+                          color: appear.backgroundColor,
+                          borderRadius: BorderRadius.circular(6)),
+                      child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "删除联系人",
+                            style: TextStyle(
+                                color: appear.titleColor, fontSize: 18),
+                          )),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
