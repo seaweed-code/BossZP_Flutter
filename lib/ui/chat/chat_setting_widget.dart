@@ -18,8 +18,8 @@ class ChatSettingWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         bottom: PreferredSize(
-          preferredSize: Size.fromHeight(1.5),
-          child: Container(height: 2, color: appear.lineColor),
+          preferredSize: Size.fromHeight(1),
+          child: Container(height: 1, color: appear.lineColor),
         ),
         flexibleSpace: FlexibleSpaceBar(
           background: ColoredBox(
