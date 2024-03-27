@@ -102,10 +102,10 @@ class ChatSettingWidget extends StatelessWidget {
 }
 
 class _Row extends StatelessWidget {
-  const _Row({super.key, required this.text});
+  const _Row({super.key, required this.text, this.subText});
 
   final String text;
-  // final
+  final String? subText;
 
   @override
   Widget build(BuildContext context) {
@@ -117,9 +117,22 @@ class _Row extends StatelessWidget {
       padding: const EdgeInsets.only(top: 20, bottom: 20),
       child: Row(
         children: [
-          Text(
-            text,
-            style: TextStyle(color: appear.titleColor, fontSize: 17),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                text,
+                style: TextStyle(color: appear.titleColor, fontSize: 17),
+              ),
+              if (subText != null)
+                Padding(
+                  padding: const EdgeInsets.only(top: 6),
+                  child: Text(
+                    subText!,
+                    style: TextStyle(color: appear.subTitleColor, fontSize: 12),
+                  ),
+                ),
+            ],
           ),
           Spacer(),
           arrow
