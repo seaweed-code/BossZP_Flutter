@@ -243,7 +243,7 @@ class _ButtonWidget extends StatelessWidget {
         child: Column(
           children: [
             icon,
-            SizedBox(height: 2),
+            SizedBox(height: 4),
             Text(
               text,
               style: TextStyle(color: appear.titleColor, fontSize: 13),
