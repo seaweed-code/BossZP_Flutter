@@ -262,8 +262,29 @@ class _InputPannelState extends State<_InputPannel> {
           ),
         if (select == _SelectIndex.more)
           Container(
-            color: Colors.black,
-            height: 40,
+            color: Colors.white,
+            height: 250,
+            padding: EdgeInsets.only(top: 10, bottom: 10, right: 12, left: 12),
+            child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+              ),
+              itemCount: 8,
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    Assets.images.avatar0Iphone.image(),
+                    SizedBox(height: 6),
+                    Text(
+                      "图片",
+                      style: TextStyle(color: appear.titleColor, fontSize: 14),
+                    )
+                  ],
+                );
+              },
+            ),
           )
       ],
     );
