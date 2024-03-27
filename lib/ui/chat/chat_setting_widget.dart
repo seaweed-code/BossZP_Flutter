@@ -12,7 +12,7 @@ class ChatSettingWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
     const leading = 20.0;
-    final line = Container(color: appear.backgroundColor, height: 2);
+    final line = Container(color: appear.backgroundColor, height: 1.5);
     final arrow = Assets.images.basicMoreArrowiphone
         .image(width: 14, height: 14, fit: BoxFit.fitHeight);
     return Scaffold(
