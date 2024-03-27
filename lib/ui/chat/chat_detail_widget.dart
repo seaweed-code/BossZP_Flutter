@@ -214,7 +214,7 @@ class _ChatRowTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
     return Padding(
-      padding: const EdgeInsets.only(left: 5, right: 5, top: 15, bottom: 15),
+      padding: const EdgeInsets.only(left: 8, right: 8, top: 15, bottom: 15),
       child: LayoutBuilder(builder: (context, constraints) {
         return Row(
           crossAxisAlignment: CrossAxisAlignment.end,
