@@ -271,7 +271,7 @@ class _EmojiPannelWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      height: 250,
+      height: 280,
       padding: EdgeInsets.only(left: 15, right: 15, top: 15),
       child: CustomScrollView(
         slivers: [
