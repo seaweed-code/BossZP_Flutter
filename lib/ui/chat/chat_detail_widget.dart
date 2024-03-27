@@ -274,27 +274,30 @@ class _MorePannelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
-    return SizedBox(
-      height: 250,
-      child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 4,
-          mainAxisSpacing: 10,
-          crossAxisSpacing: 10,
+    return Padding(
+      padding: const EdgeInsets.only(top: 20),
+      child: SizedBox(
+        height: 230,
+        child: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 4,
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+          ),
+          itemCount: 8,
+          itemBuilder: (context, index) {
+            return Column(
+              children: [
+                Assets.images.avatar0Iphone.image(),
+                SizedBox(height: 6),
+                Text(
+                  "图片",
+                  style: TextStyle(color: appear.titleColor, fontSize: 14),
+                )
+              ],
+            );
+          },
         ),
-        itemCount: 8,
-        itemBuilder: (context, index) {
-          return Column(
-            children: [
-              Assets.images.avatar0Iphone.image(),
-              SizedBox(height: 6),
-              Text(
-                "图片",
-                style: TextStyle(color: appear.titleColor, fontSize: 14),
-              )
-            ],
-          );
-        },
       ),
     );
   }
