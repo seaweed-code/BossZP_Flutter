@@ -126,7 +126,7 @@ class _Row extends StatelessWidget {
     final Appearance appear = context.read();
 
     return Padding(
-      padding: const EdgeInsets.only(top: 20, bottom: 20),
+      padding: const EdgeInsets.only(top: 16, bottom: 16),
       child: Row(
         children: [
           Column(
