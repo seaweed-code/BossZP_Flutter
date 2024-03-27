@@ -32,6 +32,7 @@ class ChatSettingWidget extends StatelessWidget {
               padding:
                   const EdgeInsets.only(left: leading, top: 8, right: leading),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 30),
@@ -72,7 +73,20 @@ class ChatSettingWidget extends StatelessWidget {
                   _Row(text: "查看隐私状态"),
                   line,
                   _Row(text: "举报对方"),
-                  line
+                  SizedBox(height: 10),
+                  line,
+                  Container(
+                    decoration: BoxDecoration(
+                        color: appear.backgroundColor,
+                        borderRadius: BorderRadius.circular(6)),
+                    child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "删除联系人",
+                          style:
+                              TextStyle(color: appear.titleColor, fontSize: 18),
+                        )),
+                  )
                 ],
               ),
             )
