@@ -269,12 +269,21 @@ class _EmojiPannelWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Appearance appear = context.read();
     return Container(
       color: Colors.white,
       height: 280,
       padding: EdgeInsets.only(left: 15, right: 15, top: 15),
       child: CustomScrollView(
         slivers: [
+          SliverToBoxAdapter(
+              child: Padding(
+            padding: const EdgeInsets.only(bottom: 15.0),
+            child: Text(
+              "全部表情",
+              style: TextStyle(fontSize: 14, color: appear.titleColor),
+            ),
+          )),
           SliverGrid.builder(
             gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                 childAspectRatio: 1,
