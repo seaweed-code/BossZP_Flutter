@@ -260,33 +260,44 @@ class _InputPannelState extends State<_InputPannel> {
             color: Colors.red,
             height: 40,
           ),
-        if (select == _SelectIndex.more)
-          Container(
-            color: Colors.white,
-            height: 250,
-            padding: EdgeInsets.only(top: 10, bottom: 10, right: 12, left: 12),
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-              ),
-              itemCount: 8,
-              itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    Assets.images.avatar0Iphone.image(),
-                    SizedBox(height: 6),
-                    Text(
-                      "图片",
-                      style: TextStyle(color: appear.titleColor, fontSize: 14),
-                    )
-                  ],
-                );
-              },
-            ),
-          )
+        if (select == _SelectIndex.more) _MorePannelWidget()
       ],
+    );
+  }
+}
+
+class _MorePannelWidget extends StatelessWidget {
+  const _MorePannelWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    return Container(
+      color: Colors.white,
+      height: 250,
+      padding: EdgeInsets.only(top: 10, bottom: 10, right: 12, left: 12),
+      child: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 4,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
+        ),
+        itemCount: 8,
+        itemBuilder: (context, index) {
+          return Column(
+            children: [
+              Assets.images.avatar0Iphone.image(),
+              SizedBox(height: 6),
+              Text(
+                "图片",
+                style: TextStyle(color: appear.titleColor, fontSize: 14),
+              )
+            ],
+          );
+        },
+      ),
     );
   }
 }
