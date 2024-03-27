@@ -42,7 +42,7 @@ class ChatDetailWidget extends StatelessWidget {
                         fontSize: 18,
                         fontWeight: FontWeight.w600),
                   ),
-                  SizedBox(width: 5),
+                  SizedBox(width: 8),
                   Assets.images.cbChatOnlineIphone
                       .image(height: 20, fit: BoxFit.fitHeight)
                 ],
