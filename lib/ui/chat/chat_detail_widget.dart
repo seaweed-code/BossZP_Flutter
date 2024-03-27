@@ -303,9 +303,15 @@ class _EmojiPannelWidget extends StatelessWidget {
 }
 
 class _MorePannelWidget extends StatelessWidget {
-  const _MorePannelWidget({
+  _MorePannelWidget({
     super.key,
   });
+  final List<(String name, String icon)> datas = [
+    ("图片", Assets.images.chatMorePhotoIconIphone.path),
+    ("语音", Assets.images.chatMoreVoiceIconIphone.path),
+    ("语音通话", Assets.images.chatMoreVoiceCallIconIphone.path),
+    ("优先提醒", Assets.images.chatMoreOnlineRemindIconIphone.path),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -320,14 +326,14 @@ class _MorePannelWidget extends StatelessWidget {
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
           ),
-          itemCount: 8,
+          itemCount: datas.length,
           itemBuilder: (context, index) {
             return Column(
               children: [
-                Assets.images.chatMoreOnlineRemindIconIphone.image(),
+                Image.asset(datas[index].$2),
                 SizedBox(height: 6),
                 Text(
-                  "图片",
+                  datas[index].$1,
                   style: TextStyle(color: appear.titleColor, fontSize: 14),
                 )
               ],
