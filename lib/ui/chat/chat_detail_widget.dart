@@ -1,5 +1,6 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:bosszp/ui/chat/chat_setting_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,13 @@ class ChatDetailWidget extends StatelessWidget {
           //     onPressed: () {},
           //     icon: Assets.images.chatNavRightTagsIconIphone.image()),
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ChatSettingWidget();
+                  },
+                ));
+              },
               icon: Assets.images.chatNavRightIconIphone.image())
         ],
         title: Center(
