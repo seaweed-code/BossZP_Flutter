@@ -83,9 +83,9 @@ class ChatSettingWidget extends StatelessWidget {
                       subText: "加入黑名单后，你将不再接受对方发过来的信息",
                     ),
                     _Row(text: "举报对方"),
-                    SizedBox(height: 10),
+                    // SizedBox(height: 10),
                     line,
-                    SizedBox(height: 40),
+                    SizedBox(height: 30),
                     Container(
                       decoration: BoxDecoration(
                           color: appear.backgroundColor,
