@@ -271,7 +271,7 @@ class _InputPannelState extends State<_InputPannel> {
                   itemCount: 100,
                   itemBuilder: (context, index) {
                     return Image.asset(
-                        "assets/images/emoji/Expression__$index.png");
+                        "assets/images/emoji/Expression__${index + 1}.png");
                   },
                 )
               ],
