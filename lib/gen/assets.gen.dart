@@ -12,6 +12,30 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/VoicePlaying1_iphone.png
+  AssetGenImage get voicePlaying1Iphone =>
+      const AssetGenImage('assets/images/VoicePlaying1_iphone.png');
+
+  /// File path: assets/images/VoicePlaying2_iphone.png
+  AssetGenImage get voicePlaying2Iphone =>
+      const AssetGenImage('assets/images/VoicePlaying2_iphone.png');
+
+  /// File path: assets/images/VoicePlaying3_iphone.png
+  AssetGenImage get voicePlaying3Iphone =>
+      const AssetGenImage('assets/images/VoicePlaying3_iphone.png');
+
+  /// File path: assets/images/VoicePlayingL1_iphone.png
+  AssetGenImage get voicePlayingL1Iphone =>
+      const AssetGenImage('assets/images/VoicePlayingL1_iphone.png');
+
+  /// File path: assets/images/VoicePlayingL2_iphone.png
+  AssetGenImage get voicePlayingL2Iphone =>
+      const AssetGenImage('assets/images/VoicePlayingL2_iphone.png');
+
+  /// File path: assets/images/VoicePlayingL3_iphone.png
+  AssetGenImage get voicePlayingL3Iphone =>
+      const AssetGenImage('assets/images/VoicePlayingL3_iphone.png');
+
   /// File path: assets/images/add_more_expression_iphone.png
   AssetGenImage get addMoreExpressionIphone =>
       const AssetGenImage('assets/images/add_more_expression_iphone.png');
@@ -321,6 +345,14 @@ class $AssetsImagesGen {
   AssetGenImage get bzpublishAddImageIphone =>
       const AssetGenImage('assets/images/bzpublish_addImage_iphone.png');
 
+  /// File path: assets/images/cb_chat_location_iphone.png
+  AssetGenImage get cbChatLocationIphone =>
+      const AssetGenImage('assets/images/cb_chat_location_iphone.png');
+
+  /// File path: assets/images/cb_chat_online_iphone.png
+  AssetGenImage get cbChatOnlineIphone =>
+      const AssetGenImage('assets/images/cb_chat_online_iphone.png');
+
   /// File path: assets/images/cb_chat_quote_voice_other_iphone.png
   AssetGenImage get cbChatQuoteVoiceOtherIphone =>
       const AssetGenImage('assets/images/cb_chat_quote_voice_other_iphone.png');
@@ -328,6 +360,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/cb_chat_record_voice_iphone.png
   AssetGenImage get cbChatRecordVoiceIphone =>
       const AssetGenImage('assets/images/cb_chat_record_voice_iphone.png');
+
+  /// File path: assets/images/cb_top300_icon_iphone.png
+  AssetGenImage get cbTop300IconIphone =>
+      const AssetGenImage('assets/images/cb_top300_icon_iphone.png');
 
   /// File path: assets/images/chat_bottom_common_icon_iphone.png
   AssetGenImage get chatBottomCommonIconIphone =>
@@ -353,6 +389,26 @@ class $AssetsImagesGen {
   /// File path: assets/images/chat_bottom_more_default_icon_iphone.png
   AssetGenImage get chatBottomMoreDefaultIconIphone => const AssetGenImage(
       'assets/images/chat_bottom_more_default_icon_iphone.png');
+
+  /// File path: assets/images/chat_gender_man_iphone.png
+  AssetGenImage get chatGenderManIphone =>
+      const AssetGenImage('assets/images/chat_gender_man_iphone.png');
+
+  /// File path: assets/images/chat_gender_woman_iphone.png
+  AssetGenImage get chatGenderWomanIphone =>
+      const AssetGenImage('assets/images/chat_gender_woman_iphone.png');
+
+  /// File path: assets/images/chat_interview_status_start_other_iphone.png
+  AssetGenImage get chatInterviewStatusStartOtherIphone => const AssetGenImage(
+      'assets/images/chat_interview_status_start_other_iphone.png');
+
+  /// File path: assets/images/chat_keyboard_expression_normal_iphone.png
+  AssetGenImage get chatKeyboardExpressionNormalIphone => const AssetGenImage(
+      'assets/images/chat_keyboard_expression_normal_iphone.png');
+
+  /// File path: assets/images/chat_keyboard_input_iphone.png
+  AssetGenImage get chatKeyboardInputIphone =>
+      const AssetGenImage('assets/images/chat_keyboard_input_iphone.png');
 
   /// File path: assets/images/chat_nav_left_icon_iphone.png
   AssetGenImage get chatNavLeftIconIphone =>
@@ -518,6 +574,38 @@ class $AssetsImagesGen {
   AssetGenImage get darkBzpublishAddImageIphone =>
       const AssetGenImage('assets/images/dark_bzpublish_addImage_iphone.png');
 
+  /// File path: assets/images/dark_exchange_phone_highlight_iphone.png
+  AssetGenImage get darkExchangePhoneHighlightIphone => const AssetGenImage(
+      'assets/images/dark_exchange_phone_highlight_iphone.png');
+
+  /// File path: assets/images/dark_exchange_phone_normal_iphone.png
+  AssetGenImage get darkExchangePhoneNormalIphone => const AssetGenImage(
+      'assets/images/dark_exchange_phone_normal_iphone.png');
+
+  /// File path: assets/images/dark_exchange_resume_highlight_iphone.png
+  AssetGenImage get darkExchangeResumeHighlightIphone => const AssetGenImage(
+      'assets/images/dark_exchange_resume_highlight_iphone.png');
+
+  /// File path: assets/images/dark_exchange_resume_normal_iphone.png
+  AssetGenImage get darkExchangeResumeNormalIphone => const AssetGenImage(
+      'assets/images/dark_exchange_resume_normal_iphone.png');
+
+  /// File path: assets/images/dark_exchange_wechat_highlight_iphone.png
+  AssetGenImage get darkExchangeWechatHighlightIphone => const AssetGenImage(
+      'assets/images/dark_exchange_wechat_highlight_iphone.png');
+
+  /// File path: assets/images/dark_exchange_wechat_normal_iphone.png
+  AssetGenImage get darkExchangeWechatNormalIphone => const AssetGenImage(
+      'assets/images/dark_exchange_wechat_normal_iphone.png');
+
+  /// File path: assets/images/dark_expression_collection_icon_iphone.png
+  AssetGenImage get darkExpressionCollectionIconIphone => const AssetGenImage(
+      'assets/images/dark_expression_collection_icon_iphone.png');
+
+  /// File path: assets/images/dark_expression_emoji_iphone.png
+  AssetGenImage get darkExpressionEmojiIphone =>
+      const AssetGenImage('assets/images/dark_expression_emoji_iphone.png');
+
   /// File path: assets/images/dark_homepage_nav_back_iphone.png
   AssetGenImage get darkHomepageNavBackIphone =>
       const AssetGenImage('assets/images/dark_homepage_nav_back_iphone.png');
@@ -525,6 +613,48 @@ class $AssetsImagesGen {
   /// File path: assets/images/dark_homepage_nav_back_white_iphone.png
   AssetGenImage get darkHomepageNavBackWhiteIphone => const AssetGenImage(
       'assets/images/dark_homepage_nav_back_white_iphone.png');
+
+  /// File path: assets/images/dark_new_chatbase_expression_delete_disable_icon_iphone.png
+  AssetGenImage get darkNewChatbaseExpressionDeleteDisableIconIphone =>
+      const AssetGenImage(
+          'assets/images/dark_new_chatbase_expression_delete_disable_icon_iphone.png');
+
+  /// File path: assets/images/dark_new_chatbase_expression_delete_icon_iphone.png
+  AssetGenImage get darkNewChatbaseExpressionDeleteIconIphone =>
+      const AssetGenImage(
+          'assets/images/dark_new_chatbase_expression_delete_icon_iphone.png');
+
+  /// File path: assets/images/exchange_phone_highlight_iphone.png
+  AssetGenImage get exchangePhoneHighlightIphone =>
+      const AssetGenImage('assets/images/exchange_phone_highlight_iphone.png');
+
+  /// File path: assets/images/exchange_phone_normal_iphone.png
+  AssetGenImage get exchangePhoneNormalIphone =>
+      const AssetGenImage('assets/images/exchange_phone_normal_iphone.png');
+
+  /// File path: assets/images/exchange_resume_highlight_iphone.png
+  AssetGenImage get exchangeResumeHighlightIphone =>
+      const AssetGenImage('assets/images/exchange_resume_highlight_iphone.png');
+
+  /// File path: assets/images/exchange_resume_normal_iphone.png
+  AssetGenImage get exchangeResumeNormalIphone =>
+      const AssetGenImage('assets/images/exchange_resume_normal_iphone.png');
+
+  /// File path: assets/images/exchange_wechat_highlight_iphone.png
+  AssetGenImage get exchangeWechatHighlightIphone =>
+      const AssetGenImage('assets/images/exchange_wechat_highlight_iphone.png');
+
+  /// File path: assets/images/exchange_wechat_normal_iphone.png
+  AssetGenImage get exchangeWechatNormalIphone =>
+      const AssetGenImage('assets/images/exchange_wechat_normal_iphone.png');
+
+  /// File path: assets/images/expression_collection_icon_iphone.png
+  AssetGenImage get expressionCollectionIconIphone => const AssetGenImage(
+      'assets/images/expression_collection_icon_iphone.png');
+
+  /// File path: assets/images/expression_emoji_iphone.png
+  AssetGenImage get expressionEmojiIphone =>
+      const AssetGenImage('assets/images/expression_emoji_iphone.png');
 
   /// File path: assets/images/geek_apply_phone_icon_iphone.png
   AssetGenImage get geekApplyPhoneIconIphone =>
@@ -590,6 +720,16 @@ class $AssetsImagesGen {
   AssetGenImage get newBannerIphone =>
       const AssetGenImage('assets/images/new_banner_iphone.png');
 
+  /// File path: assets/images/new_chatbase_expression_delete_disable_icon_iphone.png
+  AssetGenImage get newChatbaseExpressionDeleteDisableIconIphone =>
+      const AssetGenImage(
+          'assets/images/new_chatbase_expression_delete_disable_icon_iphone.png');
+
+  /// File path: assets/images/new_chatbase_expression_delete_icon_iphone.png
+  AssetGenImage get newChatbaseExpressionDeleteIconIphone =>
+      const AssetGenImage(
+          'assets/images/new_chatbase_expression_delete_icon_iphone.png');
+
   /// File path: assets/images/resume_score_icon_new_iphone.png
   AssetGenImage get resumeScoreIconNewIphone =>
       const AssetGenImage('assets/images/resume_score_icon_new_iphone.png');
@@ -610,6 +750,12 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+        voicePlaying1Iphone,
+        voicePlaying2Iphone,
+        voicePlaying3Iphone,
+        voicePlayingL1Iphone,
+        voicePlayingL2Iphone,
+        voicePlayingL3Iphone,
         addMoreExpressionIphone,
         articleBgsIphone,
         avatar0Iphone,
@@ -687,14 +833,22 @@ class $AssetsImagesGen {
         bzVideoPositionHunterIconIphone,
         bzVideoPositionLocationIphone,
         bzpublishAddImageIphone,
+        cbChatLocationIphone,
+        cbChatOnlineIphone,
         cbChatQuoteVoiceOtherIphone,
         cbChatRecordVoiceIphone,
+        cbTop300IconIphone,
         chatBottomCommonIconIphone,
         chatBottomCommonKeyboardIconIphone,
         chatBottomGreenCommonKeyboardIconIphone,
         chatBottomGreenCommonSmallIconIphone,
         chatBottomMoreCloseIconIphone,
         chatBottomMoreDefaultIconIphone,
+        chatGenderManIphone,
+        chatGenderWomanIphone,
+        chatInterviewStatusStartOtherIphone,
+        chatKeyboardExpressionNormalIphone,
+        chatKeyboardInputIphone,
         chatNavLeftIconIphone,
         chatNavRightIconIphone,
         chatNavRightTagsIconIphone,
@@ -735,8 +889,26 @@ class $AssetsImagesGen {
         darkBzVideoPositionHunterIconIphone,
         darkBzVideoPositionLocationIphone,
         darkBzpublishAddImageIphone,
+        darkExchangePhoneHighlightIphone,
+        darkExchangePhoneNormalIphone,
+        darkExchangeResumeHighlightIphone,
+        darkExchangeResumeNormalIphone,
+        darkExchangeWechatHighlightIphone,
+        darkExchangeWechatNormalIphone,
+        darkExpressionCollectionIconIphone,
+        darkExpressionEmojiIphone,
         darkHomepageNavBackIphone,
         darkHomepageNavBackWhiteIphone,
+        darkNewChatbaseExpressionDeleteDisableIconIphone,
+        darkNewChatbaseExpressionDeleteIconIphone,
+        exchangePhoneHighlightIphone,
+        exchangePhoneNormalIphone,
+        exchangeResumeHighlightIphone,
+        exchangeResumeNormalIphone,
+        exchangeWechatHighlightIphone,
+        exchangeWechatNormalIphone,
+        expressionCollectionIconIphone,
+        expressionEmojiIphone,
         geekApplyPhoneIconIphone,
         geekApplyWechatIconIphone,
         geekMyNavScanNewIphone,
@@ -753,6 +925,8 @@ class $AssetsImagesGen {
         geekSnapFeedbackIphone,
         navThemeBgiphone,
         newBannerIphone,
+        newChatbaseExpressionDeleteDisableIconIphone,
+        newChatbaseExpressionDeleteIconIphone,
         resumeScoreIconNewIphone,
         settingContactSearchIconIphone,
         settingDetailIconIphone,
