@@ -155,7 +155,10 @@ class _ListView extends StatelessWidget {
       // dragStartBehavior: DragStartBehavior.down,
       itemCount: 30,
       itemBuilder: (context, index) {
-        return _ChatRowTextWidget(isSender: index % 2 == 0);
+        return _ChatRowTextWidget(
+          isSender: index % 2 == 0,
+          text: "您好，外包考虑吗？",
+        );
       },
     );
   }
@@ -193,8 +196,13 @@ class _InputPannelButtonState extends State<_InputPannelButton> {
 }
 
 class _ChatRowTextWidget extends StatelessWidget {
-  const _ChatRowTextWidget({super.key, required this.isSender});
+  const _ChatRowTextWidget({
+    super.key,
+    required this.isSender,
+    required this.text,
+  });
   final bool isSender;
+  final String text;
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
@@ -227,7 +235,7 @@ class _ChatRowTextWidget extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Text(
-                      "您好，您考？",
+                      text,
                       style: TextStyle(
                           color: isSender ? Colors.white : appear.titleColor,
                           fontSize: 16,
