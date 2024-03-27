@@ -71,9 +71,17 @@ class ChatSettingWidget extends StatelessWidget {
                     line,
                     SizedBox(height: 10),
                     _Row(text: "查看近30天聊天记录"),
+                    _Row(
+                      text: "置顶联系人",
+                    ),
                     _Row(text: "查看个人竞争力分析"),
                     _Row(text: "查看隐私状态"),
                     line,
+                    _Row(text: "对TA的职位不感兴趣"),
+                    _Row(
+                      text: "将对方加入黑名单",
+                      subText: "加入黑名单后，你将不再接受对方发过来的信息",
+                    ),
                     _Row(text: "举报对方"),
                     SizedBox(height: 10),
                     line,
