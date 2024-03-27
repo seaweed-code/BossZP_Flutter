@@ -149,7 +149,11 @@ class _InputPannelState extends State<_InputPannel> {
               highlightColor: Colors.transparent,
               onPressed: () {
                 setState(() {
-                  select = _SelectIndex.lang;
+                  if (select == _SelectIndex.lang) {
+                    select = _SelectIndex.none;
+                  } else {
+                    select = _SelectIndex.lang;
+                  }
                 });
               }, //Assets.images.chatBottomCommonIconIphone chat_bottom_green_common_keyboard_icon_iphone
               icon: (select == _SelectIndex.lang
@@ -181,7 +185,11 @@ class _InputPannelState extends State<_InputPannel> {
               highlightColor: Colors.transparent,
               onPressed: () {
                 setState(() {
-                  select = _SelectIndex.emoji;
+                  if (select == _SelectIndex.emoji) {
+                    select = _SelectIndex.none;
+                  } else {
+                    select = _SelectIndex.emoji;
+                  }
                 });
               },
               icon: (select != _SelectIndex.emoji
@@ -194,7 +202,11 @@ class _InputPannelState extends State<_InputPannel> {
               highlightColor: Colors.transparent,
               onPressed: () {
                 setState(() {
-                  select = _SelectIndex.more;
+                  if (select == _SelectIndex.more) {
+                    select = _SelectIndex.none;
+                  } else {
+                    select = _SelectIndex.more;
+                  }
                 });
               },
               icon: (select != _SelectIndex.more
