@@ -80,13 +80,7 @@ class ChatDetailWidget extends StatelessWidget {
           Expanded(
             child: Container(
               color: appear.backgroundColor,
-              child: ListView.builder(
-                // dragStartBehavior: DragStartBehavior.down,
-                itemCount: 30,
-                itemBuilder: (context, index) {
-                  return _ChatRowTextWidget(isSender: index % 2 == 0);
-                },
-              ),
+              child: _ListView(),
             ),
           ),
           Container(
@@ -131,6 +125,23 @@ class ChatDetailWidget extends StatelessWidget {
           )
         ],
       )),
+    );
+  }
+}
+
+class _ListView extends StatelessWidget {
+  const _ListView({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      // dragStartBehavior: DragStartBehavior.down,
+      itemCount: 30,
+      itemBuilder: (context, index) {
+        return _ChatRowTextWidget(isSender: index % 2 == 0);
+      },
     );
   }
 }
