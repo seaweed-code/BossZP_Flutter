@@ -216,6 +216,21 @@ class _InputPannelState extends State<_InputPannel> {
             )
           ],
         ),
+        if (select == _SelectIndex.lang)
+          Container(
+            color: Colors.amber,
+            height: 40,
+          ),
+        if (select == _SelectIndex.emoji)
+          Container(
+            color: Colors.red,
+            height: 40,
+          ),
+        if (select == _SelectIndex.more)
+          Container(
+            color: Colors.black,
+            height: 40,
+          )
       ],
     );
   }
@@ -229,7 +244,6 @@ class _ListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      // dragStartBehavior: DragStartBehavior.down,
       itemCount: 30,
       itemBuilder: (context, index) {
         return _ChatRowTextWidget(
