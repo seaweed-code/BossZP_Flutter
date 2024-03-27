@@ -32,12 +32,20 @@ class ChatDetailWidget extends StatelessWidget {
         title: Center(
           child: Column(
             children: [
-              Text(
-                "李响",
-                style: TextStyle(
-                    color: appear.titleColor,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    "李响",
+                    style: TextStyle(
+                        color: appear.titleColor,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(width: 5),
+                  Assets.images.cbChatOnlineIphone
+                      .image(height: 20, fit: BoxFit.fitHeight)
+                ],
               ),
               Text(
                 "5min-hr",
