@@ -103,50 +103,66 @@ class ChatDetailWidget extends StatelessWidget {
             Padding(
               padding:
                   const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Assets.images.chatBottomCommonIconIphone.image()),
-                  SizedBox(width: 10),
-                  Expanded(
-                      child: TextField(
-                    controller: inputController,
-                    keyboardType: TextInputType.text,
-                    minLines: 1,
-                    maxLines: 5,
-                    onTapOutside: (event) {
-                      SystemChannels.textInput.invokeMethod('TextInput.hide');
-                    },
-                    onSubmitted: (value) {
-                      inputController.clear();
-                    },
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "新信息",
-                        hintStyle: TextStyle(color: appear.timeColor)),
-                  )),
-                  SizedBox(width: 10),
-                  _InputPannelButton(
-                    selected: emojSelected,
-                    selectedIcon:
-                        Assets.images.chatKeyboardExpressionNormalIphone.path,
-                    normalIcon: Assets.images.chatKeyboardInputIphone.path,
-                  ),
-                  _InputPannelButton(
-                    selected: emojSelected,
-                    selectedIcon:
-                        Assets.images.chatBottomMoreDefaultIconIphone.path,
-                    normalIcon:
-                        Assets.images.chatBottomMoreCloseIconIphone.path,
-                  ),
-                ],
-              ),
+              child: _InputPannel(
+                  inputController: inputController, emojSelected: emojSelected),
             )
           ],
         )),
       ),
+    );
+  }
+}
+
+class _InputPannel extends StatelessWidget {
+  const _InputPannel({
+    super.key,
+    required this.inputController,
+    required this.emojSelected,
+  });
+
+  final TextEditingController inputController;
+
+  final ValueNotifier<bool> emojSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        IconButton(
+            onPressed: () {},
+            icon: Assets.images.chatBottomCommonIconIphone.image()),
+        SizedBox(width: 10),
+        Expanded(
+            child: TextField(
+          controller: inputController,
+          keyboardType: TextInputType.text,
+          minLines: 1,
+          maxLines: 5,
+          onTapOutside: (event) {
+            SystemChannels.textInput.invokeMethod('TextInput.hide');
+          },
+          onSubmitted: (value) {
+            inputController.clear();
+          },
+          decoration: InputDecoration(
+              border: InputBorder.none,
+              hintText: "新信息",
+              hintStyle: TextStyle(color: appear.timeColor)),
+        )),
+        SizedBox(width: 10),
+        _InputPannelButton(
+          selected: emojSelected,
+          selectedIcon: Assets.images.chatKeyboardExpressionNormalIphone.path,
+          normalIcon: Assets.images.chatKeyboardInputIphone.path,
+        ),
+        _InputPannelButton(
+          selected: emojSelected,
+          selectedIcon: Assets.images.chatBottomMoreDefaultIconIphone.path,
+          normalIcon: Assets.images.chatBottomMoreCloseIconIphone.path,
+        ),
+      ],
     );
   }
 }
