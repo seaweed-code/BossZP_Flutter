@@ -218,7 +218,8 @@ class _InputPannelState extends State<_InputPannel> {
               onPressed: () {
                 setState(() {
                   if (select == _SelectIndex.emoji) {
-                    select = _SelectIndex.none;
+                    select = _SelectIndex.texting;
+                    focus.requestFocus();
                   } else {
                     select = _SelectIndex.emoji;
                   }
@@ -235,7 +236,8 @@ class _InputPannelState extends State<_InputPannel> {
               onPressed: () {
                 setState(() {
                   if (select == _SelectIndex.more) {
-                    select = _SelectIndex.none;
+                    select = _SelectIndex.texting;
+                    focus.requestFocus();
                   } else {
                     select = _SelectIndex.more;
                   }
