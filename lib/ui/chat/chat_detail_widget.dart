@@ -47,6 +47,7 @@ class ChatDetailWidget extends StatelessWidget {
                       .image(height: 20, fit: BoxFit.fitHeight)
                 ],
               ),
+              SizedBox(height: 3),
               Text(
                 "5min-hr",
                 style: TextStyle(
