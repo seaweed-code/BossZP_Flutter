@@ -255,31 +255,40 @@ class _InputPannelState extends State<_InputPannel> {
             color: Colors.amber,
             height: 40,
           ),
-        if (select == _SelectIndex.emoji)
-          Container(
-            color: Colors.white,
-            height: 250,
-            padding: EdgeInsets.only(left: 15, right: 15, top: 15),
-            child: CustomScrollView(
-              slivers: [
-                SliverGrid.builder(
-                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                      childAspectRatio: 1,
-                      maxCrossAxisExtent: 25,
-                      mainAxisSpacing: 20,
-                      crossAxisSpacing: 25),
-                  itemCount: 100,
-                  itemBuilder: (context, index) {
-                    // return Assets.images.emoji.expression20.image();
-                    return Image.asset(
-                        "assets/images/emoji/Expression__${index + 1}.png");
-                  },
-                )
-              ],
-            ),
-          ),
+        if (select == _SelectIndex.emoji) _EmojiPannelWidget(),
         if (select == _SelectIndex.more) _MorePannelWidget()
       ],
+    );
+  }
+}
+
+class _EmojiPannelWidget extends StatelessWidget {
+  const _EmojiPannelWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      height: 250,
+      padding: EdgeInsets.only(left: 15, right: 15, top: 15),
+      child: CustomScrollView(
+        slivers: [
+          SliverGrid.builder(
+            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                childAspectRatio: 1,
+                maxCrossAxisExtent: 25,
+                mainAxisSpacing: 20,
+                crossAxisSpacing: 25),
+            itemCount: 100,
+            itemBuilder: (context, index) {
+              return Image.asset(
+                  "assets/images/emoji/Expression__${index + 1}.png");
+            },
+          )
+        ],
+      ),
     );
   }
 }
