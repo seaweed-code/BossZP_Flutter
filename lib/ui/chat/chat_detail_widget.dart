@@ -324,7 +324,7 @@ class _MorePannelWidget extends StatelessWidget {
           itemBuilder: (context, index) {
             return Column(
               children: [
-                Assets.images.avatar0Iphone.image(),
+                Assets.images.chatMoreOnlineRemindIconIphone.image(),
                 SizedBox(height: 6),
                 Text(
                   "图片",
