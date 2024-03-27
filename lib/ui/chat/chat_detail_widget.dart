@@ -137,7 +137,12 @@ class _InputPannelState extends State<_InputPannel> {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    emojSelected = false;
+                    moreSelected = false;
+                  });
+                },
                 icon: Assets.images.chatBottomCommonIconIphone.image()),
             SizedBox(width: 10),
             Expanded(
@@ -165,6 +170,7 @@ class _InputPannelState extends State<_InputPannel> {
               onPressed: () {
                 setState(() {
                   emojSelected = !emojSelected;
+                  moreSelected = false;
                 });
               },
               icon: (!emojSelected
