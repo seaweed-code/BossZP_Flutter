@@ -137,13 +137,16 @@ class _InputPannelState extends State<_InputPannel> {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             IconButton(
-                onPressed: () {
-                  setState(() {
-                    emojSelected = false;
-                    moreSelected = false;
-                  });
-                },
-                icon: Assets.images.chatBottomCommonIconIphone.image()),
+              splashColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              onPressed: () {
+                setState(() {
+                  emojSelected = false;
+                  moreSelected = false;
+                });
+              },
+              icon: Assets.images.chatBottomCommonIconIphone.image(),
+            ),
             SizedBox(width: 10),
             Expanded(
                 child: TextField(
@@ -166,7 +169,6 @@ class _InputPannelState extends State<_InputPannel> {
             IconButton(
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
-              style: ButtonStyle(),
               onPressed: () {
                 setState(() {
                   emojSelected = !emojSelected;
@@ -181,7 +183,6 @@ class _InputPannelState extends State<_InputPannel> {
             IconButton(
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
-              style: ButtonStyle(),
               onPressed: () {
                 setState(() {
                   emojSelected = false;
