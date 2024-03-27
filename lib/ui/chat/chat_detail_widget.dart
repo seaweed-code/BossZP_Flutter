@@ -274,10 +274,8 @@ class _MorePannelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
-    return Container(
-      color: Colors.white,
+    return SizedBox(
       height: 250,
-      padding: EdgeInsets.only(top: 10, bottom: 10, right: 12, left: 12),
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 4,
