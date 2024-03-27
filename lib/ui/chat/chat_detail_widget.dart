@@ -179,10 +179,13 @@ class _InputPannelState extends State<_InputPannel> {
                     select = _SelectIndex.lang;
                   }
                 });
-              }, //Assets.images.chatBottomCommonIconIphone chat_bottom_green_common_keyboard_icon_iphone
-              icon: (select == _SelectIndex.lang
-                      ? Assets.images.chatBottomGreenCommonKeyboardIconIphone
-                      : Assets.images.chatBottomGreenCommonSmallIconIphone)
+              },
+              icon: ((select == _SelectIndex.none)
+                      ? Assets.images.chatBottomCommonIconIphone
+                      : (select == _SelectIndex.lang
+                          ? Assets
+                              .images.chatBottomGreenCommonKeyboardIconIphone
+                          : Assets.images.chatBottomGreenCommonSmallIconIphone))
                   .image(),
             ),
             SizedBox(width: 10),
