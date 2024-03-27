@@ -59,12 +59,12 @@ class ChatDetailWidget extends StatelessWidget {
           ),
         ),
       ),
-      body: SafeArea(
-          child: Column(
-        children: [
-          Container(
-            color: Colors.white,
-            child: Row(
+      body: Container(
+        color: Colors.white,
+        child: SafeArea(
+            child: Column(
+          children: [
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 _ButtonWidget(
@@ -86,17 +86,13 @@ class ChatDetailWidget extends StatelessWidget {
                 )
               ],
             ),
-          ),
-          Expanded(
-            child: Container(
-              color: appear.backgroundColor,
-              child: _ListView(),
+            Expanded(
+              child: Container(
+                color: appear.backgroundColor,
+                child: _ListView(),
+              ),
             ),
-          ),
-          Container(
-            color: Colors.white,
-            padding: EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
-            child: Row(
+            Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 IconButton(
@@ -131,10 +127,10 @@ class ChatDetailWidget extends StatelessWidget {
                   normalIcon: Assets.images.chatBottomMoreCloseIconIphone.path,
                 ),
               ],
-            ),
-          )
-        ],
-      )),
+            )
+          ],
+        )),
+      ),
     );
   }
 }
