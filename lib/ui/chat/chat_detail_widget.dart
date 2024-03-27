@@ -257,8 +257,25 @@ class _InputPannelState extends State<_InputPannel> {
           ),
         if (select == _SelectIndex.emoji)
           Container(
-            color: Colors.red,
-            height: 40,
+            color: Colors.white,
+            height: 250,
+            padding: EdgeInsets.only(left: 15, right: 15, top: 15),
+            child: CustomScrollView(
+              slivers: [
+                SliverGrid.builder(
+                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                      childAspectRatio: 1,
+                      maxCrossAxisExtent: 25,
+                      mainAxisSpacing: 20,
+                      crossAxisSpacing: 25),
+                  itemCount: 100,
+                  itemBuilder: (context, index) {
+                    return Image.asset(
+                        "assets/images/emoji/Expression__$index.png");
+                  },
+                )
+              ],
+            ),
           ),
         if (select == _SelectIndex.more) _MorePannelWidget()
       ],
