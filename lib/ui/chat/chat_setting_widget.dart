@@ -102,17 +102,21 @@ class ChatSettingWidget extends StatelessWidget {
 }
 
 class _Row extends StatelessWidget {
-  const _Row({super.key, required this.text, this.subText});
+  _Row({
+    super.key,
+    required this.text,
+    this.subText,
+    this.right,
+  });
 
   final String text;
   final String? subText;
+  final Widget? right;
 
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
 
-    final arrow = Assets.images.basicMoreArrowiphone
-        .image(width: 14, height: 14, fit: BoxFit.fitHeight);
     return Padding(
       padding: const EdgeInsets.only(top: 20, bottom: 20),
       child: Row(
@@ -135,7 +139,9 @@ class _Row extends StatelessWidget {
             ],
           ),
           Spacer(),
-          arrow
+          right ??
+              Assets.images.basicMoreArrowiphone
+                  .image(width: 14, height: 14, fit: BoxFit.fitHeight)
         ],
       ),
     );
