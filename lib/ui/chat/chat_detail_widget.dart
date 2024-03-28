@@ -330,7 +330,7 @@ class _EmojiPannelWidget extends StatelessWidget {
               ),
             )),
             SliverGrid.builder(
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   childAspectRatio: 1,
                   maxCrossAxisExtent: 25,
                   mainAxisSpacing: 20,
