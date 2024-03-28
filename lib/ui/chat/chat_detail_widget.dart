@@ -265,28 +265,32 @@ class _LangPannelWidget extends StatelessWidget {
     final Appearance appear = context.read();
     return SizedBox(
       height: 230,
-      child: Column(
-        children: [
-          Expanded(
-              child: ListView.builder(
-            itemCount: 3,
-            itemBuilder: (context, index) {
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8, bottom: 8),
-                    child: Text(
-                      "对不起",
-                      style: TextStyle(fontSize: 16, color: appear.titleColor),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10, right: 10, top: 12),
+        child: Column(
+          children: [
+            Expanded(
+                child: ListView.builder(
+              itemCount: 3,
+              itemBuilder: (context, index) {
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8, bottom: 8),
+                      child: Text(
+                        "对不起",
+                        style:
+                            TextStyle(fontSize: 16, color: appear.titleColor),
+                      ),
                     ),
-                  ),
-                  Divider(color: appear.lineColor)
-                ],
-              );
-            },
-          )),
-        ],
+                    Divider(color: appear.lineColor)
+                  ],
+                );
+              },
+            )),
+          ],
+        ),
       ),
     );
   }
