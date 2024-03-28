@@ -45,7 +45,7 @@ extension ToBottom on ScrollController {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       animateTo(
         position.maxScrollExtent,
-        duration: Duration(milliseconds: 500),
+        duration: Duration(milliseconds: 100),
         curve: Curves.easeInOut,
       );
     });
