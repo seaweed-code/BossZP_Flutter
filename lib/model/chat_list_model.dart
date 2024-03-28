@@ -1,5 +1,5 @@
+import 'package:bosszp/ui/chat/chat_row_text_widget.dart';
 import 'package:flutter/material.dart';
-import '../ui/chat/chat_detail_widget.dart';
 
 abstract class ChatRowModel {
   Widget builderRow();
