@@ -314,34 +314,35 @@ class _EmojiPannelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
-    return Container(
-      color: Colors.white,
+    return SizedBox(
       height: 280,
-      padding: EdgeInsets.only(left: 15, right: 15, top: 15),
-      child: CustomScrollView(
-        physics: BouncingScrollPhysics(),
-        slivers: [
-          SliverToBoxAdapter(
-              child: Padding(
-            padding: const EdgeInsets.only(bottom: 15.0),
-            child: Text(
-              "全部表情",
-              style: TextStyle(fontSize: 14, color: appear.titleColor),
-            ),
-          )),
-          SliverGrid.builder(
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                childAspectRatio: 1,
-                maxCrossAxisExtent: 25,
-                mainAxisSpacing: 20,
-                crossAxisSpacing: 25),
-            itemCount: 100,
-            itemBuilder: (context, index) {
-              return Image.asset(
-                  "assets/images/emoji/Expression__${index + 1}.png");
-            },
-          )
-        ],
+      child: Padding(
+        padding: EdgeInsets.only(left: 15, right: 15, top: 15),
+        child: CustomScrollView(
+          physics: BouncingScrollPhysics(),
+          slivers: [
+            SliverToBoxAdapter(
+                child: Padding(
+              padding: const EdgeInsets.only(bottom: 15.0),
+              child: Text(
+                "全部表情",
+                style: TextStyle(fontSize: 14, color: appear.titleColor),
+              ),
+            )),
+            SliverGrid.builder(
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  childAspectRatio: 1,
+                  maxCrossAxisExtent: 25,
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 25),
+              itemCount: 100,
+              itemBuilder: (context, index) {
+                return Image.asset(
+                    "assets/images/emoji/Expression__${index + 1}.png");
+              },
+            )
+          ],
+        ),
       ),
     );
   }
