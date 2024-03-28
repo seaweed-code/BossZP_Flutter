@@ -2,19 +2,20 @@ import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:bosszp/model/chat_list_model.dart';
 import 'package:bosszp/ui/chat/chat_input_pannel_widget.dart';
+import 'package:bosszp/ui/chat/chat_row_text_widget.dart';
 import 'package:bosszp/ui/chat/chat_setting_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ChatDetailWidget extends StatelessWidget {
-  const ChatDetailWidget({super.key});
+  ChatDetailWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     final appear = context.read<Appearance>();
 
     final inputController = TextEditingController();
-    return ChangeNotifierProvider(
+    return Provider(
       create: (context) {
         final list = ChatListModel();
         list.datas.add(ChatRowTextModel(false, "看了您的经历感觉很合适，方便发一份简历过来吗？"));
@@ -103,7 +104,19 @@ class ChatDetailWidget extends StatelessWidget {
               Expanded(
                 child: Container(
                   color: appear.backgroundColor,
-                  child: _ListView(),
+                  child: Builder(builder: (context) {
+                    final datas = context.read<ChatListModel>();
+                    return AnimatedList(
+                      key: datas.listKey,
+                      initialItemCount: datas.datas.length,
+                      itemBuilder: (context, index, animation) {
+                        return FadeTransition(
+                          opacity: animation,
+                          child: datas.datas[index].builderRow(),
+                        );
+                      },
+                    );
+                  }),
                 ),
               ),
               Padding(
@@ -119,24 +132,24 @@ class ChatDetailWidget extends StatelessWidget {
   }
 }
 
-class _ListView extends StatelessWidget {
-  const _ListView({
-    super.key,
-  });
+// class _ListView extends StatelessWidget {
+//   const _ListView({
+//     super.key,
+//   });
 
-  @override
-  Widget build(BuildContext context) {
-    return Consumer<ChatListModel>(
-      builder: (context, list, child) => ListView.builder(
-        itemCount: list.datas.length,
-        itemBuilder: (context, index) {
-          final m = list.datas[index];
-          return m.builderRow();
-        },
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Consumer<ChatListModel>(
+//       builder: (context, list, child) => ListView.builder(
+//         itemCount: list.datas.length,
+//         itemBuilder: (context, index) {
+//           final m = list.datas[index];
+//           return m.builderRow();
+//         },
+//       ),
+//     );
+//   }
+// }
 
 class _ButtonWidget extends StatelessWidget {
   const _ButtonWidget({super.key, required this.text, required this.icon});

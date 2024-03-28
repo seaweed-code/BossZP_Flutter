@@ -23,16 +23,16 @@ class ChatRowTextModel extends ChatRowModel {
   }
 }
 
-class ChatListModel extends ChangeNotifier {
+class ChatListModel {
   final List<ChatRowModel> datas = [];
-
+  final GlobalKey<AnimatedListState> listKey = GlobalKey<AnimatedListState>();
   void addRow(ChatRowModel m) {
-    datas.add(m);
-    notifyListeners();
+    final idx = datas.length;
+    datas.insert(idx, m);
+    listKey.currentState?.insertItem(idx);
   }
 
   void removeRow(int index) {
-    datas.removeAt(index);
-    notifyListeners();
+    // datas.removeAt(index);
   }
 }
