@@ -25,4 +25,14 @@ class ChatRowTextModel extends ChatRowModel {
 
 class ChatListModel extends ChangeNotifier {
   final List<ChatRowModel> datas = [];
+
+  void addRow(ChatRowModel m) {
+    datas.add(m);
+    notifyListeners();
+  }
+
+  void removeRow(int index) {
+    datas.removeAt(index);
+    notifyListeners();
+  }
 }
