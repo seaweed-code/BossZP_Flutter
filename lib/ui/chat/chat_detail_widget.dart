@@ -19,6 +19,7 @@ class ChatDetailWidget extends StatelessWidget {
         final list = ChatListModel();
         list.datas.add(ChatRowTextModel(false, "看了您的经历感觉很合适，方便发一份简历过来吗？"));
         list.datas.add(ChatRowTextModel(true, "好的，稍等一下"));
+        list.datas.add(ChatRowTextModel(false, "OK，我等你"));
         return list;
       },
       child: Scaffold(
