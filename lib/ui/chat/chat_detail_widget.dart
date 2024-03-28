@@ -22,6 +22,7 @@ class ChatDetailWidget extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) {
         final list = ChatListModel();
+        list.datas.add(ChatRowTextModel(false, "看了您的经历感觉很合适，方便发一份简历过来吗？"));
         return list;
       },
       child: Scaffold(
