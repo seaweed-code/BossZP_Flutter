@@ -319,6 +319,7 @@ class _MorePannelWidget extends StatelessWidget {
       child: SizedBox(
         height: 230,
         child: GridView.builder(
+          physics: NeverScrollableScrollPhysics(),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,
             mainAxisSpacing: 10,
