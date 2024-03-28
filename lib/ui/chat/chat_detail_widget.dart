@@ -107,12 +107,15 @@ class ChatDetailWidget extends StatelessWidget {
                   child: Builder(builder: (context) {
                     final datas = context.read<ChatListModel>();
                     return AnimatedList(
+                      controller: datas.scrollController,
                       key: datas.listKey,
                       initialItemCount: datas.datas.length,
                       itemBuilder: (context, index, animation) {
-                        return FadeTransition(
-                          opacity: animation,
-                          child: datas.datas[index].builderRow(),
+                        return SizeTransition(
+                          sizeFactor: animation,
+                          child: SizedBox(
+                              width: double.infinity,
+                              child: datas.datas[index].builderRow()),
                         );
                       },
                     );

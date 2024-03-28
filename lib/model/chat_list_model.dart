@@ -25,14 +25,26 @@ class ChatRowTextModel extends ChatRowModel {
 
 class ChatListModel {
   final List<ChatRowModel> datas = [];
+  final scrollController = ScrollController();
   final GlobalKey<AnimatedListState> listKey = GlobalKey<AnimatedListState>();
+
   void addRow(ChatRowModel m) {
     final idx = datas.length;
     datas.insert(idx, m);
-    listKey.currentState?.insertItem(idx);
+    Duration duration = Duration(milliseconds: 500);
+    listKey.currentState?.insertItem(idx, duration: duration);
+    Future.delayed(duration).whenComplete(() {
+      _scrollToBottom();
+    });
   }
 
-  void removeRow(int index) {
-    // datas.removeAt(index);
+  void _scrollToBottom() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      scrollController.animateTo(
+        scrollController.position.maxScrollExtent,
+        duration: Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+    });
   }
 }
