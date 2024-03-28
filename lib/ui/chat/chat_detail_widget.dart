@@ -256,9 +256,14 @@ class _InputPannelState extends State<_InputPannel> {
 }
 
 class _LangPannelWidget extends StatelessWidget {
-  const _LangPannelWidget({
+  _LangPannelWidget({
     super.key,
   });
+  final List<String> datas = [
+    "对不起，我觉得该职位不太适合我，祝您早日找到满意的工作人选",
+    "我可以去贵公司面试吗？",
+    "我可以把我的简历发给您看看吗？"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -271,7 +276,7 @@ class _LangPannelWidget extends StatelessWidget {
           children: [
             Expanded(
                 child: ListView.builder(
-              itemCount: 3,
+              itemCount: datas.length,
               itemBuilder: (context, index) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -279,7 +284,7 @@ class _LangPannelWidget extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 8, bottom: 8),
                       child: Text(
-                        "对不起",
+                        datas[index],
                         style:
                             TextStyle(fontSize: 16, color: appear.titleColor),
                       ),
