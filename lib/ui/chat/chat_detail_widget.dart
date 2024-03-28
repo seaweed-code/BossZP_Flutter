@@ -272,6 +272,7 @@ class _EmojiPannelWidget extends StatelessWidget {
       height: 280,
       padding: EdgeInsets.only(left: 15, right: 15, top: 15),
       child: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
               child: Padding(
