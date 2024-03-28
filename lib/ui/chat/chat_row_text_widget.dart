@@ -30,7 +30,7 @@ class ChatRowTextWidget extends StatelessWidget {
               constraintsTransform: (pCon) => BoxConstraints(
                 minHeight: pCon.minHeight,
                 maxHeight: pCon.maxHeight,
-                minWidth: pCon.minWidth,
+                minWidth: 80,
                 maxWidth: constraints.maxWidth * 0.75,
               ),
               child: Stack(
