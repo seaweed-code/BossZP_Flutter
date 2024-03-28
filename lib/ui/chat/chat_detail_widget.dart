@@ -279,17 +279,21 @@ class _LangPannelWidget extends StatelessWidget {
                     didSelect?.call(index, datas[index]);
                   },
                   child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 8, bottom: 8),
+                        padding: const EdgeInsets.only(top: 15, bottom: 15),
                         child: Text(
                           datas[index],
                           style:
                               TextStyle(fontSize: 16, color: appear.titleColor),
                         ),
                       ),
-                      Divider(color: appear.lineColor)
+                      SizedBox(
+                          height: 1.5,
+                          width: double.infinity,
+                          child: ColoredBox(color: appear.lineColor))
                     ],
                   ),
                 );
