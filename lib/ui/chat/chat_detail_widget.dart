@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:bosszp/model/chat_list_model.dart';
 import 'package:bosszp/ui/chat/chat_setting_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
@@ -18,97 +19,103 @@ class ChatDetailWidget extends StatelessWidget {
     final appear = context.read<Appearance>();
 
     final inputController = TextEditingController();
-    return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: FlexibleSpaceBar(
-          background: Container(
-            color: Colors.white,
+    return ChangeNotifierProvider(
+      create: (context) {
+        final list = ChatListModel();
+        return list;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          flexibleSpace: FlexibleSpaceBar(
+            background: Container(
+              color: Colors.white,
+            ),
           ),
-        ),
-        actions: [
-          // IconButton(
-          //     onPressed: () {},
-          //     icon: Assets.images.chatNavRightTagsIconIphone.image()),
-          IconButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) {
-                    return ChatSettingWidget();
-                  },
-                ));
-              },
-              icon: Assets.images.chatNavRightIconIphone.image())
-        ],
-        title: Center(
-          child: Column(
-            children: [
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    "李响",
-                    style: TextStyle(
-                        color: appear.titleColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  SizedBox(width: 8),
-                  Assets.images.cbChatOnlineIphone
-                      .image(height: 20, fit: BoxFit.fitHeight)
-                ],
-              ),
-              SizedBox(height: 3),
-              Text(
-                "5min-hr",
-                style: TextStyle(
-                    color: appear.titleColor,
-                    fontSize: 14,
-                    fontWeight: FontWeight.normal),
-              )
-            ],
-          ),
-        ),
-      ),
-      body: Container(
-        color: Colors.white,
-        child: SafeArea(
+          actions: [
+            // IconButton(
+            //     onPressed: () {},
+            //     icon: Assets.images.chatNavRightTagsIconIphone.image()),
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return ChatSettingWidget();
+                    },
+                  ));
+                },
+                icon: Assets.images.chatNavRightIconIphone.image())
+          ],
+          title: Center(
             child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _ButtonWidget(
-                  icon: Assets.images.exchangePhoneHighlightIphone.image(),
-                  text: "打电话",
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      "李响",
+                      style: TextStyle(
+                          color: appear.titleColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    SizedBox(width: 8),
+                    Assets.images.cbChatOnlineIphone
+                        .image(height: 20, fit: BoxFit.fitHeight)
+                  ],
                 ),
-                _ButtonWidget(
-                  icon: Assets.images.exchangeWechatHighlightIphone.image(),
-                  text: "换微信",
-                ),
-                _ButtonWidget(
-                  icon: Assets.images.exchangeResumeHighlightIphone.image(),
-                  text: "发简历",
-                ),
-                _ButtonWidget(
-                  icon:
-                      Assets.images.bbChatExchangeItemNotFitAbleIphone.image(),
-                  text: "不感兴趣",
+                SizedBox(height: 3),
+                Text(
+                  "5min-hr",
+                  style: TextStyle(
+                      color: appear.titleColor,
+                      fontSize: 14,
+                      fontWeight: FontWeight.normal),
                 )
               ],
             ),
-            Expanded(
-              child: Container(
-                color: appear.backgroundColor,
-                child: _ListView(),
+          ),
+        ),
+        body: Container(
+          color: Colors.white,
+          child: SafeArea(
+              child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _ButtonWidget(
+                    icon: Assets.images.exchangePhoneHighlightIphone.image(),
+                    text: "打电话",
+                  ),
+                  _ButtonWidget(
+                    icon: Assets.images.exchangeWechatHighlightIphone.image(),
+                    text: "换微信",
+                  ),
+                  _ButtonWidget(
+                    icon: Assets.images.exchangeResumeHighlightIphone.image(),
+                    text: "发简历",
+                  ),
+                  _ButtonWidget(
+                    icon: Assets.images.bbChatExchangeItemNotFitAbleIphone
+                        .image(),
+                    text: "不感兴趣",
+                  )
+                ],
               ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
-              child: _InputPannel(inputController: inputController),
-            )
-          ],
-        )),
+              Expanded(
+                child: Container(
+                  color: appear.backgroundColor,
+                  child: _ListView(),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
+                child: _InputPannel(inputController: inputController),
+              )
+            ],
+          )),
+        ),
       ),
     );
   }
@@ -399,20 +406,20 @@ class _ListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 30,
-      itemBuilder: (context, index) {
-        return _ChatRowTextWidget(
-          isSender: index % 2 == 0,
-          text: "您好，外包考虑吗？",
-        );
-      },
+    return Consumer<ChatListModel>(
+      builder: (context, list, child) => ListView.builder(
+        itemCount: list.datas.length,
+        itemBuilder: (context, index) {
+          final m = list.datas[index];
+          return m.builderRow();
+        },
+      ),
     );
   }
 }
 
-class _ChatRowTextWidget extends StatelessWidget {
-  const _ChatRowTextWidget({
+class ChatRowTextWidget extends StatelessWidget {
+  const ChatRowTextWidget({
     super.key,
     required this.isSender,
     required this.text,
