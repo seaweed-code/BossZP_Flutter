@@ -212,7 +212,9 @@ class _InputPannelState extends State<_InputPannel> {
               onTapOutside: (event) {
                 SystemChannels.textInput.invokeMethod('TextInput.hide');
               },
-              onSubmitted: (value) {
+              onSubmitted: (content) {
+                final chatList = context.read<ChatListModel>();
+                chatList.addRow(ChatRowTextModel(true, content));
                 widget.inputController.clear();
               },
               decoration: InputDecoration(
