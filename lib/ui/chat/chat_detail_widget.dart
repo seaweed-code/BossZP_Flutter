@@ -192,7 +192,7 @@ class _InputPannelState extends State<_InputPannel> {
                           : Assets.images.chatBottomGreenCommonSmallIconIphone))
                   .image(),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
                 child: TextField(
               focusNode: focus,
@@ -211,7 +211,7 @@ class _InputPannelState extends State<_InputPannel> {
                   hintText: "新信息",
                   hintStyle: TextStyle(color: appear.timeColor)),
             )),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             IconButton(
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
