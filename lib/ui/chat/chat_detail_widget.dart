@@ -244,16 +244,16 @@ class _InputPannelState extends State<_InputPannel> {
   }
 }
 
+typedef _LangPannelDidSelectCallBack = void Function(int index, String title);
+
 class _LangPannelWidget extends StatelessWidget {
-  _LangPannelWidget({
-    super.key,
-  });
+  _LangPannelWidget({super.key, this.didSelect});
   final List<String> datas = [
     "对不起，我觉得该职位不太适合我，祝您早日找到满意的工作人选",
     "我可以去贵公司面试吗？",
     "我可以把我的简历发给您看看吗？"
   ];
-
+  final _LangPannelDidSelectCallBack? didSelect;
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
@@ -267,19 +267,24 @@ class _LangPannelWidget extends StatelessWidget {
                 child: ListView.builder(
               itemCount: datas.length,
               itemBuilder: (context, index) {
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8, bottom: 8),
-                      child: Text(
-                        datas[index],
-                        style:
-                            TextStyle(fontSize: 16, color: appear.titleColor),
+                return GestureDetector(
+                  onTap: () {
+                    didSelect?.call(index, datas[index]);
+                  },
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8, bottom: 8),
+                        child: Text(
+                          datas[index],
+                          style:
+                              TextStyle(fontSize: 16, color: appear.titleColor),
+                        ),
                       ),
-                    ),
-                    Divider(color: appear.lineColor)
-                  ],
+                      Divider(color: appear.lineColor)
+                    ],
+                  ),
                 );
               },
             )),
