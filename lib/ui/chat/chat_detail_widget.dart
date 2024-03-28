@@ -263,8 +263,7 @@ class _LangPannelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
-    return Container(
-      color: Colors.white,
+    return SizedBox(
       height: 230,
       child: Column(
         children: [
