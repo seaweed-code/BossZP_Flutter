@@ -113,9 +113,7 @@ class ChatDetailWidget extends StatelessWidget {
                       itemBuilder: (context, index, animation) {
                         return SizeTransition(
                           sizeFactor: animation,
-                          child: SizedBox(
-                              width: double.infinity,
-                              child: datas.datas[index].builderRow()),
+                          child: datas.datas[index].builderRow(),
                         );
                       },
                     );

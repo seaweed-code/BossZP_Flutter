@@ -19,7 +19,7 @@ class ChatRowTextWidget extends StatelessWidget {
       child: LayoutBuilder(builder: (context, constraints) {
         return Row(
           crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.max,
           textDirection: isSender ? TextDirection.rtl : TextDirection.ltr,
           children: [
             ClipOval(
