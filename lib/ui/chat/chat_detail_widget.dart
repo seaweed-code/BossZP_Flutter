@@ -160,6 +160,16 @@ class _InputPannelState extends State<_InputPannel> {
     super.dispose();
   }
 
+  void _changePannel(_SelectIndex index) {
+    if (select == index) {
+      focus.requestFocus();
+    } else {
+      setState(() {
+        select = index;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
@@ -172,14 +182,7 @@ class _InputPannelState extends State<_InputPannel> {
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onPressed: () {
-                if (select == _SelectIndex.lang) {
-                  focus.requestFocus();
-                } else {
-                  // focus.nextFocus();
-                  setState(() {
-                    select = _SelectIndex.lang;
-                  });
-                }
+                _changePannel(_SelectIndex.lang);
               },
               icon: ((select == _SelectIndex.none)
                       ? Assets.images.chatBottomCommonIconIphone
@@ -213,14 +216,7 @@ class _InputPannelState extends State<_InputPannel> {
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onPressed: () {
-                if (select == _SelectIndex.emoji) {
-                  focus.requestFocus();
-                } else {
-                  // focus.nextFocus();
-                  setState(() {
-                    select = _SelectIndex.emoji;
-                  });
-                }
+                _changePannel(_SelectIndex.emoji);
               },
               icon: (select != _SelectIndex.emoji
                       ? Assets.images.chatKeyboardExpressionNormalIphone
@@ -231,14 +227,7 @@ class _InputPannelState extends State<_InputPannel> {
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onPressed: () {
-                if (select == _SelectIndex.more) {
-                  focus.requestFocus();
-                } else {
-                  // focus.nextFocus();
-                  setState(() {
-                    select = _SelectIndex.more;
-                  });
-                }
+                _changePannel(_SelectIndex.more);
               },
               icon: (select != _SelectIndex.more
                       ? Assets.images.chatBottomMoreDefaultIconIphone
