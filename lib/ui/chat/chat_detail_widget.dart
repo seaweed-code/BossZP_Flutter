@@ -132,25 +132,6 @@ class ChatDetailWidget extends StatelessWidget {
   }
 }
 
-// class _ListView extends StatelessWidget {
-//   const _ListView({
-//     super.key,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Consumer<ChatListModel>(
-//       builder: (context, list, child) => ListView.builder(
-//         itemCount: list.datas.length,
-//         itemBuilder: (context, index) {
-//           final m = list.datas[index];
-//           return m.builderRow();
-//         },
-//       ),
-//     );
-//   }
-// }
-
 class _ButtonWidget extends StatelessWidget {
   const _ButtonWidget({super.key, required this.text, required this.icon});
 
