@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
-class _InputPannel extends StatefulWidget {
-  const _InputPannel({
+class ChatInputPannelWidget extends StatefulWidget {
+  const ChatInputPannelWidget({
     super.key,
     required this.inputController,
   });
@@ -14,7 +14,7 @@ class _InputPannel extends StatefulWidget {
   final TextEditingController inputController;
 
   @override
-  State<_InputPannel> createState() => _InputPannelState();
+  State<ChatInputPannelWidget> createState() => _ChatInputPannelWidgetState();
 }
 
 enum _SelectIndex {
@@ -25,7 +25,7 @@ enum _SelectIndex {
   more,
 }
 
-class _InputPannelState extends State<_InputPannel> {
+class _ChatInputPannelWidgetState extends State<ChatInputPannelWidget> {
   _SelectIndex select = _SelectIndex.none;
   FocusNode focus = FocusNode();
 
