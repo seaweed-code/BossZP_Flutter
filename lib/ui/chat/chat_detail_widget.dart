@@ -249,8 +249,32 @@ class _InputPannelState extends State<_InputPannel> {
         ),
         if (select == _SelectIndex.lang)
           Container(
-            color: Colors.amber,
-            height: 40,
+            color: Colors.white,
+            height: 230,
+            child: Column(
+              children: [
+                Expanded(
+                    child: ListView.builder(
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8, bottom: 8),
+                          child: Text(
+                            "对不起",
+                            style: TextStyle(
+                                fontSize: 16, color: appear.titleColor),
+                          ),
+                        ),
+                        Divider(color: appear.lineColor)
+                      ],
+                    );
+                  },
+                )),
+              ],
+            ),
           ),
         if (select == _SelectIndex.emoji) _EmojiPannelWidget(),
         if (select == _SelectIndex.more) _MorePannelWidget()
