@@ -236,7 +236,13 @@ class _InputPannelState extends State<_InputPannel> {
             )
           ],
         ),
-        if (select == _SelectIndex.lang) _LangPannelWidget(),
+        if (select == _SelectIndex.lang)
+          _LangPannelWidget(
+            didSelect: (_, title) {
+              widget.inputController.text = title;
+              focus.requestFocus();
+            },
+          ),
         if (select == _SelectIndex.emoji) _EmojiPannelWidget(),
         if (select == _SelectIndex.more) _MorePannelWidget()
       ],
@@ -268,6 +274,7 @@ class _LangPannelWidget extends StatelessWidget {
               itemCount: datas.length,
               itemBuilder: (context, index) {
                 return GestureDetector(
+                  behavior: HitTestBehavior.translucent,
                   onTap: () {
                     didSelect?.call(index, datas[index]);
                   },
