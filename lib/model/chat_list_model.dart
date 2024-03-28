@@ -1,4 +1,5 @@
 import 'package:bosszp/ui/chat/chat_row_text_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 abstract class ChatRowModel {
@@ -34,14 +35,16 @@ class ChatListModel {
     Duration duration = Duration(milliseconds: 500);
     listKey.currentState?.insertItem(idx, duration: duration);
     Future.delayed(duration).whenComplete(() {
-      _scrollToBottom();
+      scrollController.scrollToBottom();
     });
   }
+}
 
-  void _scrollToBottom() {
+extension ToBottom on ScrollController {
+  void scrollToBottom() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      scrollController.animateTo(
-        scrollController.position.maxScrollExtent,
+      animateTo(
+        position.maxScrollExtent,
         duration: Duration(milliseconds: 500),
         curve: Curves.easeInOut,
       );
