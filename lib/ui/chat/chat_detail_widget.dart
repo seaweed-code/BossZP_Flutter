@@ -198,9 +198,6 @@ class _InputPannelState extends State<_InputPannel> {
               maxLines: 5,
               onTapOutside: (event) {
                 SystemChannels.textInput.invokeMethod('TextInput.hide');
-                setState(() {
-                  select = _SelectIndex.none;
-                });
               },
               onSubmitted: (value) {
                 widget.inputController.clear();
