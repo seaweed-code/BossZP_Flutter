@@ -175,6 +175,7 @@ class _InputPannelState extends State<_InputPannel> {
                 if (select == _SelectIndex.lang) {
                   focus.requestFocus();
                 } else {
+                  focus.nextFocus();
                   setState(() {
                     select = _SelectIndex.lang;
                   });
@@ -197,7 +198,7 @@ class _InputPannelState extends State<_InputPannel> {
               minLines: 1,
               maxLines: 5,
               onTapOutside: (event) {
-                SystemChannels.textInput.invokeMethod('TextInput.hide');
+                // SystemChannels.textInput.invokeMethod('TextInput.hide');
               },
               onSubmitted: (value) {
                 widget.inputController.clear();
@@ -215,6 +216,7 @@ class _InputPannelState extends State<_InputPannel> {
                 if (select == _SelectIndex.emoji) {
                   focus.requestFocus();
                 } else {
+                  focus.nextFocus();
                   setState(() {
                     select = _SelectIndex.emoji;
                   });
@@ -232,6 +234,7 @@ class _InputPannelState extends State<_InputPannel> {
                 if (select == _SelectIndex.more) {
                   focus.requestFocus();
                 } else {
+                  focus.nextFocus();
                   setState(() {
                     select = _SelectIndex.more;
                   });
