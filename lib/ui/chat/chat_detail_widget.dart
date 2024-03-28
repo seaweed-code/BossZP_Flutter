@@ -214,7 +214,12 @@ class _InputPannelState extends State<_InputPannel> {
               },
               onSubmitted: (content) {
                 final chatList = context.read<ChatListModel>();
-                chatList.addRow(ChatRowTextModel(true, content));
+                final text = content.trim();
+
+                if (text.isNotEmpty) {
+                  chatList.addRow(ChatRowTextModel(true, text));
+                }
+
                 widget.inputController.clear();
               },
               decoration: InputDecoration(
