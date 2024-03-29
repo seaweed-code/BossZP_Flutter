@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 abstract class ChatRowModel {
-  Widget builderRow();
+  Widget builderRow(BuildContext context);
 }
 
 class ChatRowTextModel extends ChatRowModel {
@@ -16,7 +16,7 @@ class ChatRowTextModel extends ChatRowModel {
   String content;
 
   @override
-  Widget builderRow() {
+  Widget builderRow(BuildContext context) {
     return ChatRowTextWidget(
       isSender: isSender,
       text: content,
@@ -29,14 +29,14 @@ class ChatRowTimeModel extends ChatRowModel {
   String text;
 
   @override
-  Widget builderRow() {
+  Widget builderRow(BuildContext context) {
     return ChatRowTimeWidget(content: text);
   }
 }
 
 class ChatRowJobCardModel extends ChatRowModel {
   @override
-  Widget builderRow() {
+  Widget builderRow(BuildContext context) {
     return ChatRowJobCardWidget();
   }
 }

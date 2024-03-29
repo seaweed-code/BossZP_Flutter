@@ -119,7 +119,7 @@ class ChatDetailWidget extends StatelessWidget {
                           opacity: animation,
                           child: SizeTransition(
                             sizeFactor: animation,
-                            child: datas.datas[index].builderRow(),
+                            child: datas.datas[index].builderRow(context),
                           ),
                         );
                       },
