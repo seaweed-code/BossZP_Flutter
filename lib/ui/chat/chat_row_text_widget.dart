@@ -166,7 +166,18 @@ class ChatRowJobCardWidget extends StatelessWidget {
                     style: TextStyle(fontSize: 14, color: appear.titleColor),
                   ),
                 ],
-              )
+              ),
+              SizedBox(height: 15),
+              SizedBox(
+                width: double.infinity,
+                height: 1.5,
+                child: ColoredBox(color: appear.lineColor),
+              ),
+              SizedBox(height: 15),
+              Text(
+                "今天早上 10点 由你发起的沟通",
+                style: TextStyle(fontSize: 14, color: appear.subTitleColor),
+              ),
             ],
           ),
         ),
