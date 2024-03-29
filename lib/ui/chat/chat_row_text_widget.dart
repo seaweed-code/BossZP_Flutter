@@ -76,10 +76,13 @@ class ChatRowTimeWidget extends StatelessWidget {
     const leading = _widthAvatar + _traingAvatar;
     return Padding(
       padding: _edgeInset + EdgeInsets.only(left: leading, right: leading),
-      child: Text(
-        content,
-        style: TextStyle(fontSize: 12, color: appear.timeColor),
-        textAlign: TextAlign.center,
+      child: SizedBox(
+        width: double.infinity,
+        child: Text(
+          content,
+          style: TextStyle(fontSize: 12, color: appear.timeColor),
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }
