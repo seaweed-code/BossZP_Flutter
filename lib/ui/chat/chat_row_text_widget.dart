@@ -1,5 +1,6 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
+import 'package:bosszp/ui/position/postion_detail_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
@@ -97,88 +98,97 @@ class ChatRowJobCardWidget extends StatelessWidget {
     final Appearance appear = context.read();
     return Padding(
       padding: EdgeInsets.only(left: _edgeInset.left, right: _edgeInset.right),
-      child: Card(
-        elevation: 0.0,
-        color: Colors.white,
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(15, 16, 15, 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: Text(
-                      "iOS开发工程师",
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          color: appear.titleColor),
-                    ),
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    "20-25K",
-                    textAlign: TextAlign.end,
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        color: context.read<Appearance>().blueColor),
-                  )
-                ],
-              ),
-              SizedBox(height: 6),
-              Text(
-                "腾讯 不需要融资 1000人以上",
-                style: TextStyle(fontSize: 15, color: appear.subTitleColor),
-              ),
-              SizedBox(height: 6),
-              Wrap(
-                direction: Axis.horizontal,
-                runSpacing: 5,
-                children: [
-                  for (int i = 0; i < 3; i++)
-                    Container(
-                      decoration: BoxDecoration(
-                          color: appear.backgroundColor,
-                          borderRadius: BorderRadius.circular(2)),
-                      margin: EdgeInsets.fromLTRB(0, 0, 6, 0),
-                      padding: EdgeInsets.fromLTRB(8, 3, 8, 3),
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PostionDetailWidget(),
+              ));
+        },
+        child: Card(
+          elevation: 0.0,
+          color: Colors.white,
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(15, 16, 15, 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Expanded(
                       child: Text(
-                        "经验不限$i",
+                        "iOS开发工程师",
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                            color: appear.subTitleColor, fontSize: 14),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: appear.titleColor),
                       ),
+                    ),
+                    SizedBox(width: 10),
+                    Text(
+                      "20-25K",
+                      textAlign: TextAlign.end,
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          color: context.read<Appearance>().blueColor),
                     )
-                ],
-              ),
-              SizedBox(height: 10),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  ClipOval(
-                      child: Assets.images.avatar1Iphone
-                          .image(width: 25, height: 25)),
-                  SizedBox(width: 8),
-                  Text(
-                    "李响 - HRBP",
-                    style: TextStyle(fontSize: 14, color: appear.timeColor),
-                  ),
-                ],
-              ),
-              SizedBox(height: 15),
-              SizedBox(
-                width: double.infinity,
-                height: 1.5,
-                child: ColoredBox(color: appear.lineColor),
-              ),
-              SizedBox(height: 16),
-              Text(
-                "今天早上 10点 由你发起的沟通",
-                style: TextStyle(fontSize: 14, color: appear.subTitleColor),
-              ),
-            ],
+                  ],
+                ),
+                SizedBox(height: 6),
+                Text(
+                  "腾讯 不需要融资 1000人以上",
+                  style: TextStyle(fontSize: 15, color: appear.subTitleColor),
+                ),
+                SizedBox(height: 6),
+                Wrap(
+                  direction: Axis.horizontal,
+                  runSpacing: 5,
+                  children: [
+                    for (int i = 0; i < 3; i++)
+                      Container(
+                        decoration: BoxDecoration(
+                            color: appear.backgroundColor,
+                            borderRadius: BorderRadius.circular(2)),
+                        margin: EdgeInsets.fromLTRB(0, 0, 6, 0),
+                        padding: EdgeInsets.fromLTRB(8, 3, 8, 3),
+                        child: Text(
+                          "经验不限$i",
+                          style: TextStyle(
+                              color: appear.subTitleColor, fontSize: 14),
+                        ),
+                      )
+                  ],
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    ClipOval(
+                        child: Assets.images.avatar1Iphone
+                            .image(width: 25, height: 25)),
+                    SizedBox(width: 8),
+                    Text(
+                      "李响 - HRBP",
+                      style: TextStyle(fontSize: 14, color: appear.timeColor),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15),
+                SizedBox(
+                  width: double.infinity,
+                  height: 1.5,
+                  child: ColoredBox(color: appear.lineColor),
+                ),
+                SizedBox(height: 16),
+                Text(
+                  "今天早上 10点 由你发起的沟通",
+                  style: TextStyle(fontSize: 14, color: appear.subTitleColor),
+                ),
+              ],
+            ),
           ),
         ),
       ),
