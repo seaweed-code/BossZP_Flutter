@@ -24,6 +24,16 @@ class ChatRowTextModel extends ChatRowModel {
   }
 }
 
+class ChatRowTimeModel extends ChatRowModel {
+  ChatRowTimeModel(this.text);
+  String text;
+
+  @override
+  Widget builderRow() {
+    return ChatRowTimeWidget(content: text);
+  }
+}
+
 class ChatListModel {
   final List<ChatRowModel> datas = [];
   final scrollController = ScrollController();

@@ -3,6 +3,10 @@ import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+const _edgeInset = EdgeInsets.only(left: 8, right: 8, top: 15, bottom: 15);
+const _widthAvatar = 35.0;
+const _traingAvatar = 5.0;
+
 class ChatRowTextWidget extends StatelessWidget {
   const ChatRowTextWidget({
     super.key,
@@ -15,7 +19,7 @@ class ChatRowTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
     return Padding(
-      padding: const EdgeInsets.only(left: 8, right: 8, top: 15, bottom: 15),
+      padding: _edgeInset,
       child: LayoutBuilder(builder: (context, constraints) {
         return Row(
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -23,9 +27,9 @@ class ChatRowTextWidget extends StatelessWidget {
           textDirection: isSender ? TextDirection.rtl : TextDirection.ltr,
           children: [
             ClipOval(
-                child:
-                    Assets.images.avatar2Iphone.image(width: 35, height: 35)),
-            SizedBox(width: 5),
+                child: Assets.images.avatar2Iphone
+                    .image(width: _widthAvatar, height: _widthAvatar)),
+            const SizedBox(width: _traingAvatar),
             ConstraintsTransformBox(
               constraintsTransform: (pCon) => BoxConstraints(
                 minHeight: pCon.minHeight,
@@ -56,6 +60,27 @@ class ChatRowTextWidget extends StatelessWidget {
           ],
         );
       }),
+    );
+  }
+}
+
+class ChatRowTimeWidget extends StatelessWidget {
+  const ChatRowTimeWidget({
+    super.key,
+    required this.content,
+  });
+  final String content;
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    const leading = _widthAvatar + _traingAvatar;
+    return Padding(
+      padding: _edgeInset + EdgeInsets.only(left: leading, right: leading),
+      child: Text(
+        content,
+        style: TextStyle(fontSize: 12, color: appear.timeColor),
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
