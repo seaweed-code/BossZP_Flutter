@@ -34,6 +34,13 @@ class ChatRowTimeModel extends ChatRowModel {
   }
 }
 
+class ChatRowJobCardModel extends ChatRowModel {
+  @override
+  Widget builderRow() {
+    return ChatRowJobCardWidget();
+  }
+}
+
 class ChatListModel {
   final List<ChatRowModel> datas = [];
   final scrollController = ScrollController();
