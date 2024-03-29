@@ -160,11 +160,11 @@ class ChatRowJobCardWidget extends StatelessWidget {
                 children: [
                   ClipOval(
                       child: Assets.images.avatar1Iphone
-                          .image(width: _widthAvatar, height: _widthAvatar)),
-                  SizedBox(width: 6),
+                          .image(width: 25, height: 25)),
+                  SizedBox(width: 8),
                   Text(
                     "张先生 - 人事总监",
-                    style: TextStyle(fontSize: 14, color: appear.subTitleColor),
+                    style: TextStyle(fontSize: 14, color: appear.titleColor),
                   ),
                 ],
               )

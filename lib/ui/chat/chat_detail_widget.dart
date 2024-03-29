@@ -18,6 +18,7 @@ class ChatDetailWidget extends StatelessWidget {
     return Provider(
       create: (context) {
         final list = ChatListModel()
+          ..datas.add(ChatRowTimeModel("10分钟前"))
           ..datas.add(ChatRowJobCardModel())
           ..datas.add(ChatRowTimeModel("此Boss正在急招该职位，系统自动为您匹配该职位，若感兴趣可以直接投递"))
           ..datas.add(ChatRowTextModel(false, "看了您的经历感觉很合适，方便发一份简历过来吗？"))
