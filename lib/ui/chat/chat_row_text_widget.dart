@@ -163,7 +163,7 @@ class ChatRowJobCardWidget extends StatelessWidget {
                   SizedBox(width: 8),
                   Text(
                     "李响 - HRBP",
-                    style: TextStyle(fontSize: 14, color: appear.titleColor),
+                    style: TextStyle(fontSize: 14, color: appear.timeColor),
                   ),
                 ],
               ),
