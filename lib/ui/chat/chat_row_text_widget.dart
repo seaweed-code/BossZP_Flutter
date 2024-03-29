@@ -78,7 +78,7 @@ class ChatRowTimeWidget extends StatelessWidget {
       padding: _edgeInset + EdgeInsets.only(left: leading, right: leading),
       child: Text(
         content,
-        style: TextStyle(fontSize: 13, color: appear.timeColor),
+        style: TextStyle(fontSize: 12, color: appear.timeColor),
         textAlign: TextAlign.center,
       ),
     );
