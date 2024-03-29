@@ -174,28 +174,33 @@ class _AnimatedAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverAppBar(
-      pinned: true,
-      actions: [
-        IconButton(
-            onPressed: null,
-            icon: Assets.images.geekMyNavSwitchNewIphone.image()),
-        IconButton(
-            onPressed: null,
-            icon: Assets.images.geekMyNavScanNewIphone.image()),
-        IconButton(
-            onPressed: null, icon: Assets.images.geekMyNavSetNewIphone.image())
-      ],
-      flexibleSpace: FlexibleSpaceBar(
-          background: ListenScrollController(
-        scrollController: controller,
-        builder: (progress, context, child) => Opacity(
-          opacity: progress,
-          child: child!,
-        ),
-        didUpdate: () => _scrollProgress(controller.position),
-        child: Assets.images.basicBgNaviBackImgIphone.image(fit: BoxFit.cover),
-      )),
+    return Theme(
+      data: ThemeData(appBarTheme: AppBarTheme(color: Colors.transparent)),
+      child: SliverAppBar(
+        pinned: true,
+        actions: [
+          IconButton(
+              onPressed: null,
+              icon: Assets.images.geekMyNavSwitchNewIphone.image()),
+          IconButton(
+              onPressed: null,
+              icon: Assets.images.geekMyNavScanNewIphone.image()),
+          IconButton(
+              onPressed: null,
+              icon: Assets.images.geekMyNavSetNewIphone.image())
+        ],
+        flexibleSpace: FlexibleSpaceBar(
+            background: ListenScrollController(
+          scrollController: controller,
+          builder: (progress, context, child) => Opacity(
+            opacity: progress,
+            child: child!,
+          ),
+          didUpdate: () => _scrollProgress(controller.position),
+          child:
+              Assets.images.basicBgNaviBackImgIphone.image(fit: BoxFit.cover),
+        )),
+      ),
     );
   }
 }
