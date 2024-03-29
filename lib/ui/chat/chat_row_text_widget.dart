@@ -98,11 +98,10 @@ class ChatRowJobCardWidget extends StatelessWidget {
     return Padding(
       padding: _edgeInset,
       child: Card(
-        margin: EdgeInsets.only(left: 10, right: 10, top: 12, bottom: 0),
-        elevation: 0.2,
+        elevation: 0.0,
         color: Colors.white,
         child: Padding(
-          padding: EdgeInsets.fromLTRB(10, 12, 10, 6),
+          padding: EdgeInsets.fromLTRB(15, 16, 15, 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
