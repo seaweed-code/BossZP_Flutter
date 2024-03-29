@@ -1,6 +1,7 @@
 import 'package:bosszp/gen/assets.gen.dart';
 import 'package:bosszp/model/appearance.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 const _edgeInset = EdgeInsets.only(left: 8, right: 8, top: 15, bottom: 15);
@@ -82,6 +83,93 @@ class ChatRowTimeWidget extends StatelessWidget {
           content,
           style: TextStyle(fontSize: 12, color: appear.timeColor),
           textAlign: TextAlign.center,
+        ),
+      ),
+    );
+  }
+}
+
+class ChatRowJobCardWidget extends StatelessWidget {
+  const ChatRowJobCardWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final Appearance appear = context.read();
+    return Padding(
+      padding: _edgeInset,
+      child: Card(
+        margin: EdgeInsets.only(left: 10, right: 10, top: 12, bottom: 0),
+        elevation: 0.2,
+        color: Colors.white,
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(10, 12, 10, 6),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      "iOS开发工程师",
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: appear.titleColor),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    "20-25K",
+                    textAlign: TextAlign.end,
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: context.read<Appearance>().blueColor),
+                  )
+                ],
+              ),
+              SizedBox(height: 6),
+              Text(
+                "腾讯 不需要融资 1000人以上",
+                style: TextStyle(fontSize: 15, color: appear.subTitleColor),
+              ),
+              SizedBox(height: 6),
+              Wrap(
+                direction: Axis.horizontal,
+                runSpacing: 5,
+                children: [
+                  for (int i = 0; i < 3; i++)
+                    Container(
+                      decoration: BoxDecoration(
+                          color: appear.backgroundColor,
+                          borderRadius: BorderRadius.circular(2)),
+                      margin: EdgeInsets.fromLTRB(0, 0, 6, 0),
+                      padding: EdgeInsets.fromLTRB(8, 3, 8, 3),
+                      child: Text(
+                        "经验不限$i",
+                        style: TextStyle(
+                            color: appear.subTitleColor, fontSize: 14),
+                      ),
+                    )
+                ],
+              ),
+              SizedBox(height: 8),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ClipOval(
+                      child: Assets.images.avatar1Iphone
+                          .image(width: _widthAvatar, height: _widthAvatar)),
+                  SizedBox(width: 6),
+                  Text(
+                    "张先生 - 人事总监",
+                    style: TextStyle(fontSize: 14, color: appear.subTitleColor),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
