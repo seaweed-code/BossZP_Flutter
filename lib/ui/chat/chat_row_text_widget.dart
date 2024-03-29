@@ -162,7 +162,7 @@ class ChatRowJobCardWidget extends StatelessWidget {
                           .image(width: 25, height: 25)),
                   SizedBox(width: 8),
                   Text(
-                    "张先生 - 人事总监",
+                    "李响 - HRBP",
                     style: TextStyle(fontSize: 14, color: appear.titleColor),
                   ),
                 ],
