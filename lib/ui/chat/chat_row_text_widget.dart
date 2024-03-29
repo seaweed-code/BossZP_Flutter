@@ -96,7 +96,7 @@ class ChatRowJobCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final Appearance appear = context.read();
     return Padding(
-      padding: _edgeInset,
+      padding: EdgeInsets.only(left: _edgeInset.left, right: _edgeInset.right),
       child: Card(
         elevation: 0.0,
         color: Colors.white,
