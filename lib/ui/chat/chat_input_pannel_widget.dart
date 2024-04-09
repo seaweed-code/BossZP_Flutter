@@ -54,6 +54,10 @@ class _ChatInputPannelWidgetState extends State<ChatInputPannelWidget> {
   void _changePannel(_SelectIndex index) {
     if (select == index) {
       focus.requestFocus();
+      ChatListModel chat = context.read();
+      Future.delayed(Duration(seconds: 1)).whenComplete(() {
+        chat.scrollController.scrollToBottom();
+      });
     } else {
       setState(() {
         select = index;
