@@ -3,4 +3,4 @@
 
 状态管理：Provider
 
-<img src="preview.png" alt="pic.16.44" width="450" height="648" />
+<img src="preview.png" alt="pic.16.44" width="550" height="792" />
